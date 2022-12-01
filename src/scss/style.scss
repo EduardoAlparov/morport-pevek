@@ -1,0 +1,23 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  /* typography  */
+  --main-ff: "Roboto", sans-serif;
+  --second-ff: "Roboto", sans-serif;
+
+  /* colors */
+  --color-dark: #333;
+  --color-bg: #fafcfe;
+  --color-white: #fff;
+  --color-grey-600: #99a5b0;
+  --color-grey-300: #eff1f5;
+  --font-body: 400 1.6rem/1.2 var(--main-ff);
+
+  /* etc */
+  --transition: 200ms ease-in;
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/**/*";
+@import "./pages/**/*";
