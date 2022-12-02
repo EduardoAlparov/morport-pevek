@@ -6,11 +6,11 @@
 		"dev": "gulp watch",
 		"build:dev": "gulp build",
 		"build:prod": "gulp build --prod",
-    "predeploy": "gulp build --prod",
+		"predeploy": "gulp build --prod",
 		"deploy": "gh-pages -d build",
 		"squoosh": "gulp squoosh"
 	},
-  "repository": {
+	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/USER/PROJECT.git"
 	},
@@ -87,7 +87,10 @@
 		"vinyl-source-stream": "^2.0.0"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "4.0.31",
+		"gsap": "3.11.3",
 		"reset-css": "^5.0.1",
+		"swiper": "8.4.5",
 		"vanilla-lazyload": "^17.6.1"
 	}
 }

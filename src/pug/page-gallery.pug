@@ -1,0 +1,10 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page page-gallery preload"
+  - const pageTitle = "Галерея"
+  - const siteLang = "ru"
+  - const heading = "Галерея"
+
+block content
+  include pages/gallery/main.pug

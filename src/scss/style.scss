@@ -1,23 +1,44 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
 :root {
   /* typography  */
-  --main-ff: "Roboto", sans-serif;
+  --main-ff: "HelveticaNeueCyr", sans-serif;
   --second-ff: "Roboto", sans-serif;
 
   /* colors */
+  --color-accent: #053095;
+  --color-blue: #00206a;
   --color-dark: #333;
-  --color-bg: #fafcfe;
-  --color-white: #fff;
+  --color-title:  #0a1631;
+  --color-text:  #656c7d;
+  --color-bg: #eeeeee;
+  --color-bg-2: #444444;
+  --color-white: #ffffff;
+  --color-other: #ced0d6;
   --color-grey-600: #99a5b0;
   --color-grey-300: #eff1f5;
+  --color-card: #f2f5fa;
   --font-body: 400 1.6rem/1.2 var(--main-ff);
 
   /* etc */
   --transition: 200ms ease-in;
 }
 
+
 @import "./helpers/**/*";
 @import "./vendor/**/*";
 @import "./settings/**/*";
 @import "./UI/**/*";
 @import "./pages/**/*";
+
+
+body {
+  position: relative;
+
+  min-width: 319px;
+  min-height: 100vh;
+
+  font: var(--font-body);
+  color: var(--color-text);
+
+  text-rendering: optimizeSpeed;
+}

@@ -1,0 +1,58 @@
+.map {
+  &__inner-header {
+    display: flex;
+    margin-bottom: 103px;
+
+    @include mq(lg, max) {
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle,
+  &__address {
+    flex-basis: 50%;
+
+    @include mq(sm, max) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__subtitle {
+
+    @include mq(sm, max) {
+      font-size: 20px !important;
+    }
+  }
+
+  &__address {
+    padding-left: 25px;
+
+    font-size: 22px;
+    line-height: 150%;
+
+    @include mq(lg, max) {
+      padding-left: 0;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include mq(sm, max) {
+      font-size: 16px;
+    }
+  }
+
+  &__yamap-wrapper {
+    width: 100%;
+    min-height: 788px;
+
+    background-color: var(--color-other);
+
+    @include mq(md, max) {
+      min-height: 485px;
+    }
+  }
+}

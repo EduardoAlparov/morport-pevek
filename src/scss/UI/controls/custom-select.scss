@@ -1,0 +1,259 @@
+.select-box {
+  position: relative;
+
+  display: block;
+  width: 420px;
+  margin: 0 auto;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  color: var(--color-text);
+
+  @include mq(xl, max) {
+    width: 380px;
+  }
+
+  @include mq(md, max) {
+    width: 320px;
+  }
+
+  @include mq(sm, max) {
+    width: 100%;
+
+    font-size: 16px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 5px;
+
+    padding-left: 30px;
+
+    font-size: 12px;
+    line-height: 140%;
+    color: rgba(101, 108, 125, .6);
+
+    pointer-events: none;
+
+    @include mq(sm, max) {
+      padding-left: 24px;
+      font-size: 10px;
+    }
+  }
+
+  &__current {
+    position: relative;
+
+    height: 73px;
+
+    cursor: pointer;
+    outline: none;
+    background-color: var(--color-white);
+    border: 1px solid #CED0D6;
+    border-radius: 50px;
+    overflow: hidden;
+
+    &.active {
+      color: var(--color-accent);
+      border-color: var(--color-accent);
+
+      & + .select-box__list-wrapper {
+        opacity: 1;
+
+        animation-name: none;
+
+        .select-box__option {
+          cursor: pointer;
+        }
+      }
+
+      .select-box__input-text {
+        color: var(--color-accent);
+      }
+
+      .select-box__icon {
+        transform: translateY(-50%) rotate(180deg);
+
+        svg {
+          color: var(--color-accent);
+          stroke: var(--color-accent);
+        }
+      }
+    }
+
+    @include mq(sm, max) {
+      height: 52px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+
+    width: 20px;
+
+    transition: 0.1s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+
+      color: var(--color-title);
+      stroke: var(--color-title);
+    }
+  }
+
+  &__value {
+    display: flex;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .select-box__input-text {
+      display: block;
+    }
+  }
+
+  &__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 21px 30px 17px 30px;
+
+    color: var(--color-text);
+
+    @include hover {
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+
+    @include mq(sm, max) {
+      padding: 17px 25px 12px 24px;
+    }
+  }
+
+  &__list-wrapper {
+    position: absolute;
+    top: calc(100% + 9px);
+    z-index: 25;
+
+    width: 100%;
+    padding: 20px 5px 10px 30px;
+
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--color-accent);
+    border-radius: 24px;
+    list-style: none;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &__list {
+    max-height: 150px;
+    overflow: scroll;
+
+    scrollbar-color: var(--color-other) transparent !important;
+    scrollbar-width: thin !important;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track  {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 2px;
+      height: 76px;
+
+      border-radius: 3px;
+      border: 3px solid var(--color-other);
+      background-color: var(--color-other);
+    }
+
+    &::-webkit-scrollbar-track-piece {
+
+      background-color: transparent;
+    }
+
+    @include mq(sm, max) {
+      height: 140px;
+    }
+  }
+
+  &__option {
+    position: relative;
+
+    display: block;
+    padding-left: 0;
+    margin-bottom: 20px;
+
+    background-color: #fff;
+
+    transition: padding-left 0.2s ease-out;
+
+    @include hover {
+      &:hover {
+        padding-left: 32px;
+        color: var(--color-accent);
+        background-color: #fbfbfb;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 20px;
+      height: 24px;
+
+      background-image: url('../../assets/images/icons/mono/anchor.svg');
+      background-size: contain;
+
+      transition: opacity .1s ease-out;
+    }
+
+    @include notHover {
+      &.active {
+        padding-left: 32px;
+        color: var(--color-accent);
+        background-color: #fbfbfb;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}

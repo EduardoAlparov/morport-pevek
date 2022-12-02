@@ -142,6 +142,7 @@ export class Modal {
     let pagePosition = window.scrollY;
     this.lockPadding();
     document.body.classList.add('disable-scroll');
+    document.body.classList.add('modal-menu-open');
     document.body.dataset.position = pagePosition;
     document.body.style.top = -pagePosition + 'px';
   }
@@ -151,6 +152,7 @@ export class Modal {
     this.unlockPadding();
     document.body.style.top = 'auto';
     document.body.classList.remove('disable-scroll');
+    document.body.classList.remove('modal-menu-open');
     window.scroll({ top: pagePosition, left: 0 });
     document.body.removeAttribute('data-position');
   }

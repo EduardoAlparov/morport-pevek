@@ -1,0 +1,26 @@
+.gallery-popup
+  .gallery-popup__container
+    .gallery-popup__carousel
+      .gallery-popup__carousel-wrapper
+        .gallery-popup__carousel-list
+          .gallery-popup__carousel-item
+            +pictureLazy("gallery/image-16.jpg", "фотография галереи попрта Певек")
+          .gallery-popup__carousel-item
+            +pictureLazy("gallery/image-14.jpg", "фотография галереи попрта Певек")
+
+      .gallery-popup__carousel-navigation
+        .gallery-popup__button.technic__slider-button.technic__slider-button--prev.gallery-popup__button--prev
+          +icon-multi('arrow-l')
+        .gallery-popup__button.technic__slider-button.technic__slider-button--next.gallery-popup__button--next
+          +icon-multi('arrow-r')
+
+      button.gallery-popup__close-button.close-button
+        +icon-multi('close')
+
+    .gallery-popup__carousel-pagination
+      .gallery-popup__current-value.gallery-popup__num
+        | 20
+      .gallery-popup__range
+        .gallery-popup__active-line
+      .gallery-popup__all-value.gallery-popup__num
+        | 132

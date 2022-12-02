@@ -1,0 +1,68 @@
+.notice {
+  &__title {
+    margin-bottom: 98px;
+
+    @include mq(xl, max) {
+      margin-bottom: 50px;
+    }
+
+    @include mq(md, max) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 423px;
+    margin-bottom: 18px;
+
+    font-size: 18px;
+    line-height: 140%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    line-clamp: 6;
+    box-orient: vertical;
+
+
+    @include mq(xl, max) {
+    }
+
+    @include mq(md, max) {
+      max-width: unset;
+
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+
+  &__btn {
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 110%;
+    color: var(--color-title);
+    cursor: pointer;
+    transition: color var(--transition);
+
+    span:first-child {
+
+    }
+
+    span:last-child {
+      display: none;
+    }
+
+    @include mq(md, max) {
+      font-size: 16px;
+      line-height: 110%;
+    }
+
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+}

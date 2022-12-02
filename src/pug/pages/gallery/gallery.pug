@@ -1,0 +1,67 @@
+section.gallery-section.section
+  .section__body
+    .site-container.gallery-section__container
+      .section__breadcrumbs.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a( href="/" ).breadcrumbs__link
+              | Главная
+          li.breadcrumbs__item
+            a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+              | Галерея
+
+      h1.section__title
+        | Галерея
+
+      .section__gallery.gallery
+        .gallery__body
+
+          .gallery__grid-contanier
+            //- big row
+            a(href="#").gallery__cell.gallery__cell--big.cell-gallery
+              +pictureLazy('gallery/image-1.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-2.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-3.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-4.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-5.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-6.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-7.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-8.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-9.jpg', 'фотография галереи порта Певек')
+
+          .gallery__grid-contanier
+            //- big row
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-10.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-11.jpg', 'фотография галереи порта Певек')
+            //- video cell start
+            a(href="#").gallery__cell.gallery__cell--big.cell-gallery.cell-gallery--video
+              .cell-gallery__button.video-button
+                +icon-multi('play')
+              +pictureLazy('gallery/image-16.jpg', 'фотография галереи порта Певек')
+            //- video cell end
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-12.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-13.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-14.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-15.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-4.jpg', 'фотография галереи порта Певек')
+            a(href="#").gallery__cell.gallery__cell--small.cell-gallery
+              +pictureLazy('gallery/image-4.jpg', 'фотография галереи порта Певек')
+
+          .gallery__add-button
+              button.blue-button
+                | Показать еще

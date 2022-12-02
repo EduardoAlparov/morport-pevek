@@ -1,0 +1,24 @@
+.blue-button {
+  padding: 30px 50px;
+
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 140%;
+  color: var(--color-white);
+
+  background-color: var(--color-accent);
+  border-radius: 50px;
+
+  transition: background-color var(--transition);
+
+  @include hover {
+    background-color: var(--color-blue);
+  }
+
+
+  @include mq(sm, max) {
+    padding: 25px 40px;
+
+    font-size: 20px;
+  }
+}

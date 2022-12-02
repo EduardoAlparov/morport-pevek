@@ -1,0 +1,136 @@
+.slide {
+  position: relative;
+
+  padding: 0 30px;
+
+  @include mq(md, max) {
+    &:first-child {
+      .slide__number {
+        left: 0;
+      }
+    }
+  }
+
+  @include mq(md, max) {
+    padding: 0 30px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  @include mq(sm, max) {
+    padding: 16px 0;
+  }
+
+
+  &__body {
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 323px;
+    grid-template-rows: 622px min-content;
+    gap: 27px 30px;
+    grid-template-areas:
+      "slide__image slide__image"
+      "slide__title slide__spec";
+    width: 933px;
+    min-height: 789px;
+
+    @include mq(xl, max) {
+      width: 753px;
+      min-height: 620px;
+      grid-template-rows: 1.7fr 0.3fr;
+      grid-template-columns: 1fr max-content;
+    }
+
+    @include mq(md, max) {
+      width: 553px;
+      min-height: 520px;
+      grid-template-rows: 1.7fr 0.3fr;
+    }
+
+    @include mq(sm, max) {
+      width: 100%;
+      height: 80vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content 1fr min-content;
+      grid-template-areas:
+      "slide__title"
+      "slide__image"
+      "slide__spec";
+    }
+    @include mq(xs, max) {
+      height: 351px;
+      gap: 21px;
+    }
+  }
+
+  &__image {
+    grid-area: slide__image;
+    position: relative;
+    overflow: hidden;
+
+    background-color: var(--color-other);
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+
+      width: 100%;
+      max-width: unset;
+      height: 100%;
+
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+  }
+
+  &__spec {
+    grid-area: slide__spec;
+    min-height: 138px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__spec-name {
+    margin-bottom: 10px;
+
+    font-weight: 550;
+    font-size: 24px;
+    line-height: 110%;
+    color: var(--color-title);
+
+    @include mq(xl, max) {
+      font-size: 20px;
+    }
+
+    @include mq(md, max) {
+      font-size: 16px;
+    }
+  }
+
+  &__spec-value {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &__title {
+    grid-area: slide__title;
+  }
+
+  &__number {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+
+    @include mq(sm, max) {
+      display: none;
+    }
+  }
+}

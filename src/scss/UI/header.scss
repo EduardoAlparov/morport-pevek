@@ -1,20 +1,201 @@
 .header {
-  padding-top: 2rem;
+  position: relative;
+  z-index: 32;
 
-  .site-container {
+  width: 100%;
+  padding-top: 25px;
+
+  &__body {
     position: relative;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
+
+    @include mq(xxs, max) {
+      gap: 18px;
+    }
   }
 
-  a {
-    display: block;
-    flex-shrink: 0;
+  &__logo {
+    flex-basis: 74.5%;
 
-    img {
-      max-width: 6rem;
-      height: 3.3rem;
+    @include mq(xxl, max) {
+      flex-basis: auto;
     }
+  }
+
+  &__controls {
+    position: relative;
+
+    flex-basis: 25.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 74px;
+    padding: 0 6px 10px 70px;
+
+    opacity: 1;
+
+    @include mq(xxl, max) {
+      flex-basis: 30%;
+    }
+
+    @include mq(xl, max) {
+      flex-basis: 40%;
+      gap: 20px;
+    }
+
+    @include mq(md, max) {
+      position: relative;
+      right: unset;
+
+      flex-basis: auto;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 15px;
+      margin-left: auto;
+      padding-top: 0;
+      padding-left: 0;
+    }
+
+    @include mq(sm, max) {
+      padding-right: 0;
+      padding-bottom: 5px;
+    }
+
+    @include mq(xxs, max) {
+      margin-left: auto;
+    }
+  }
+
+  &__site-control {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    @include mq(xl, max) {
+      gap: 20px;
+    }
+  }
+
+  &__lang-control {
+    @include mq(md, max) {
+      display: none;
+    }
+  }
+
+  @include mq(md, max) {
+    padding: 20px 0;
+  }
+
+  @include mq(sm, max) {
+    padding: 16px 0;
+  }
+}
+
+.page-home {
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 19;
+
+    width: 100%;
+
+
+    &__controls {
+      position: relative;
+
+      padding-top: 0;
+      padding-right: 0px;
+
+      opacity: 0;
+      transition: opacity 4s 3s;
+    }
+
+    @include mq(sm, max) {
+      position: absolute;
+    }
+  }
+
+  .header__logo {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.page-history {
+  .header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 59;
+
+    width: 100%;
+  }
+}
+
+.modal-menu-open {
+  .header {
+    z-index: 59;
+    background-color: transparent;
+  }
+
+  .header__logo {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  @include mq(md, max) {
+    .header__logo {
+      display: none;
+    }
+
+    .header__controls {
+      flex-basis: 100%;
+      padding: 0;
+    }
+
+    .header__site-control {
+      flex-grow: 1;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    .header__lang-control {
+      display: block;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}
+
+.fixed-mobile-header {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 60 !important;
+
+  background-color: var(--color-white);
+
+  .header__logo {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+  }
+
+  .header__controls {
+    transition: none;
+  }
+}
+
+.animation-on {
+  .header__controls {
+    opacity: 1 !important;
   }
 }

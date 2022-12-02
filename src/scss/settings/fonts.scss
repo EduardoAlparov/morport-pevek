@@ -10,3 +10,55 @@
     url("../fonts/roboto-regular.woff2") format("woff2"),
     url("../fonts/roboto-regular.woff") format("woff");
 }
+
+@font-face {
+  font-weight: 300;
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("HelveticaNeueCyr"),
+    local("HelveticaNeueCyr-Light"),
+    local("HelveticaNeueCyr-Light"),
+    url("../fonts/HelveticaNeueCyr-Light.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Light.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("HelveticaNeueCyr"),
+    local("HelveticaNeueCyr-Roman"),
+    local("HelveticaNeueCyr-Roman"),
+    url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 550;
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("HelveticaNeueCyr"),
+    local("HelveticaNeueCyr-Medium"),
+    local("HelveticaNeueCyr-Medium"),
+    url("../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("HelveticaNeueCyr"),
+    local("HelveticaNeueCyr-Bold"),
+    local("HelveticaNeueCyr-Bold"),
+    url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+}

@@ -1,0 +1,80 @@
+section.contacts-section.section
+  .section__body
+    .site-container
+      .section__breadcrumbs.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a( href="/" ).breadcrumbs__link
+              | Главная
+          li.breadcrumbs__item
+            a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+              | Контакты
+
+      h1.section__title
+        | Контакты
+
+      .section__content.contacts-section__content
+        .contacts-section__info
+          .contacts-section__info-body.footer__body
+
+            .contacts-section__info-inner-header.footer__inner-header
+              .contacts-section__info-left.footer__left
+                .contacts-section__subtitle.section__subtitle
+                  | Контакты
+                .contacts-section__icon
+                  +icon-mono('anchor')
+
+              .contacts-section__info-right.footer__right
+                .contacts-section__contacts.footer__contacts.contacts.contacts--vertical.contacts--big
+                  ul.contacts__list.contacts__list
+                    li.contacts__item
+                      .contacts__title
+                        | Секретарь
+                      a(href="tel:+7 (42737) 4-24-63").contacts__link
+                        | +7 (42737) 4-24-63
+                      a(href="tel:+7 (42737) 4-24-63").contacts__link
+                        | +7 (42737) 4-24-63
+                    li.contacts__item
+                      .contacts__title
+                        | Коммерческий отдел
+                      a(href="tel:+7 (42737) 4-26-23").contacts__link
+                        | +7 (42737) 4-26-23
+                    li.contacts__item
+                      .contacts__title
+                        | Главный диспетчер
+                      a(href="tel:+7 (42737) 4-13-55").contacts__link
+                        | +7 (42737) 4-13-55
+                      a(href="tel:+7 (42737) 4-13-55").contacts__link
+                        | +7 (42737) 4-13-55
+                    li.contacts__item
+                      .contacts__title
+                        | Email
+                      a(href="mailto: Wolna@chukotka.ru").contacts__link
+                        | Wolna@chukotka.ru
+                      a(href="mailto: Wolna@chukotka.ru").contacts__link
+                        | Wolna@chukotka.ru
+                .contacts-section__requisites.requisites
+                  .requisites__title
+                    | Реквизиты:
+                  .requisites__requisites-list
+                    .requisites__requisites-item
+                      | ОГРН 1023901862676
+                    .requisites__requisites-item
+                      | ИНН 3908018946
+                    .requisites__requisites-item
+                      | КПП 390601001
+                    .requisites__requisites-item
+                      | ОКПО 51785698
+                    .requisites__requisites-item
+                      | ОКВЭД 52.24
+                    .requisites__requisites-item
+                      | ОКТМО 27701000
+
+        .contacts-section__map.map
+          .map__inner-header
+            .map__subtitle.section__subtitle
+              | Адрес местонахождения
+            .map__address.address.address--big
+              | 689400, Чукотский Автономный Округ, г.&nbsp;Певек,<br>
+              | ул.&nbsp;Полярная&nbsp;д.&nbsp;5
+          .map__yamap-wrapper#ya-map

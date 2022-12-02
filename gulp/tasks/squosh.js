@@ -3,7 +3,7 @@ import config from '../config';
 import gulpSquoosh from 'gulp-squoosh';
 
 const squosh = () => {
-  return gulp.src(`${config.src.images}/**/*.{jpg, png}`)
+  return gulp.src(`${config.src.images}/**/*.{png,jpg}`)
     .pipe(
       gulpSquoosh(({ width, height, size, filePath }) => ({
         preprocessOptions: {},

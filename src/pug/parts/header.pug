@@ -1,6 +1,43 @@
-header.header
+header.header(class=headerClass)
   .site-container
-    a(href="/")
-      img(src="assets/images/logo.svg" alt="Logo")
-    button.button(data-path="modal")
-      | Открыть модалку
+    .header__body
+      .header__logo
+        a(href="/").image-log
+          +icon-multi('logo')
+      .header__controls
+        .header__menu-control
+          .menu-control
+            button.menu-control__button.menu-control__button-open(data-path="modal", type="button")
+              span.menu-control__icon
+              span.menu-control__text
+                | Меню
+            button.menu-control__button.menu-control__button-close.modal-close(type="button")
+              span.menu-control__icon.menu-control__icon--transform
+              span.menu-control__text
+                | Закрыть
+
+        .header__site-control
+          .header__search-control
+            .search-control.search-control--closed
+              button(type="button").search-control__btn
+                +icon-multi('search')
+                +icon-multi('close')
+              .search-control__search-line
+                .search-control__input-wrapper
+                  input.search-control__input(type='text' placeholder= 'Поиск по сайту')
+                  .search-control__icon-wrapper
+                    .search-control__icon
+                      +icon-multi('search')
+                  .search-control__values
+
+          .header__lang-control
+            .lang-control
+              button.lang-control__btn.lang-control__btn-active
+                | Ru
+              .lang-control__lang-list
+                .lang-control__list-item
+                  button.lang-control__btn
+                    | Ru
+                .lang-control__list-item
+                  button.lang-control__btn
+                    | En

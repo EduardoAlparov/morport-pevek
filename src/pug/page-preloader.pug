@@ -1,0 +1,9 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-preloader preload"
+  - const pageTitle = "Загрузка"
+  - const siteLang = "ru"
+
+block content
+  include pages/preloader/main.pug

@@ -1,0 +1,62 @@
+.lang-control {
+  position: relative;
+
+  &.opened-list {
+    & .lang-control__lang-list {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .lang-control__btn-active {
+      pointer-events: none;
+    }
+  }
+
+  &__btn {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 140%;
+    color: var(--color-accent);
+
+    cursor: pointer;
+
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__lang-list {
+    position: absolute;
+    top: 100%;
+    left: -5px;
+
+    padding: 5px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    border: 1px solid var(--color-white);
+  }
+}
+
+.page-home,
+.modal-menu-open,
+.page-history {
+  .lang-control__btn {
+    color: var(--color-white);
+  }
+}
+
+._set-dark-colors {
+  .lang-control__btn {
+    color: var(--color-accent);
+  }
+}
+
+.modal-menu-open {
+  ._set-dark-colors {
+    .lang-control__btn {
+      color: var(--color-white);
+    }
+  }
+}
