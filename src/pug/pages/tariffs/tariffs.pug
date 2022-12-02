@@ -1,0 +1,66 @@
+section.tariffs-section.section
+  .section__body.section__body--bottom-border
+    .site-container
+      .section__breadcrumbs.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a( href="/" ).breadcrumbs__link
+              | Главная
+          li.breadcrumbs__item
+            a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+              | Услуги и тарифы
+
+      h1.section__title
+        | Услуги и тарифы
+
+      .tariffs__body
+        .tariffs__control-line
+          .tariffs__select-wrapper
+            +SelectBox('2022', [
+              {name: '2022', value: '1', checked: true},
+              {name: '2021', value: '2'},
+              {name: '2020', value: '3'},
+              {name: '2019', value: '4'},
+              {name: '2018', value: '5'},
+              {name: '2017', value: '6'},
+              {name: '2016', value: '7'},
+              {name: '2015', value: '8'},
+              {name: '2014', value: '9'},
+              {name: '2013', value: '10'},
+            ], 'Выберите год')
+          .tarrifs__search-wrapper
+            +SearchBar('Поиск по документам', 'Введите название документа')
+        ul.tariffs__tariffs-list
+          li.tariffs__tariffs-item
+            a( href="path_to_file", download="file_name" ).card
+              .card__body
+                .card__title
+                  | Сборник услуг, работ, тарифов АО "Морпорт Певек"
+                .card__info
+                  .card__size
+                    span.card__value
+                      | 12
+                    span.card__desc
+                      | &nbsp;MB,&nbsp;
+                    span.card__type
+                      | PDF
+                  .card__icon
+                    +icon-multi('download')
+          li.tariffs__tariffs-item
+            a( href="path_to_file", download="file_name" ).card
+              .card__body
+                .card__title
+                  | Сборник услуг, работ, тарифов АО "Морпорт Певек"
+                .card__info
+                  .card__size
+                    span.card__value
+                      | 12
+                    span.card__desc
+                      | &nbsp;MB,&nbsp;
+                    span.card__type
+                      | PDF
+                  .card__icon
+                    +icon-multi('download')
+        .tariffs__add-button
+            button.blue-button
+              | Показать еще

@@ -1,0 +1,9 @@
+extends layout/error.pug
+
+block variables
+  - const bodyClass = "page page-error"
+  - const pageTitle = "404"
+  - const heading = "Меню"
+
+block content
+  include pages/page-404/main.pug

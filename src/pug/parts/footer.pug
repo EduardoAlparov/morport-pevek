@@ -1,3 +1,76 @@
 footer.footer
-	.site-container
-		h1 footer
+  .site-container
+    .footer__body
+      .footer__inner-header
+        .footer__left
+          a(href="/").footer__logo.logo
+            span.logo__title
+              | Певек
+            span.logo__icon
+              +icon-mono('anchor')
+            span.logo__text
+              | Морской<br> торговый порт
+          .footer__address.address
+            | 689400, Чукотский Автономный Округ,<br> г. Певек,  ул. Полярная д. 5
+        .footer__right
+          .footer__nav.nav.nav--vertical
+            ul.nav__list
+              li.nav__item
+                a(href="./page-tariffs.html")#nav-tariffs.nav__link
+                  | Услуги и тарифы
+              li.nav__item
+                a(href="./page-info.html")#nav-info.nav__link
+                  | Раскрытие информации
+              li.nav__item
+                a(href="./page-technic.html")#nav-tech.nav__link
+                  | Техническое оснащение
+              li.nav__item
+                a(href="./page-history.html")#nav-history.nav__link
+                  | История порта
+              li.nav__item
+                a(href="./page-404.html")#nav-scheme.nav__link
+                  | Схема порта
+              li.nav__item
+                a(href="./page-contacts.html")#nav-contacts.nav__link
+                  | Контакты
+              li.nav__item
+                a(href="./page-gallery.html")#nav-gallery.nav__link
+                  | Галерея
+            .nav__icon
+              +icon-mono('anchor')
+          .footer__contacts.contacts.contacts--vertical
+            ul.contacts__list.contacts__list
+              li.contacts__item
+                .contacts__title
+                  | Секретарь
+                a(href="tel:+7 (42737) 4-24-63").contacts__link
+                  | +7 (42737) 4-24-63
+              li.contacts__item
+                .contacts__title
+                  | Коммерческий отдел
+                a(href="tel:+7 (42737) 4-26-23").contacts__link
+                  | +7 (42737) 4-26-23
+              li.contacts__item
+                .contacts__title
+                  | Гл. диспетчер
+                a(href="tel:+7 (42737) 4-13-55").contacts__link
+                  | +7 (42737) 4-13-55
+              li.contacts__item
+                .contacts__title
+                  | Email
+                a(href="mailto: Wolna@chukotka.ru").contacts__link
+                  | Wolna@chukotka.ru
+      .footer__inner-footer
+        .footer__left
+          .footer__copyright
+            | © 2022 Все права защищены
+        .footer__right
+          a(href="#" target="_blank").footer__policy
+            | Политика конфиденциальности
+            .footer__policy-text
+              | © 2022 Все права защищены
+          a(href="#" target="_blank").footer__dev
+            span.footer__dev-text
+              | Сайт разработан
+            .footer__dev-logo
+              img(src="assets/images/mw-studio-logo.png" alt="Site developer logo")

@@ -1,0 +1,151 @@
+.gallery {
+  $gapBig: 16px;
+  $gapSmall: 10px;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $gapBig;
+    padding: 70px 0;
+
+    border-style: solid;
+    border-color: #d9d8d8;
+    border-width: 0 0 1px 0;
+
+    @include mq(sm, max) {
+      gap: $gapSmall;
+      padding: 20px 0;
+    }
+  }
+
+  &__grid-contanier {
+    display: grid;
+    grid-auto-flow: row dense;
+
+    grid-template-columns: repeat(4, 0.25fr);
+    grid-template-rows: repeat(auto-fill, minmax(auto, 304px));
+
+    column-gap: $gapBig;
+    row-gap: $gapBig;
+
+    width: 100%;
+
+    @include mq(lg, max) {
+      grid-template-columns: repeat(3, 0.5fr);
+      grid-template-rows: repeat(auto-fill, minmax(auto, 280px));
+
+      &:nth-child(2n+1) {
+        .gallery__cell:last-child {
+          display: none;
+        }
+      }
+
+      &:nth-child(2n) {
+        .gallery__cell:first-child {
+          display: none;
+        }
+      }
+    }
+
+    @include mq(sm, max) {
+      grid-template-columns: 1fr;
+
+      column-gap: $gapSmall;
+      row-gap: $gapSmall;
+    }
+
+    @include mq(xxs, max) {
+      grid-template-rows: repeat(auto-fill, minmax(auto, 257px));
+    }
+  }
+
+  &__cell {
+    position: relative;
+
+    display: block;
+
+    border: none;
+    outline: none;
+
+    background-color: var(--color-other);
+    height: 304px;
+
+    &--small {
+      grid-column: span 1;
+      grid-row: span 1;
+
+      @include mq(lg, max) {
+
+      }
+
+      @include mq(sm, max) {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+
+    &--big {
+      height: auto;
+
+      grid-column: span 2;
+      grid-row: span 2;
+
+      @include mq(lg, max) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      @include mq(sm, max) {
+        grid-column: unset;
+        grid-row: unset;
+      }
+
+      @include mq(xxs, max) {
+        height: 257px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+
+      width: 100%;
+      height: 100%;
+
+      transition: background-color var(--transition);
+    }
+
+    @include hover {
+      &::after {
+        background-color: rgba(10, 22, 49, 0.8);
+      }
+    }
+
+    @include mq(lg, max) {
+
+    }
+
+    @include mq(xxs, max) {
+      height: 257px;
+    }
+  }
+
+  &__add-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+
+    @include mq(sm, max) {
+      margin-top: 20px;
+    }
+  }
+
+  @include mq(sm, max) {
+
+  }
+}

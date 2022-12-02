@@ -1,0 +1,21 @@
+mixin SelectBox(name, options, label)
+  .select-box
+    .select-box__current(tabindex="1")
+      each option, index in options
+        .select-box__value
+          input.select-box__input(
+            type="radio"
+            id=index
+            value=option.value
+            name=name
+            checked=option.checked
+          )
+          p.select-box__input-text #{option.name}
+      .select-box__icon
+        +icon-multi('arrow-d')
+      .select-box__label #{label}
+    .select-box__list-wrapper
+      ul.select-box__list
+        each option, index in options
+          li
+            label.select-box__option(for=index aria-hidden) #{option.name}

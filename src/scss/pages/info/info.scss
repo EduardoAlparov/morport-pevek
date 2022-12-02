@@ -1,0 +1,186 @@
+.info {
+  &__body {
+    display: flex;
+    padding: 28px 0 130px;
+
+    border-style: solid;
+    border-color: #d9d8d8;
+    border-width: 0 0 1px 0;
+
+    @include mq(xl, max) {
+      flex-direction: column;
+    }
+
+    @include mq(md, max) {
+      padding: 20px 0 60px;
+    }
+  }
+
+  &__sidebar {
+    padding-right: 65px;
+
+    border-style: solid;
+    border-color: #d9d8d8;
+    border-width: 0 1px 0 0;
+
+    @include mq(xxl, max) {
+      padding-right: 30px;
+    }
+
+    @include mq(xl, max) {
+      padding-right: 0;
+      border-width: 0 0 0 0;
+    }
+
+    @include mq(xl, max) {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__sidebar-item {
+    margin-bottom: 28px;
+    padding-bottom: 30px;
+    border-style: solid;
+    border-color: #d9d8d8;
+    border-width: 0 0 1px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mq(xl, max) {
+      padding-bottom: 20px;
+      margin-bottom: 0;
+      border-width: 0 0 0 0;
+
+      &:last-child {
+        margin-bottom: 20px;
+        border-width: 0 0 1px 0;
+      }
+    }
+  }
+
+  &__control-line {
+    padding-left: 9px !important;
+    gap: 15px !important;
+
+    @include mq(xxl, max) {
+      flex-wrap: wrap;
+    }
+
+    @include mq(md, max) {
+      padding-left: 0 !important;
+      gap: 10px !important;
+    }
+  }
+
+  &__nav {
+    margin-left: 32px;
+
+    .nav__list {
+      @include mq(xl, max) {
+        flex-direction: row;
+        gap: 10px;
+        padding-right: 100%;
+        overflow-x: scroll;
+
+        transition: var(--transition);
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
+    .nav__item {
+      &--active {
+        .nav__link {
+          background-color: var(--color-accent);
+          color: var(--color-white);
+          padding-left: 35px;
+
+          &::after {
+            content: '';
+          }
+        }
+      }
+    }
+
+    .nav__link {
+
+      @include mq(xl, max) {
+        position: relative;
+        display: block;
+        padding: 10px;
+
+        font-size: 16px;
+        line-height: 150%;
+        background-color: var(--color-other);
+        border-radius: 30px;
+        white-space: nowrap;
+
+        &::after {
+          content: none;
+          position: absolute;
+          left: 13px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 15px;
+          height: 18px;
+
+          background-image: url('../../assets/images/icons/mono/anchor.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          filter: brightness(0) invert(1);
+        }
+
+        @include mq(xl, max) {
+          transition: unset;
+        }
+      }
+    }
+
+    .nav__icon {
+      @include mq(xl, max) {
+        display: none;
+      }
+    }
+
+    @include mq(xl, max) {
+      margin-left: 0;
+    }
+  }
+
+  &__main {
+    padding-left: 50px;
+
+    @include mq(xxl, max) {
+      padding-left: 20px;
+    }
+
+    @include mq(xl, max) {
+      padding-left: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 52px;
+
+    @include mq(md, max) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__doc-list {
+    min-height: 700px;
+
+    @include mq(xl, max) {
+      min-height: unset;
+    }
+  }
+}

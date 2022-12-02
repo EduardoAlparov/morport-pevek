@@ -1,0 +1,113 @@
+.article-story {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+
+  @include mq(sm, max) {
+    gap: 40px;
+  }
+
+  &--horizontal {
+    flex-direction: row;
+
+    @include mq(sm, max) {
+      flex-direction: column;
+    }
+
+    .article-story__story {
+      max-width: 258px;
+    }
+  }
+
+  &__time {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+
+    color: var(--color-white);
+
+    @include mq(sm, max) {
+
+    }
+  }
+
+  &__year {
+    .icon {
+      width: 164.33px;
+      height: 85.92px;
+
+      fill: var(--color-white);
+
+      @include mq(sm, max) {
+        width: 109.56px;
+        height: 57.28px;
+      }
+    }
+
+    &--double {
+      .icon {
+        width: 297.47px;
+        height: 85.92px;
+
+        @include mq(sm, max) {
+          width: 195px;
+          height: 57.28px;
+        }
+      }
+    }
+
+    &--accent {
+      .icon {
+        fill: var(--color-accent);
+      }
+    }
+  }
+
+  &__story {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__main-text {
+    font-style: normal;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 110%;
+
+    color: var(--color-white);
+
+    &--dark {
+      color: var(--color-title);
+    }
+
+    @include mq(sm, max) {
+      font-size: 16px;
+    }
+  }
+
+  &__secondary-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+
+    color: rgba(255, 255, 255, .4);
+
+    &--dark {
+      color: rgba(10, 22, 49, .4)
+    }
+
+    @include mq(sm, max) {
+      font-size: 12px;
+    }
+  }
+}

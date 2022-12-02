@@ -1,0 +1,117 @@
+section.info-section.section
+
+  .section__body
+    .site-container
+      .section__breadcrumbs.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a( href="/" ).breadcrumbs__link
+              | Главная
+          li.breadcrumbs__item
+            a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+              | Раскрытие информации
+
+      h1.section__title
+        | Раскрытие<br> информации
+
+      .info__body
+        .info__sidebar
+          .info__sidebar-item
+            .info__nav.nav.nav--vertical.nav--small
+              ul.nav__list
+                li.nav__item
+                  a(href="#")#nav-tariffs.nav__link.nav__link--active
+                    | Договоры
+                li.nav__item
+                  a(href="#")#nav-info.nav__link
+                    | Лицензии
+                li.nav__item
+                  a(href="#")#nav-tech.nav__link
+                    | Бугхалтерская отчетность
+                li.nav__item
+                  a(href="#")#nav-history.nav__link
+                    | Расчет доступной мощности
+                li.nav__item
+                  a(href="#")#nav-scheme.nav__link
+                    | Годовая бухотчетность
+                li.nav__item
+                  a(href="#")#nav-contacts.nav__link
+                    | Специальная оценка труда
+              .nav__icon
+                +icon-mono('anchor')
+          .info__sidebar-item
+            .info__notice.notice
+              .notice__title.section__subtitle
+                | Важно!
+              .notice__dropdown
+                .notice__text
+                  | В соответствии с п.9 Постановления от 20.10.2017 № 1285 «Об
+                  |  утверждении правил недискриминационного доступа к услугам
+                  | субъектов естественных монополий в портах» лица, которые
+                  | намерены заключить договор об оказании услуг по погрузке,
+                  | выгрузке
+                  | В соответствии с п.9 Постановления от 20.10.2017 № 1285 «Об
+                  |  утверждении правил недискриминационного доступа к услугам
+                  | субъектов естественных монополий в портах» лица, которые
+                  | намерены заключить договор об оказании услуг по погрузке,
+                  | выгрузке
+                button.notice__btn
+                  span
+                    | Читать полностью
+                  span
+                    | Скрыть
+
+        .info__main
+          h2.info__subtitle.section__subtitle
+            | Договоры
+
+          .info__control-line.tariffs__control-line
+            .tariffs__select-wrapper
+              +SelectBox('2022', [
+                {name: '2022', value: '1', checked: true},
+                {name: '2021', value: '2'},
+                {name: '2020', value: '3'},
+                {name: '2019', value: '4'},
+                {name: '2018', value: '5'},
+                {name: '2017', value: '6'},
+                {name: '2016', value: '7'},
+                {name: '2015', value: '8'},
+                {name: '2014', value: '9'},
+                {name: '2013', value: '10'},
+              ], 'Выберите год')
+            .tarrifs__search-wrapper
+              +SearchBar('Поиск по документам', 'Введите название документа')
+          ul.info__doc-list.tariffs__tariffs-list
+            li.tariffs__tariffs-item
+              a( href="path_to_file", download="file_name" ).card
+                .card__body
+                  .card__title
+                    | Сборник услуг, работ, тарифов АО "Морпорт Певек"
+                  .card__info
+                    .card__size
+                      span.card__value
+                        | 12
+                      span.card__desc
+                        | &nbsp;MB,&nbsp;
+                      span.card__type
+                        | PDF
+                    .card__icon
+                      +icon-multi('download')
+            li.tariffs__tariffs-item
+              a( href="path_to_file", download="file_name" ).card
+                .card__body
+                  .card__title
+                    | Сборник услуг, работ, тарифов АО "Морпорт Певек"
+                  .card__info
+                    .card__size
+                      span.card__value
+                        | 12
+                      span.card__desc
+                        | &nbsp;MB,&nbsp;
+                      span.card__type
+                        | PDF
+                    .card__icon
+                      +icon-multi('download')
+          .info__add-button.tariffs__add-button
+            button.blue-button
+              | Показать еще

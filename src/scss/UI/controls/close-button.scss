@@ -1,0 +1,16 @@
+.close-button {
+  padding: 20px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-white);
+  }
+
+  @include mq(sm, max) {
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

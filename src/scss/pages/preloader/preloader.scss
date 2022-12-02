@@ -1,0 +1,58 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 60;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--color-accent);
+
+  &__body {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+  }
+
+  &__icon {
+    animation-name: scaleIcon;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+    .icon {
+      width: 218px;
+      height: 268px;
+
+      fill: var(--color-white);
+
+
+      @include mq(md, max) {
+        width: 109px;
+        height: 134px;
+      }
+    }
+  }
+}
+
+@keyframes scaleIcon {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

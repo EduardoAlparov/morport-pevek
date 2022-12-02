@@ -1,15 +1,142 @@
 .intro {
-  z-index: 1;
-  padding-top: 8rem;
+  position: sticky;
+  top: 0;
+  z-index: 15;
 
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
-    transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  background-image: url('../images/intro/intro-back-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  @include mq(sm, max) {
+    flex-direction: column;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 36;
+
+    flex-grow: 1;
+
+    display: flex;
+    // align-items: flex-end;
+    justify-content: center;
+    padding-top: 22%;
+
+    overflow-y: hidden;
+    transition: .3s ease-out;
+
+    @include mq(xxl, max) {
+      align-items: flex-end;
+    }
+
+    @include mq(md, max) {
+      padding-top: 220px;
+      align-items: center;
+    }
+
+    @include mq(sm, max) {
+      padding-top: 0px;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    height: 30vh;
+    max-height: 245px;
+
+    transform: translateX(-50%);
+    transition: transform 3s ease-out;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+
+      width: 100%;
+      max-width: unset;
+      height: 100%;
+
+      object-fit: contain;
+      transform: translate(-50%, -50%);
+
+      @include mq(xxl, max) {
+        max-width: 100%;
+      }
+
+      @include mq(xl, max) {
+        height: 20vh;
+        max-height: 245px;
+      }
+
+      @include mq(md, max) {
+        left: -10%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 100%;
+        max-width: unset;
+
+        object-fit: cover;
+        object-position: right;
+      }
+
+      @include mq(sm, max) {
+        width: 106%;
+      }
+    }
+
+    @include mq(md, max) {
+      margin-top: 50px;
+    }
+
+    @include mq(sm, max) {
+      height: 145px;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 5.5vh 0;
+
+    opacity: 0;
+    transition: opacity 3s 3s;
+
+    @include mq(xl, max) {
+      padding: 72px 0;
+    }
+
+    @include mq(sm, max) {
+      padding: 65px 0 55px;
+    }
+
+    @include mq(custom, max, 360) {
+      padding: 25px 0 25px;
+    }
+  }
+
+  @include mq(sm, max) {
+    min-height: unset;
+  }
+}
+
+.animation-on {
+  .intro__image {
+    transform: translateX(0%);
+
+    @include mq(sm, max) {
+      transform: translateX(5%);
+    }
+  }
+
+  .intro__button-wrapper  {
+    opacity: 1;
   }
 }

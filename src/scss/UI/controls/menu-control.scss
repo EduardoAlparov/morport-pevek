@@ -1,0 +1,154 @@
+.menu-control {
+
+  &--active {
+    .menu-control__button-open {
+      display: none;
+    }
+
+    .menu-control__button-close {
+      display: flex;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 140%;
+    color: var(--color-accent);
+  }
+
+  &__button-close {
+    display: none;
+  }
+
+  &__text {
+    @include mq(md, max) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: relative;
+
+    display: block;
+    width: 32px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 100%;
+      height: 1px;
+
+      border-radius: 3px;
+      background-color: var(--color-accent);
+    }
+
+    &::before {
+      top: -4px;
+    }
+
+    &::after {
+      top: 6px;
+    }
+
+    &--transform {
+      &::before {
+        transform: translateX(-50%) translateY(2px) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateX(-50%) translateY(-7px) rotate(-45deg);
+      }
+
+      @include mq(sm, max) {
+        transform: translateX(-50%) translateY(3px) rotate(45deg);
+      }
+    }
+
+    @include mq(md, max) {
+      height: 5px;
+    }
+
+    @include mq(sm, max) {
+      width: 24px;
+    }
+  }
+}
+
+.page-home,
+.page-history {
+  .menu-control {
+    &__button {
+      color: var(--color-white);
+    }
+
+    &__icon {
+      &::before,
+      &::after {
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
+
+.modal-menu-open {
+  .menu-control {
+    &__button {
+      color: var(--color-white) !important;
+    }
+
+    &__icon {
+      &::before,
+      &::after {
+        background-color: var(--color-white) !important;
+      }
+    }
+  }
+
+  .menu-control__button-open {
+    display: none;
+  }
+
+  .menu-control__button-close {
+    display: flex;
+  }
+}
+
+._set-dark-colors {
+  .menu-control {
+    &__button {
+      color: var(--color-accent);
+    }
+
+    &__icon {
+      &::before,
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}
+
+.fixed-mobile-header {
+  .menu-control {
+    &__button {
+      color: var(--color-accent);
+    }
+
+    &__icon {
+      &::before,
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}

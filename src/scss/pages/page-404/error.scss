@@ -1,0 +1,193 @@
+.error {
+
+  &__inner-header {
+    position: absolute;
+    top: 4.5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+
+
+    @include mq(xs, max) {
+      top: 11.5%;
+    }
+  }
+
+  &__heading {
+    position: relative;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading-text {
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+
+
+    @include mq(sm, max) {
+      top: -16px;
+
+      font-size: 11px;
+      line-height: 120%;
+    }
+  }
+
+  &__heading-number {
+    width: 100%;
+    max-width: 118vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 50vh;
+    line-height: 1;
+
+    color: var(--color-accent);
+    text-align: center;
+
+    span {
+      line-height: 1;
+      text-align: center;
+      letter-spacing: normal;
+    }
+
+    @include mq(md, max) {
+      font-size: 45vh;
+    }
+
+    @include mq(sm, max) {
+      max-width: 90%;
+      font-weight: 550;
+    }
+
+    @include mq(xs, max) {
+      max-width: 100%;
+      font-size: 180px;
+    }
+  }
+
+  &__inner-footer {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(custom, min, 2000) {
+      bottom: 10%;
+    }
+
+    @include mq(xl, max) {
+      bottom: 10%;
+    }
+
+    @include mq(xl, max) {
+      bottom: 10%;
+    }
+
+    @include mq(xs, max) {
+      bottom: 15%;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -6%);
+
+    width: 100vw;
+    height: 100vw;
+
+    background-color: var(--color-white);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+    overflow: hidden;
+
+    @include mq(custom, min, 1800) {
+      transform: translate(-50%, -3%);
+    }
+
+    @include mq(xxl, max) {
+      transform: translate(-50%, -8.5%);
+    }
+
+    @include mq(md, max) {
+      width: 110vw;
+      height: 120vw;
+    }
+
+    @include mq(sm, max) {
+      width: 150vw;
+      transform: translate(-50%, -12.5%);
+    }
+
+    @include mq(xs, max) {
+      transform: translate(-50%, -22%);
+    }
+
+    @media screen and (max-height: 499px) {
+      opacity: .9;
+    }
+  }
+
+  &__message-wrapper {
+    position: relative;
+    z-index: 30;
+
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @include mq(xxl, max) {
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 325px;
+
+    text-align: center;
+    font-size: 22px;
+    line-height: 150%;
+
+    @include mq(md, max) {
+      max-width: 200px;
+      margin-bottom: 0;
+
+      font-size: 16px;
+    }
+
+    @include mq(xs, max) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    padding: 30px 50px !important;
+
+    font-size: 28px !important;
+
+    @include mq(md, max) {
+      padding: 25px 40px !important;
+      font-size: 20px !important;
+    }
+  }
+}

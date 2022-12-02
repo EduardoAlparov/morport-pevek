@@ -1,7 +1,92 @@
+- const title = heading ? heading : "Меню"
+
 .modal__container(data-target="modal")
   .modal__content
-    button.button-reset.modal__close-btn.modal-close(type="button")
-      span
-      span
-    .modal__legend
-      | Поздравляем вы открыли модалку!
+    .site-container
+      .modal__body
+        .modal__left-col
+          h1.modal__title.section__title.section__title--not-border.section__title--white=title
+
+          .modal__contacts.modal__contacts--desktop.contacts.contacts--horizontal
+            ul.contacts__list
+              li.contacts__item
+                .contacts__title
+                  | Секретарь
+                a(href="tel:+7 (42737) 4-24-63").contacts__link
+                  | +7 (42737) 4-24-63
+              li.contacts__item
+                .contacts__title
+                  | Коммерческий отдел
+                a(href="tel:+7 (42737) 4-26-23").contacts__link
+                  | +7 (42737) 4-26-23
+              li.contacts__item
+                .contacts__title
+                  | Гл. диспетчер
+                a(href="tel:+7 (42737) 4-13-55").contacts__link
+                  | +7 (42737) 4-13-55
+              li.contacts__item
+                .contacts__title
+                  | Email
+                a(href="mailto: Wolna@chukotka.ru").contacts__link
+                  | Wolna@chukotka.ru
+
+          .modal__lang
+            .lang-control
+              button.lang-control__btn.lang-control__btn-active
+                | Ru
+              .lang-control__lang-list
+                .lang-control__list-item
+                  button.lang-control__btn
+                    | Ru
+                .lang-control__list-item
+                  button.lang-control__btn
+                    | En
+
+        .modal__right-col
+          .modal__nav.nav.nav--vertical.nav--light
+            ul.nav__list
+              li.nav__item
+                a(href="./page-tariffs.html")#nav-tariffs.nav__link
+                  | Услуги и тарифы
+              li.nav__item
+                a(href="./page-info.html")#nav-info.nav__link
+                  | Раскрытие информации
+              li.nav__item
+                a(href="./page-technic.html")#nav-tech.nav__link
+                  | Техническое оснащение
+              li.nav__item
+                a(href="./page-history.html")#nav-history.nav__link
+                  | История порта
+              li.nav__item
+                a(href="./page-404.html")#nav-scheme.nav__link
+                  | Схема порта
+              li.nav__item
+                a(href="./page-contacts.html")#nav-contacts.nav__link
+                  | Контакты
+              li.nav__item
+                a(href="./page-gallery.html")#nav-gallery.nav__link
+                  | Галерея
+            .nav__icon
+              +icon-mono('anchor')
+        .modal__contacts.modal__contacts--mobile.contacts.contacts--horizontal
+          ul.contacts__list
+            li.contacts__item
+              .contacts__title
+                | Секретарь
+              a(href="tel:+7 (42737) 4-24-63").contacts__link
+                | +7 (42737) 4-24-63
+            li.contacts__item
+              .contacts__title
+                | Коммерческий отдел
+              a(href="tel:+7 (42737) 4-26-23").contacts__link
+                | +7 (42737) 4-26-23
+            li.contacts__item
+              .contacts__title
+                | Гл. диспетчер
+              a(href="tel:+7 (42737) 4-13-55").contacts__link
+                | +7 (42737) 4-13-55
+            li.contacts__item
+              .contacts__title
+                | Email
+              a(href="mailto: Wolna@chukotka.ru").contacts__link
+                | Wolna@chukotka.ru

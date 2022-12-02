@@ -1,0 +1,145 @@
+.animated-logo {
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  z-index: 35;
+
+  width: 100%;
+  max-height: max-content;
+  overflow: hidden;
+
+  @include mq(lg, max) {
+    height: max-content;
+    top: 30px;
+    left: 0px;
+  }
+
+  @include mq(lg, max) {
+    top: 72px;
+  }
+
+  @include mq(sm, max) {
+    padding-top: 72px;
+    position: static;
+  }
+
+  &__link {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+
+    transition: width 3s, opacity 3s .3s;
+
+    @include mq(lg, max) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+    }
+  }
+
+  &__title {
+    padding-right: 15px;
+
+    font-weight: 700;
+    font-size: 416px;
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    color: var(--color-white);
+
+    will-change: font-size;
+    transition: font-size 0.4s ease-out, width 3s, opacity 3s;
+
+    @include mq(xxl, max) {
+      font-size: 362px;
+    }
+
+    // @include mq(custom, max, 1501) {
+    //   font-size: 362px;
+    // }
+
+    @include mq(custom, max, 1360) {
+      font-size: 320px;
+    }
+
+    @include mq(custom, max, 1090) {
+      font-size: 270px;
+    }
+
+    @include mq(md, max) {
+      padding-right: 0;
+
+      font-size: 110px;
+      line-height: 100%;
+    }
+
+    @include mq(xxs, max) {
+      padding-right: 12px;
+    }
+  }
+
+  &__sub-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    line-height: 416px;
+
+    opacity: 0;
+
+    transition: 4s 3s;
+
+    @include mq(lg, max) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 47px;
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+
+      fill: var(--color-white);
+    }
+
+    @include mq(xl, max) {
+      width: 20px;
+      height: 37px;
+    }
+
+  }
+
+  &__text {
+    color: var(--color-white);
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.2em;
+
+    @include mq(xl, max) {
+      text-align: center;
+    }
+
+    @include mq(xl, max) {
+      font-size: 11px;
+      line-height: 120%;
+    }
+  }
+}
+
+.animation-on {
+  .animated-logo__sub-items {
+    opacity: 1;
+  }
+  .animated-logo__link {
+    opacity: 1;
+    width: 100%;
+  }
+}

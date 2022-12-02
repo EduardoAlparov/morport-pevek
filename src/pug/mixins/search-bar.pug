@@ -1,0 +1,8 @@
+mixin SearchBar(placeholder, label)
+  .search-bar
+    input.search-bar__input(type='text' placeholder= placeholder)
+    .search-bar__label
+      | #{label}
+    .search-bar__icon-wrapper
+      .search-bar__icon
+        +icon-multi('search')
