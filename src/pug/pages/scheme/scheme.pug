@@ -1,0 +1,56 @@
+section.scheme.section
+  .section__body
+    .site-container.scheme__container
+      .section__breadcrumbs.breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a( href="/" ).breadcrumbs__link
+              | Главная
+          li.breadcrumbs__item
+            a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+              | Схема порта
+
+      h1.section__title
+        | Схема порта
+
+      .scheme__main
+        .scheme__wrapper
+          +pictureLazy('scheme/scheme-empty.png', 'схема порта Певек')
+
+          .scheme__buttons-wrapper
+            .scheme__inner-wrapper
+              input(hidden type="checkbox" name="storages" id="storages")
+              input(hidden type="checkbox" name="hostel" id="hostel")
+              input(hidden type="checkbox" name="capitol" id="capitol")
+              input(hidden type="checkbox" name="boxes" id="boxes")
+              input(hidden type="checkbox" name="berth-one" id="berth-one")
+              input(hidden type="checkbox" name="berth-two" id="berth-two")
+
+
+              .scheme__item.scheme__item--storages
+                .scheme__inner-wrapper
+                  .scheme__button
+                    label.scheme__label(for="storages")
+                      | Склады
+
+                  .scheme__tooltip-wrapper
+                    .scheme__tooltip
+                      label.scheme__close-button(for="storages")
+                        +icon-mono('tooltip-close')
+                      .scheme__desc-wrappper
+                        .scheme__desc
+                          .scheme__desc-title
+                            | Склады
+                          .scheme__desc-text
+                            | Текст (от лат. textus — ткань; сплетение,
+                            | сочетание) — зафиксированная на каком-либо
+                            | материальном носителе человеческая мысль; в
+                            | общем плане связная и полная последовательность
+                            | символов. В лингвистике термин «текст»
+                            | используется в более широком значении, включая
+                            | также образцы устной речи.
+
+              .scheme__masks-wrapper
+                .scheme__masks
+                  .scheme__mask.scheme__mask--storages
+                    img(src="./assets/images/scheme/storages-mask.svg", alt="")

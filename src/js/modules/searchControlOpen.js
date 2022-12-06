@@ -40,25 +40,27 @@ export default () => {
     }
   })
 
-  if(searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      if (e.target.value.length > 0) {
-        searchListWrapper.innerHTML = '';
+  // adding search results to results-list-div:
 
-        let newList = document.createElement('div');
-        newList.classList.add('search-control__values-list');
+  // if(searchInput) {
+  //   searchInput.addEventListener('input', (e) => {
+  //     if (e.target.value.length > 0) {
+  //       searchListWrapper.innerHTML = '';
 
-        searchListWrapper.append(newList);
+  //       let newList = document.createElement('div');
+  //       newList.classList.add('search-control__values-list');
 
-        let newElement = document.createElement('a');
-        newElement.classList.add('search-control__value');
-        newElement.classList.add('select-box__option');
-        newElement.innerHTML = e.target.value;
-        newList.append(newElement);
-      } else {
-        searchListWrapper.innerHTML = '';
-      }
-    })
-  }
+  //       searchListWrapper.append(newList);
+
+  //       let newElement = document.createElement('a');
+  //       newElement.classList.add('search-control__value');
+  //       newElement.classList.add('select-box__option');
+  //       newElement.innerHTML = e.target.value;
+  //       newList.append(newElement);
+  //     } else {
+  //       searchListWrapper.innerHTML = '';
+  //     }
+  //   })
+  // }
 
 }
