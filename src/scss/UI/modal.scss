@@ -177,6 +177,10 @@
     left: -8px;
     bottom: 63px;
 
+    .contacts__title {
+      color: rgba($color: white, $alpha: 0.3);
+    }
+
     &--desktop {
       @include mq(xl, max) {
         display: none;

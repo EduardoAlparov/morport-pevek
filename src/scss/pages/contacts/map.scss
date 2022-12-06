@@ -56,3 +56,11 @@
     }
   }
 }
+
+#ya-map {
+  filter: brightness(82%) saturate(271%) contrast(136%);
+
+  .ya-maps-placemark {
+    filter: brightness(106%) saturate(50%) contrast(100%);
+  }
+}
