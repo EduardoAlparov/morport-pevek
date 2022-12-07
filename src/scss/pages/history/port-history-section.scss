@@ -1,6 +1,7 @@
 .port-history-section {
   position: relative;
   z-index: 4;
+  max-height: 1050px;
 
   background-color: var(--color-title);
   transition: background-color 1s ease-in;
@@ -21,7 +22,6 @@
   }
 
   .site-container {
-    // height: 100vh;
     display: flex;
     flex-direction: column;
 
@@ -59,7 +59,7 @@
   &__first-word {
     position: relative;
     z-index: 10;
-    padding-top: 15vh;
+    padding-top: 160px;
 
     @include mq(sm, max) {
       padding-top: 0;

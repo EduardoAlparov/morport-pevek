@@ -48,16 +48,12 @@
 
     &--big {
       font-weight: 700;
-      font-size: 25.5vh;
+      font-size: 260px;
       line-height: 100%;
       letter-spacing: -0.03em;
       text-transform: uppercase;
 
       @include mq(xl, max) {
-        font-size: 180px !important;
-      }
-
-      @include mq(lg, max) {
         font-size: 132px !important;
       }
 
@@ -68,7 +64,7 @@
     }
 
     @include mq(xl, max) {
-      padding-bottom: 50px;
+      padding-bottom: 20px;
 
       font-size: 72px;
       line-height: 100%;

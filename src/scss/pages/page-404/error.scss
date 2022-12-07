@@ -2,12 +2,20 @@
 
   &__inner-header {
     position: absolute;
-    top: 4.5%;
+    top: 1%;
     left: 50%;
     transform: translateX(-50%);
 
     width: 100%;
 
+
+    @include mq(md, max) {
+      top: 6%;
+    }
+
+    @include mq(sm, max) {
+      top: 2%;
+    }
 
     @include mq(xs, max) {
       top: 11.5%;
@@ -46,14 +54,14 @@
 
   &__heading-number {
     width: 100%;
-    max-width: 118vh;
+    max-width: 1122px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     font-weight: 700;
-    font-size: 50vh;
+    font-size: 466px;
     line-height: 1;
 
     color: var(--color-accent);
@@ -65,12 +73,18 @@
       letter-spacing: normal;
     }
 
+    @include mq(xl, max) {
+      max-width: 920px;
+      font-size: 386px;
+    }
+
     @include mq(md, max) {
-      font-size: 45vh;
+      max-width: 720px;
+      font-size: 286px;
     }
 
     @include mq(sm, max) {
-      max-width: 90%;
+      max-width: 520px;
       font-weight: 550;
     }
 
@@ -82,7 +96,7 @@
 
   &__inner-footer {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
 
