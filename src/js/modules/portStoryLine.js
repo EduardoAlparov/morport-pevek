@@ -29,9 +29,10 @@ export default () => {
     modules: [Navigation, Pagination, Mousewheel, FreeMode, Parallax, Controller],
     direction: 'horizontal',
     slidesPerView: "auto",
-    speed: 700,
+    speed: 400,
     freeMode: true,
-    parallax: true,
+    preloadImages: true,
+
 
     mousewheel: {
       releaseOnEdges: true,
@@ -40,6 +41,13 @@ export default () => {
 
     wrapperClass: 'story-line',
     slideClass: 'story-line__list',
+
+    breakpoints: {
+      768: {
+        speed: 700,
+        followFinger: false,
+      }
+    },
 
     on: {
       setTranslate: function () {
@@ -56,21 +64,29 @@ export default () => {
   })
 
   const floatingSwiper = new Swiper('.floating-background',{
-    modules: [Navigation, Pagination, Mousewheel, FreeMode, Parallax],
+    modules: [Navigation, Mousewheel],
     direction: 'horizontal',
     slidesPerView: "auto",
-    speed: 800,
+    speed: 400,
     freeMode: true,
-    parallax: true,
+    preloadImages: true,
 
+
+    wrapperClass: 'floating-background__slider',
+    slideClass: 'floating-background__list',
 
     mousewheel: {
       releaseOnEdges: true,
       sensitivity: 3
     },
 
-    wrapperClass: 'floating-background__slider',
-    slideClass: 'floating-background__list',
+    breakpoints: {
+      768: {
+        speed: 700,
+        followFinger: false,
+      }
+    },
+
   })
 
   storySwiper.controller.control = floatingSwiper;

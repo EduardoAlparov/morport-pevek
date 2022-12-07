@@ -19,38 +19,178 @@ section.scheme.section
 
           .scheme__buttons-wrapper
             .scheme__inner-wrapper
-              input(hidden type="checkbox" name="storages" id="storages")
-              input(hidden type="checkbox" name="hostel" id="hostel")
-              input(hidden type="checkbox" name="capitol" id="capitol")
-              input(hidden type="checkbox" name="boxes" id="boxes")
-              input(hidden type="checkbox" name="berth-one" id="berth-one")
-              input(hidden type="checkbox" name="berth-two" id="berth-two")
-
-
-              .scheme__item.scheme__item--storages
-                .scheme__inner-wrapper
-                  .scheme__button
-                    label.scheme__label(for="storages")
-                      | Склады
-
-                  .scheme__tooltip-wrapper
-                    .scheme__tooltip
-                      label.scheme__close-button(for="storages")
-                        +icon-mono('tooltip-close')
-                      .scheme__desc-wrappper
-                        .scheme__desc
-                          .scheme__desc-title
-                            | Склады
-                          .scheme__desc-text
-                            | Текст (от лат. textus — ткань; сплетение,
-                            | сочетание) — зафиксированная на каком-либо
-                            | материальном носителе человеческая мысль; в
-                            | общем плане связная и полная последовательность
-                            | символов. В лингвистике термин «текст»
-                            | используется в более широком значении, включая
-                            | также образцы устной речи.
+              input(hidden type="radio" name="building" id="empty" checked)
+              input(hidden type="radio" name="building" id="storages")
+              input(hidden type="radio" name="building" id="capitol")
+              input(hidden type="radio" name="building" id="hostel")
+              input(hidden type="radio" name="building" id="boxes")
+              input(hidden type="radio" name="building" id="berth-one")
+              input(hidden type="radio" name="building" id="berth-two")
 
               .scheme__masks-wrapper
+
                 .scheme__masks
-                  .scheme__mask.scheme__mask--storages
-                    img(src="./assets/images/scheme/storages-mask.svg", alt="")
+
+                  .scheme__mask-wrapper.scheme__mask-wrapper--storage
+                    label.scheme__mask.scheme__mask--storages(for="storages")
+                      img(src="./assets/images/scheme/storages-mask.svg", alt="")
+
+                    .scheme__item.scheme__item--storages
+                      .scheme__inner-wrapper
+                        .scheme__button-wrapper
+                          label.scheme__button(for="storages")
+                            | Склады
+
+                        .scheme__tooltip-wrapper
+                          .scheme__tooltip
+                            label.scheme__close-button(for="empty")
+                              +icon-mono('tooltip-close')
+                            .scheme__desc-wrapper
+                              .scheme__desc
+                                .scheme__desc-title
+                                  | Склады
+                                .scheme__desc-text
+                                  | Текст (от лат. textus — ткань; сплетение,
+                                  | сочетание) — зафиксированная на каком-либо
+                                  | материальном носителе человеческая мысль; в
+                                  | общем плане связная и полная последовательность
+                                  | символов. В лингвистике термин «текст»
+                                  | используется в более широком значении, включая
+                                  | также образцы устной речи.
+
+                  .scheme__mask-wrapper.scheme__mask-wrapper--capitol
+                    label.scheme__mask.scheme__mask--capitol(for="capitol")
+                      img(src="./assets/images/scheme/capitol-mask.svg", alt="")
+
+                    .scheme__item.scheme__item--capitol
+                      .scheme__inner-wrapper
+                        .scheme__button-wrapper
+                          label.scheme__button(for="capitol")
+                            | Административное здание
+
+                        .scheme__tooltip-wrapper
+                          .scheme__tooltip
+                            label.scheme__close-button(for="empty")
+                              +icon-mono('tooltip-close')
+                            .scheme__desc-wrapper
+                              .scheme__desc
+                                .scheme__desc-title
+                                  | Административное здание
+                                .scheme__desc-text
+                                  | Текст (от лат. textus — ткань; сплетение,
+                                  | сочетание) — зафиксированная на каком-либо
+                                  | материальном носителе человеческая мысль; в
+                                  | общем плане связная и полная последовательность
+                                  | символов. В лингвистике термин «текст»
+                                  | используется в более широком значении, включая
+                                  | также образцы устной речи.
+
+                  .scheme__mask-wrapper.scheme__mask-wrapper--hostel
+                    label.scheme__mask.scheme__mask--hostel(for="hostel")
+                      img(src="./assets/images/scheme/hostel-mask.svg", alt="")
+
+                    .scheme__item.scheme__item--hostel
+                      .scheme__inner-wrapper
+                        .scheme__button-wrapper
+                          label.scheme__button(for="hostel")
+                            | Общежитие
+
+                        .scheme__tooltip-wrapper
+                          .scheme__tooltip
+                            label.scheme__close-button(for="empty")
+                              +icon-mono('tooltip-close')
+                            .scheme__desc-wrapper
+                              .scheme__desc
+                                .scheme__desc-title
+                                  | Общежитие
+                                .scheme__desc-text
+                                  | Текст (от лат. textus — ткань; сплетение,
+                                  | сочетание) — зафиксированная на каком-либо
+                                  | материальном носителе человеческая мысль; в
+                                  | общем плане связная и полная последовательность
+                                  | символов. В лингвистике термин «текст»
+                                  | используется в более широком значении, включая
+                                  | также образцы устной речи.
+
+                  .scheme__mask-wrapper.scheme__mask-wrapper--boxes
+                    label.scheme__mask.scheme__mask--boxes(for="boxes")
+                      img(src="./assets/images/scheme/boxes-mask.svg", alt="")
+
+                    .scheme__item.scheme__item--boxes
+                      .scheme__inner-wrapper
+                        .scheme__button-wrapper
+                          label.scheme__button(for="boxes")
+                            | Ремонтные боксы
+
+                        .scheme__tooltip-wrapper
+                          .scheme__tooltip
+                            label.scheme__close-button(for="empty")
+                              +icon-mono('tooltip-close')
+                            .scheme__desc-wrapper
+                              .scheme__desc
+                                .scheme__desc-title
+                                  | Ремонтные боксы
+                                .scheme__desc-text
+                                  | Текст (от лат. textus — ткань; сплетение,
+                                  | сочетание) — зафиксированная на каком-либо
+                                  | материальном носителе человеческая мысль; в
+                                  | общем плане связная и полная последовательность
+                                  | символов. В лингвистике термин «текст»
+                                  | используется в более широком значении, включая
+                                  | также образцы устной речи.
+
+                  .scheme__mask-wrapper.scheme__mask-wrapper--berth-two
+                    label.scheme__mask.scheme__mask--berth-two(for="berth-two")
+                      img(src="./assets/images/scheme/berth-two-mask.svg", alt="")
+
+                    .scheme__item.scheme__item--berth-two
+                      .scheme__inner-wrapper
+                        .scheme__button-wrapper
+                          label.scheme__button(for="berth-two")
+                            | Причал №2
+
+                        .scheme__tooltip-wrapper
+                          .scheme__tooltip
+                            label.scheme__close-button(for="empty")
+                              +icon-mono('tooltip-close')
+                            .scheme__desc-wrapper
+                              .scheme__desc
+                                .scheme__desc-title
+                                  | Причал №2
+                                .scheme__desc-text
+                                  | Текст (от лат. textus — ткань; сплетение,
+                                  | сочетание) — зафиксированная на каком-либо
+                                  | материальном носителе человеческая мысль; в
+                                  | общем плане связная и полная последовательность
+                                  | символов. В лингвистике термин «текст»
+                                  | используется в более широком значении, включая
+                                  | также образцы устной речи.
+
+                  .scheme__mask-wrapper.scheme__mask-wrapper--berth-one
+                    label.scheme__mask.scheme__mask--berth-one(for="berth-one")
+                      img(src="./assets/images/scheme/berth-one-mask.svg", alt="")
+
+                    .scheme__item.scheme__item--berth-one
+                      .scheme__inner-wrapper
+                        .scheme__button-wrapper
+                          label.scheme__button(for="berth-one")
+                            | Причал №1
+
+                        .scheme__tooltip-wrapper
+                          .scheme__tooltip
+                            label.scheme__close-button(for="empty")
+                              +icon-mono('tooltip-close')
+                            .scheme__desc-wrapper
+                              .scheme__desc
+                                .scheme__desc-title
+                                  | Причал №1
+                                .scheme__desc-text
+                                  | Текст (от лат. textus — ткань; сплетение,
+                                  | сочетание) — зафиксированная на каком-либо
+                                  | материальном носителе человеческая мысль; в
+                                  | общем плане связная и полная последовательность
+                                  | символов. В лингвистике термин «текст»
+                                  | используется в более широком значении, включая
+                                  | также образцы устной речи.
+
+        .scheme__mobile-desc

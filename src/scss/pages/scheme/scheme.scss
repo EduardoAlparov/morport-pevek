@@ -1,6 +1,20 @@
 .scheme {
+  $this: &;
+
   &__main {
-    padding: 7.2rem 0;
+    padding: 72px 0 0;
+
+    @include mq(xl, max) {
+      padding: 36px 0 0;
+    }
+
+    @include mq(md, max) {
+      padding: 20px 0 56px;
+
+      border-style: solid;
+      border-color: #d9d8d8;
+      border-width: 0 0 1px 0;
+    }
   }
 
   &__wrapper {
@@ -12,7 +26,7 @@
     padding-top: 56%;
 
     @include mq(sm, max) {
-      padding-top: 100%;
+      padding-top: 83%;
     }
 
     > picture {
@@ -67,38 +81,77 @@
     width: 1px;
     height: 1px;
 
-    background-color: red;
+    background-color: white;
 
     &--storages {
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
     }
+
+    &--capitol {
+      top: 32%;
+      left: 21%;
+      transform: translate(-50%, -50%);
+
+      @include mq(sm, max) {
+        .scheme__button-wrapper {
+          transform: translateX(-25%);
+        }
+      }
+    }
+
+    &--hostel {
+      top: 43%;
+      left: 67%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--boxes {
+      top: 60%;
+      left: 68%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--berth-one {
+      top: 68%;
+      left: 49%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--berth-two {
+      top: 56%;
+      left: 26%;
+      transform: translate(-50%, -50%);
+    }
   }
 
-  &__button {
+  &__button-wrapper {
     position: absolute;
-
     top: -80px;
     left: 50%;
     transform: translateX(-50%);
     transition: var(--transition);
+
+    @include mq(md, max) {
+      top: -40px;
+    }
   }
 
-  &__label {
+  &__button {
     position: relative;
     display: block;
-    padding: 1.2rem 1.6rem 1rem;
+    padding: 12px 16px 10px;
 
     font-weight: 550;
     font-size: 14px;
     line-height: 110%;
     color: var(--color-title);
     text-align: center;
+    white-space: nowrap;
 
     background-color: var(--color-white);
     border-radius: 10rem;
-    cursor: pointer;
     transition: var(--transition);
 
     &::before {
@@ -116,12 +169,12 @@
       transition: var(--transition);
     }
 
-    @include hover {
-      color: var(--color-white);
-      background-color: var(--color-accent);
+    @include mq(md, max) {
+      padding: 5.5px 8px 5.5px;
+      font-size: 10px;
 
       &::before {
-        border-color: var(--color-accent) transparent transparent transparent;
+        border-width: 5px 3px 0 3px;
       }
     }
   }
@@ -134,6 +187,11 @@
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+
+    @include mq(md, max) {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
   }
 
   &__tooltip {
@@ -171,17 +229,31 @@
     }
   }
 
-  &__desc-wrappper {
+  &__desc-wrapper {
     width: 380px;
     padding: 32px;
+    overflow: hidden;
 
     background-color: var(--color-white);
+
+    @include mq(xl, max) {
+      width: 280px;
+      padding: 16px;
+    }
+
+    @include mq(md, max) {
+      width: 200px;
+    }
   }
 
   &__desc {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @include mq(xl, max) {
+      gap: 12px;
+    }
   }
 
   &__desc-title {
@@ -189,11 +261,50 @@
     font-size: 20px;
     line-height: 110%;
     color: var(--color-title);
+
+    @include mq(xl, max) {
+      font-size: 16px;
+    }
   }
 
   &__desc-text {
+    max-height: 140px;
+    overflow: auto;
+
     font-size: 14px;
     line-height: 140%;
+
+    scrollbar-color: var(--color-other) transparent !important;
+    scrollbar-width: thin !important;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track  {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 2px;
+      height: 76px;
+
+      border-radius: 3px;
+      border: 3px solid var(--color-other);
+      background-color: var(--color-other);
+    }
+
+    &::-webkit-scrollbar-track-piece {
+
+      background-color: transparent;
+    }
+
+
+    @include mq(xl, max) {
+      max-height: 102px;
+      font-size: 12px;
+      line-height: 140%;
+    }
   }
 
   &__masks-wrapper{
@@ -208,7 +319,7 @@
     height: 100%;
   }
 
-  &__masks {
+  &__masks{
     position: relative;
     width: 100%;
     height: 100%;
@@ -216,36 +327,277 @@
 
   &__mask {
     position: absolute;
+    display: block;
+
+    width: 10%;
+    height: 10%;
 
     opacity: 0;
-    visibility: hidden;
     transition: var(--transition);
+    cursor: pointer;
 
     &--storages {
       top: 50%;
       left: 50%;
-      transform: translate(-40%, -31%);
+      transform: translate(-38%, -29%);
+      width: 14%;
+      height: 8%;
+    }
+
+    &--capitol {
+      top: 32%;
+      left: 21%;
+      transform: translate(-39%, -53%);
+      width: 6%;
+      height: 3%;
+    }
+
+    &--hostel {
+      top: 43%;
+      left: 67%;
+      transform: translate(-60%, -76%);
+      width: 7%;
+      height: 4%;
+    }
+
+    &--boxes {
+      top: 60%;
+      left: 68%;
+      transform: translate(-78%, -55%);
+      width: 10%;
+      height: 10%;
+    }
+
+    &--berth-one {
+      top: 68%;
+      left: 49%;
+      transform: translate(-35%, -39%);
+      width: 22%;
+      height: 19%;
+    }
+
+    &--berth-two {
+      top: 56%;
+      left: 26%;
+      transform: translate(-49%, -43%);
+      width: 22%;
+      height: 17%;
+    }
+
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+
+      ~ #{$this}__item {
+        #{$this}__button {
+          color: var(--color-white);
+          background-color: var(--color-accent);
+          pointer-events: none;
+
+          &::before {
+            border-color: var(--color-accent) transparent transparent transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &__mobile-desc {
+    display: none;
+
+    @include mq(md, max) {
+      display: block;
+    }
+
+    .scheme__desc-wrapper {
+      width: 100%;
+      padding: 20px 0 0;
+    }
+
+    .scheme__desc-text {
+      max-height: unset;
+      overflow: auto;
     }
   }
 }
 
-#storages:checked ~ .scheme__item--storages .scheme__label {
-  color: var(--color-white);
-  background-color: var(--color-accent);
-  pointer-events: none;
+// checked control on css
 
-  &::before {
-    border-color: var(--color-accent) transparent transparent transparent;
+#storages:checked {
+  & ~ .scheme__masks-wrapper {
+
+    .scheme__mask--storages {
+      opacity: 1;
+    }
+
+    .scheme__item--storages {
+      z-index: 100;
+      opacity: 1;
+      visibility: visible;
+
+      .scheme__button {
+        color: var(--color-white);
+        background-color: var(--color-accent);
+        pointer-events: none;
+
+        &::before {
+          border-color: var(--color-accent) transparent transparent transparent;
+        }
+      }
+
+      .scheme__tooltip-wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 }
 
-#storages:checked ~ .scheme__item--storages .scheme__tooltip-wrapper {
-  opacity: 1;
-  visibility: visible;
+#capitol:checked {
+  & ~ .scheme__masks-wrapper {
+
+    .scheme__mask--capitol {
+      opacity: 1;
+    }
+
+    .scheme__item--capitol {
+      z-index: 100;
+      opacity: 1;
+      visibility: visible;
+
+      .scheme__button {
+        color: var(--color-white);
+        background-color: var(--color-accent);
+        pointer-events: none;
+
+        &::before {
+          border-color: var(--color-accent) transparent transparent transparent;
+        }
+      }
+
+      .scheme__tooltip-wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
 
-.scheme__item--storages:hover ~ .scheme__masks-wrapper .scheme__mask--storages,
-#storages:checked ~ .scheme__masks-wrapper .scheme__mask--storages{
-  opacity: 1;
-  visibility: visible;
+#hostel:checked {
+  & ~ .scheme__masks-wrapper {
+
+    .scheme__mask--hostel {
+      opacity: 1;
+    }
+
+    .scheme__item--hostel {
+      z-index: 100;
+      opacity: 1;
+      visibility: visible;
+
+      .scheme__button {
+        color: var(--color-white);
+        background-color: var(--color-accent);
+        pointer-events: none;
+
+        &::before {
+          border-color: var(--color-accent) transparent transparent transparent;
+        }
+      }
+
+      .scheme__tooltip-wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+#boxes:checked {
+  & ~ .scheme__masks-wrapper {
+
+    .scheme__mask--boxes {
+      opacity: 1;
+    }
+
+    .scheme__item--boxes {
+      opacity: 1;
+      visibility: visible;
+
+      .scheme__button {
+        color: var(--color-white);
+        background-color: var(--color-accent);
+        pointer-events: none;
+
+        &::before {
+          border-color: var(--color-accent) transparent transparent transparent;
+        }
+      }
+
+      .scheme__tooltip-wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+#berth-two:checked {
+  & ~ .scheme__masks-wrapper {
+
+    .scheme__mask--berth-two {
+      opacity: 1;
+    }
+
+    .scheme__item--berth-two {
+      z-index: 100;
+      opacity: 1;
+      visibility: visible;
+
+      .scheme__button {
+        color: var(--color-white);
+        background-color: var(--color-accent);
+        pointer-events: none;
+
+        &::before {
+          border-color: var(--color-accent) transparent transparent transparent;
+        }
+      }
+
+      .scheme__tooltip-wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+#berth-one:checked {
+  & ~ .scheme__masks-wrapper {
+
+    .scheme__mask--berth-one {
+      opacity: 1;
+    }
+
+    .scheme__item--berth-one {
+      z-index: 100;
+      opacity: 1;
+      visibility: visible;
+
+      .scheme__button {
+        color: var(--color-white);
+        background-color: var(--color-accent);
+        pointer-events: none;
+
+        &::before {
+          border-color: var(--color-accent) transparent transparent transparent;
+        }
+      }
+
+      .scheme__tooltip-wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
