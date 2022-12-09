@@ -4,7 +4,7 @@
       flex-direction: column;
       gap: 31px;
 
-      @include mq(md, max) {
+      @include mq(sm, max) {
         gap: 12px;
       }
     }

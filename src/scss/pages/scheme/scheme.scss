@@ -21,7 +21,7 @@
     position: relative;
 
     width: 100%;
-    min-width: 327px;
+    min-width: 320px;
     overflow: hidden;
     padding-top: 56%;
 
@@ -77,11 +77,9 @@
   &__item {
     position: absolute;
     z-index: 40;
-
     width: 1px;
     height: 1px;
-
-    background-color: white;
+    background-color: transparent;
 
     &--storages {
       top: 50%;
@@ -96,7 +94,13 @@
 
       @include mq(sm, max) {
         .scheme__button-wrapper {
-          transform: translateX(-25%);
+          transform: translateX(-15%);
+        }
+
+        .scheme__button {
+          &::before {
+            left: 15%;
+          }
         }
       }
     }
@@ -152,6 +156,7 @@
 
     background-color: var(--color-white);
     border-radius: 10rem;
+    cursor: pointer;
     transition: var(--transition);
 
     &::before {
@@ -167,6 +172,15 @@
       border-width: 10.4px 6px 0 6px;
       border-color: #ffffff transparent transparent transparent;
       transition: var(--transition);
+    }
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-accent);
+
+      &::before {
+        border-color: var(--color-accent) transparent transparent transparent;
+      }
     }
 
     @include mq(md, max) {
@@ -382,6 +396,10 @@
       transform: translate(-49%, -43%);
       width: 22%;
       height: 17%;
+    }
+
+    &._visible {
+      opacity: 1;
     }
 
     &:hover {

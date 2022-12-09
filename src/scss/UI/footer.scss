@@ -27,7 +27,11 @@
     display: flex;
     justify-content: space-between;
 
-    @include mq(xl, max) {
+    // @include mq(xl, max) {
+    //   flex-direction: column;
+    // }
+
+    @include mq(lg, max) {
       flex-direction: column;
     }
   }
@@ -50,6 +54,7 @@
     @include mq(xl, max) {
       flex-basis: 100%;
     }
+
     @include mq(lg, max) {
       gap: 20px;
     }
@@ -59,7 +64,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include mq(xl, max) {
+    @include mq(lg, max) {
       flex-direction: row;
       align-items: center;
     }
@@ -73,7 +78,7 @@
 
   &__logo,
   &__address {
-    @include mq(xl, max) {
+    @include mq(lg, max) {
       flex-basis: 100%;
 
       display: flex;
@@ -82,10 +87,10 @@
   }
 
   &__right {
-
     padding-left: 20px;
 
-    @include mq(xl, max) {
+    @include mq(lg, max) {
+      flex-grow: 1;
       padding-left: 0;
     }
 
@@ -104,13 +109,14 @@
     line-height: 140%;
     color: var(--color-title);
 
-    @include mq(xl, max) {
+    @include mq(lg, max) {
       margin-bottom: 0;
     }
 
     @include mq(sm, max) {
       font-size: 14px;
-      line-height: 150%;    }
+      line-height: 150%;
+    }
   }
 
   &__inner-footer {
@@ -137,6 +143,16 @@
   }
 
   &__nav {
+    @include mq(md, max) {
+      .nav__item {
+        height: 34px;
+      }
+
+      .nav__link {
+        font-size: 22px;
+      }
+    }
+
     @include mq(sm, max) {
       display: none;
     }
@@ -150,9 +166,27 @@
   }
 
   &__contacts {
+    @include mq(md, max) {
+      .contacts__list {
+        align-items: flex-start;
+      }
+
+      .contacts__item {
+        align-items: flex-start;
+      }
+    }
+
     @include mq(sm, max) {
       display: flex;
       justify-content: center;
+
+      .contacts__list {
+        align-items: center;
+      }
+
+      .contacts__item {
+        align-items: center;
+      }
     }
   }
 
@@ -160,7 +194,7 @@
   &__dev {
     padding-left: 60px;
 
-    @include mq(xl, max) {
+    @include mq(lg, max) {
       padding-left: 0;
     }
   }
