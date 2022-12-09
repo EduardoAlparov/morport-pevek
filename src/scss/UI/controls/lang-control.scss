@@ -23,6 +23,10 @@
     @include hover {
       color: var(--color-accent);
     }
+
+    @include mq(sm, max) {
+      font-size: 19px;
+    }
   }
 
   &__lang-list {

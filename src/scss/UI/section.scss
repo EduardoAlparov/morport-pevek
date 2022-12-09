@@ -44,6 +44,10 @@
       padding-bottom: 0;
       margin-top: -12px;
       margin-left: -4px;
+
+      @include mq(sm, max) {
+        margin-top: 0;
+      }
     }
 
     &--big {

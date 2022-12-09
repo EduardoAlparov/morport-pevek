@@ -67,6 +67,7 @@
 
     @include mq(xxs, max) {
       margin-left: auto;
+      padding-bottom: 15px;
     }
   }
 
@@ -163,6 +164,7 @@
     }
 
     .header__site-control {
+      height: 27px;
       flex-grow: 1;
       flex-direction: row-reverse;
       justify-content: space-between;

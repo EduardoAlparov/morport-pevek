@@ -167,6 +167,10 @@
       border-width: 0 0 1px 0;
     }
 
+    @include mq(xxs, max) {
+      padding-top: 75px;
+    }
+
     @media screen and (max-height: 370px) {
       padding-top: 20vh;
     }
