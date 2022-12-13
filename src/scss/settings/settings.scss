@@ -197,12 +197,7 @@ img {
 }
 
 .page-error {
-  overflow: hidden;
   background-color: var(--color-bg);
-
-  .page-wrapper {
-    overflow: hidden;
-  }
 }
 
 .page-home {
@@ -224,7 +219,12 @@ img {
 .page-main {
   flex-grow: 1;
 
-
+  &--error,
+  &--history {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
 }
 
 .page-preloader {

@@ -1,6 +1,8 @@
 .port-history-section {
   position: relative;
   z-index: 4;
+
+  width: 100%;
   max-height: 1050px;
 
   background-color: var(--color-title);
@@ -15,7 +17,6 @@
   }
 
   &__body {
-    height: 100%;
     display: flex;
     padding-top: 96px;
     padding-bottom: 37px;
