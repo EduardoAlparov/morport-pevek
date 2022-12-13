@@ -16,7 +16,7 @@
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translateZ(0);
 
-  transition: transform 1.2s ease-in-out !important;
+  transition: transform 1.3s ease !important;
 
   @include mq(md, max) {
     padding-right: 60px;

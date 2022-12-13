@@ -26,7 +26,7 @@ section.contacts-section.section
 
               .contacts-section__info-right.footer__right
                 .contacts-section__contacts.footer__contacts.contacts.contacts--vertical.contacts--big
-                  ul.contacts__list.contacts__list
+                  ul.contacts__list
                     li.contacts__item
                       .contacts__title
                         | Секретарь
@@ -77,4 +77,11 @@ section.contacts-section.section
             .map__address.address.address--big
               | 689400, Чукотский Автономный Округ, г.&nbsp;Певек,<br>
               | ул.&nbsp;Полярная&nbsp;д.&nbsp;5
-          .map__yamap-wrapper#ya-map
+          //- example data-controls ="'geolocationControl','routeButtonControl', 'typeSelector','fullscreenControl'"
+          .map__yamap-wrapper#ya-map(
+            data-center-coord="69.702974, 170.274369",
+            data-placemark-coord="69.702974, 170.274369",
+            data-zoom="12",
+            data-icon-href="assets/images/map/anchor.svg",
+            data-controls=""
+          )

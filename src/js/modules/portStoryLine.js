@@ -30,8 +30,20 @@ export default () => {
     direction: 'horizontal',
     slidesPerView: "auto",
     speed: 400,
-    freeMode: true,
     preloadImages: true,
+
+    longSwipesRatio: 1,
+    touchReleaseOnEdges: true,
+    resistance: false,
+    // threshold: 50,
+    nested: true,
+
+    freeMode: {
+      enabled: true,
+      momentumBounce: false,
+      momentumRatio: 0.5,
+      momentumVelocityRatio: 0.5,
+    },
 
 
     mousewheel: {
@@ -45,8 +57,15 @@ export default () => {
     breakpoints: {
       768: {
         speed: 700,
-        followFinger: false,
-      }
+      },
+      1199: {
+        freeMode: {
+          enabled: true,
+          momentumBounce: true,
+          momentumRatio: 1,
+          momentumVelocityRatio: 1,
+        },
+      },
     },
 
     on: {
