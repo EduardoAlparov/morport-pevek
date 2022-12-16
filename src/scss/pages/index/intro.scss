@@ -4,7 +4,8 @@
   z-index: 15;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 
   background-image: url('../images/intro/intro-back-image.jpg');
@@ -23,19 +24,17 @@
     flex-grow: 1;
 
     display: flex;
-    // align-items: flex-end;
     justify-content: center;
-    padding-top: 22%;
-
     overflow-y: hidden;
     transition: .3s ease-out;
 
-    @include mq(xxl, max) {
-      align-items: flex-end;
+    .site-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
 
     @include mq(md, max) {
-      padding-top: 220px;
       align-items: center;
     }
 
@@ -104,13 +103,12 @@
   &__button-wrapper {
     display: flex;
     justify-content: center;
-    padding: 5.5vh 0;
 
     opacity: 0;
     transition: opacity 3s 3s;
 
     @include mq(xl, max) {
-      padding: 72px 0;
+      padding-bottom: 55px;
     }
 
     @include mq(sm, max) {

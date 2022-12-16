@@ -75,9 +75,11 @@
     display: flex;
     align-items: center;
     gap: 35px;
+    padding-right: 9px;
 
     @include mq(xl, max) {
       gap: 20px;
+      padding-right: 0;
     }
   }
 

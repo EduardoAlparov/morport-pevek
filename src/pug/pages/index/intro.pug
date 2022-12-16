@@ -7,16 +7,17 @@ section.intro
       a(href="#").animated-logo__link
         .animated-logo__title.logo-scale
           | Певек
-        .animated-logo__sub-items
-          span.animated-logo__icon
-            +icon-mono('anchor')
-          span.animated-logo__text
-            | Морской<br> торговый пот
+        .animated-logo__sub-title
+          .animated-logo__sub-items
+            span.animated-logo__icon
+              +icon-mono('anchor')
+            span.animated-logo__text
+              | Морской<br> торговый порт
 
-  .intro__body.parallax-bg(data-speed="0.37")
+  .intro__body.parallax-bg(data-speed="0.15")
     .site-container
       .intro__image
-        +pictureLazy('intro/intro-ship-image.png', 'баржа торгового порта "Певек"')
+        +picture('intro/intro-ship-image.png', 'баржа торгового порта "Певек"')
       .intro__button-wrapper
         a.main-button(href="./page-tariffs.html")
           span.main-button__text

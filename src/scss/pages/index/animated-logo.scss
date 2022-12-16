@@ -1,21 +1,16 @@
 .animated-logo {
-  position: fixed;
-  top: 0px;
-  bottom: 0;
-  z-index: 35;
-
   width: 100%;
+  padding-top: 88px;
   max-height: max-content;
   overflow: hidden;
+  will-change: padding-top;
+  transition: padding-top 0.4s ease-out;
+  z-index: 40;
 
   @include mq(lg, max) {
     height: max-content;
-    top: 30px;
+    padding-top: 30px;
     left: 0px;
-  }
-
-  @include mq(lg, max) {
-    top: 72px;
   }
 
   @include mq(sm, max) {
@@ -24,15 +19,23 @@
   }
 
   &__link {
+    width: 0;
     display: flex;
     align-items: baseline;
-    gap: 20px;
-
+    gap: 307px;
+    will-change: gap;
     opacity: 0;
-    width: 0;
     overflow: hidden;
 
-    transition: width 3s, opacity 3s .3s;
+    transition: gap 0.5s linear, width 3s, opacity 3s .3s;
+
+    @include mq(custom, max, 1500) {
+      gap: 200px;
+    }
+
+    @include mq(custom, max, 1350) {
+      gap: 60px;
+    }
 
     @include mq(lg, max) {
       flex-direction: column;
@@ -43,27 +46,14 @@
 
   &__title {
     padding-right: 15px;
-
     font-weight: 700;
-    font-size: 416px;
+    font-size: 316px;
     line-height: 111%;
     letter-spacing: -0.03em;
     color: var(--color-white);
 
     will-change: font-size;
     transition: font-size 0.4s ease-out, width 3s, opacity 3s;
-
-    @include mq(xxl, max) {
-      font-size: 362px;
-    }
-
-    // @include mq(custom, max, 1501) {
-    //   font-size: 362px;
-    // }
-
-    @include mq(custom, max, 1360) {
-      font-size: 320px;
-    }
 
     @include mq(custom, max, 1090) {
       font-size: 270px;
@@ -81,16 +71,18 @@
     }
   }
 
+  &__sub-title {
+    display: flex;
+  }
+
   &__sub-items {
     display: flex;
     align-items: center;
     gap: 20px;
 
-    line-height: 416px;
-
+    line-height: 316px;
     opacity: 0;
-
-    transition: 4s 3s;
+    transition: opacity 4s 3s;
 
     @include mq(lg, max) {
       flex-direction: column;

@@ -1,12 +1,8 @@
 .search-bar {
   position: relative;
 
-  width: 580px;
+  width: 420px;
   height: 73px;
-
-  @include mq(xxl, max) {
-    width: 420px;
-  }
 
   @include mq(xl, max) {
     width: 380px;
