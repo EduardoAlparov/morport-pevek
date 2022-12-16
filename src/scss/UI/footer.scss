@@ -2,12 +2,12 @@
   position: relative;
   z-index: 30;
   display: block;
-  padding: 125px 0 23px;
+  padding: 77px 0 23px;
 
   background-color: var(--color-white);
 
   &__body {
-    min-height: 530px;
+    min-height: 373px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,10 +26,6 @@
   &__inner-footer {
     display: flex;
     justify-content: space-between;
-
-    // @include mq(xl, max) {
-    //   flex-direction: column;
-    // }
 
     @include mq(lg, max) {
       flex-direction: column;
@@ -103,7 +99,7 @@
   }
 
   &__address {
-    margin-bottom: 10.5%;
+    margin-bottom: 4.5%;
 
     font-size: 18px;
     line-height: 140%;
@@ -143,15 +139,22 @@
   }
 
   &__nav {
-    @include mq(md, max) {
-      .nav__item {
-        height: 34px;
-      }
-
-      .nav__link {
-        font-size: 22px;
-      }
+    .nav__list {
+      gap: 24px;
     }
+
+    .nav__item {
+      height: 20px;
+    }
+
+    .nav__link {
+      font-size: 20px;
+    }
+
+    .nav__icon {
+      height: 26px;
+    }
+
 
     @include mq(sm, max) {
       display: none;
@@ -166,6 +169,16 @@
   }
 
   &__contacts {
+    padding-top: 5px;
+
+    .contacts__list {
+      gap: 18px;
+    }
+
+    .contacts__item {
+      gap: 7px;
+    }
+
     @include mq(md, max) {
       .contacts__list {
         align-items: flex-start;

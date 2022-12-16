@@ -27,11 +27,7 @@
   &__list {
     display: flex;
     align-items: center;
-    gap: 48px;
-
-    @include mq(sm, max) {
-      gap: 17px;
-    }
+    gap: 16px;
   }
 
   &__item {
@@ -40,9 +36,9 @@
     &::after {
       content: '/';
       position: absolute;
-      right: -27px;
+      right: -11px;
 
-      font-size: 22px;
+      font-size: 14px;
       line-height: 150%;
       color: var(--color-title);
 
@@ -60,8 +56,8 @@
   }
 
   &__link {
-    font-size: 22px;
-    line-height: 150%;
+    font-size: 14px;
+    line-height: 140%;
     color: var(--color-title);
     transition: var(--transition);
 
@@ -72,10 +68,6 @@
     &--active {
       color: var(--color-other);
       pointer-events: none;
-    }
-
-    @include mq(xl, max) {
-      font-size: 20px;
     }
 
     @include mq(sm, max) {

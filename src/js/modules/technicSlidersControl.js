@@ -13,9 +13,9 @@ export default () => {
       infinite: false,
       Dots: false,
       center: false,
-      fill: false,
+      // fill: false,
       friction: 0.85,
-      slidesPerPage: 1,
+      slidesPerPage: 'auto',
 
       Navigation: {
         prevTpl: '<svg width="11" height="18" viewBox="0 0 11 18" tabindex="-1" stroke="#0a1631" xmlns="http://www.w3.org/2000/svg"><path d="M10 1L2 9L10 17" stroke-width="2"/></svg>',

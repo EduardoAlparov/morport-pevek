@@ -9,7 +9,7 @@
     top: 0;
     z-index: 20;
 
-    padding-top: 135px;
+    padding-top: 105px;
 
     @include mq(xxl, max) {
       padding-top: 35px;
@@ -17,10 +17,6 @@
 
     @include mq(lg, max) {
       padding-top: 60px;
-    }
-
-    @include mq(md, max) {
-      // position: static;
     }
   }
 
@@ -31,7 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 88px;
+    gap: 118px;
 
     @include mq(xxl, max) {
       gap: 30px;
@@ -44,7 +40,7 @@
 
   &__up-heading {
     display: flex;
-
+    justify-content: space-between;
     transform: translateY(50px);
     opacity: .5;
 
@@ -60,7 +56,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 70%;
+    top: 81.5%;
 
     width: 100%;
     height: 0;
@@ -75,26 +71,16 @@
   }
 
   &__title {
-    flex-basis: 50%;
+    flex-basis: 40%;
 
-    @include mq(lg, max) {
-      flex-basis: 100%;
-    }
-  }
-
-  &__subtitle {
-    flex-basis: 50%;
-
-    @include mq(lg, max) {
-      flex-basis: 100%;
-    }
-  }
-
-  &__title {
     font-weight: 550;
-    font-size: 46px;
-    line-height: 105%;
+    font-size: 36px;
+    line-height: 110%;
     color: var(--color-title);
+
+    @include mq(lg, max) {
+      flex-basis: 100%;
+    }
 
     @include mq(md, max) {
       font-size: 24px;
@@ -107,15 +93,17 @@
   }
 
   &__subtitle {
-    max-width: 732px;
-    padding-left: 27px;
-
-    font-size: 22px;
-    line-height: 150%;
+    flex-basis: 50%;
+    max-width: 760px;
+    padding-right: 15px;
+    font-size: 20px;
+    line-height: 140%;
 
     @include mq(lg, max) {
+      flex-basis: 100%;
+
       max-width: unset;
-      padding-left: 0;
+      padding-right: 0;
     }
 
     @include mq(md, max) {
@@ -134,7 +122,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 62px;
+    gap: 76px;
 
     @include mq(xxl, max) {
       gap: 30px;
@@ -195,7 +183,7 @@
     z-index: 20;
 
     width: 100%;
-    max-width: 1455px;
+    max-width: 1060px;
   }
 
   &__down {
@@ -205,8 +193,8 @@
     min-height: 1416px;
     display: flex;
     align-items: flex-end;
-    margin-top: -3%;
-    padding-bottom: 142px;
+    margin-top: -4.7%;
+    padding-bottom: 133px;
 
     background-color: transparent;
     background-image: url('../images/history/down-back-image.png');
@@ -226,7 +214,6 @@
   }
 
   &__down-body {
-    // padding: 100vh 0 15vh;
     display: flex;
     justify-content: flex-end;
 
@@ -246,15 +233,15 @@
   }
 
   &__down-text {
-    max-width: 618px;
-    font-size: 22px;
-    line-height: 150%;
+    max-width: 680px;
+    font-size: 20px;
+    line-height: 140%;
     color: var(--color-white);
   }
 
   &__link-wrapper {
     a {
-      min-width: 316px;
+      min-width: 260px;
 
       @include mq(md, max) {
         min-width: 215px

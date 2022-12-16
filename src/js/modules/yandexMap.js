@@ -7,6 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 export default () => {
   const mapWrapper = document.getElementById('ya-map');
 
+  if(!mapWrapper) {
+    return;
+  }
+
   let mapScrolTrigge = ScrollTrigger.create({
     start: 0,
     end: "max",
