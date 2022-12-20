@@ -1,28 +1,8 @@
 .story-line
-  ul.story-line__list
+  ul.story-line__list.swiper-wrapper
 
-    li.story-line__item.story-line__item--first
-      .story-line__col.story-line__big-col._outer-index-20
-        .story-line__img.story-line__img--small
-          +picture('story-line/image-1', 'фотография архива порта Певек')
-      .story-line__col.story-line__small-col._outer-index-5
-        .story-line__img.story-line__img--small
-          +picture('story-line/image-2', 'фотография архива порта Певек')
-      .story-line__absolute-numbers
-        h1.section__title.section__title--white.section__title--big.section__title--not-border
-          | История
-        h1.section__title.section__title--white.section__title--big.section__title--not-border
-          | порта
-      .story-line__absolute-numbers._outer-index-25
-        h1.section__title.section__title--white.section__title--big.section__title--not-border._hidden
-          | История
-        h1.section__title.section__title--white.section__title--big.section__title--not-border
-          | порта
-        .story-line__decore
-          +icon-mono('arrows')
-
-    li.story-line__item.story-line__item--second
-      .story-line__col.story-line__small-col._outer-index-25
+    li.story-line__item.story-line__item--first.swiper-slide
+      .story-line__col.story-line__small-col
         .story-line__article.article-story
           .article-story__time
             .article-story__date
@@ -47,16 +27,22 @@
                 | вручную, в смене работало до 900 человек
                 | (в основном — заключённые).
 
+      .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+        .story-line__img.story-line__img--small
+          +picture('story-line/image-1', 'фотография архива порта Певек')
+        .story-line__img.story-line__img--small
+          +picture('story-line/image-2', 'фотография архива порта Певек')
+
+    li.story-line__item.story-line__item--second.swiper-slide
       .story-line__col.story-line__big-col.story-line__col--center
-        .story-line__img.story-line__img--big._outer-index-25
+        .story-line__img.story-line__img--big
           +picture('story-line/image-3', 'панорама порта Певек')
 
-    li.story-line__item.story-line__item--third
       .story-line__col.story-line__small-col
         .story-line__article.article-story
           .article-story__time
             .article-story__date
-              | 20 апреля
+              | 25 октября
             .article-story__year
               +icon-mono('1957')
 
@@ -72,15 +58,9 @@
                 | гидротехнических сооружений, производственных корпусов и жилья
                 | для работников порта.
 
-      .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
-        .story-line__img.story-line__img--midd._outer-index-25
-          +picture('story-line/image-7', 'фотография архива порта Певек')
-        .story-line__img.story-line__img--midd
-          +picture('story-line/image-8', 'фотография архива порта Певек')
-
-    li.story-line__item.story-line__item--four
+    li.story-line__item.story-line__item--third.swiper-slide
       .story-line__col.story-line__small-col
-         .story-line__article.article-story
+        .story-line__article.article-story
           .article-story__time
             .article-story__year.article-story__year--double
               +icon-mono('1960')
@@ -100,12 +80,17 @@
                 | шестнадцатиквартирный дома, расширено общежитие для работников
                 | порта, велись работы по благоустройству территории порта.
 
+      .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+        .story-line__img.story-line__img--small
+          +picture('story-line/image-7', 'фотография архива порта Певек')
+        .story-line__img.story-line__img--small
+          +picture('story-line/image-8', 'фотография архива порта Певек')
 
+    li.story-line__item.story-line__item--four.swiper-slide
       .story-line__col.story-line__big-col.story-line__col--center
         .story-line__img.story-line__img--big._outer-index-15
           +picture('story-line/image-6', 'панорама порта Певек')
 
-    li.story-line__item.story-line__item--five
       .story-line__col.story-line__small-col
         .story-line__article.article-story
           .article-story__time
@@ -127,13 +112,7 @@
                 | порт Певек стал базовым портом для переработки
                 | перевалочных грузов Колымского направления.
 
-      .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
-        .story-line__img.story-line__img--midd
-          +picture('story-line/image-4', 'фотография архива порта Певек')
-        .story-line__img.story-line__img--midd._outer-index-25
-              +picture('story-line/image-5', 'фотография архива порта Певек')
-
-    li.story-line__item.story-line__item--six
+    li.story-line__item.story-line__item--five.swiper-slide
       .story-line__col.story-line__small-col
         .story-line__article.article-story
           .article-story__time
@@ -148,11 +127,17 @@
                 | Чукотки морской торговый порт Певек был награждён орденом
                 | «Знак Почёта».
 
+      .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+        .story-line__img.story-line__img--small
+          +picture('story-line/image-4', 'фотография архива порта Певек')
+        .story-line__img.story-line__img--small
+              +picture('story-line/image-5', 'фотография архива порта Певек')
+
+    li.story-line__item.story-line__item--six.swiper-slide
       .story-line__col.story-line__big-col.story-line__col--center
-        .story-line__img.story-line__img--big._outer-index-15
+        .story-line__img.story-line__img--big
           +picture('story-line/image-9', 'панорама порта Певек')
 
-    li.story-line__item.story-line__item--big
       .story-line__col.story-line__small-col
         .story-line__article.article-story
           .article-story__time
@@ -175,31 +160,37 @@
                 | порт Певек стал базовым портом для переработки
                 | перевалочных грузов Колымского направления.
 
+    li.story-line__item.story-line__item--big.swiper-slide
+      .story-line__col.story-line__small-col
+        .story-line__article.article-story.article-story--horizontal
+          .article-story__time
+            .article-story__year.article-story__year--accent
+              +icon-mono('1997')
+
+          .article-story__story
+            .article-story__main-text.article-story__main-text--dark
+              p
+                | Морской порт Певек был преобразован в открытое
+                | акционерное общество.
       .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
         .story-line__row
           .story-line__img.story-line__img--midd
             +picture('story-line/image-10', 'фотография архива порта Певек')
 
-          .story-line__article.article-story.article-story--horizontal
-            .article-story__time
-              .article-story__year.article-story__year--accent
-                +icon-mono('1997')
+    li.story-line__item.story-line__item--big.swiper-slide
+      .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+        .story-line__img.story-line__img--midd
+          +picture('story-line/image-11', 'фотография архива порта Певек')
 
-            .article-story__story
-              .article-story__main-text.article-story__main-text--dark
-                p
-                  | Морской порт Певек был преобразован в открытое
-                  | акционерное общество.
-        .story-line__row
-          .story-line__img.story-line__img--midd._outer-index-25
-            +picture('story-line/image-11', 'фотография архива порта Певек')
+      .story-line__col.story-line__small-col
+        .story-line__article.article-story.article-story--horizontal
+          .article-story__time
+            .article-story__year.article-story__year--accent
+              +icon-mono('2006')
 
-          .story-line__article.article-story.article-story--horizontal
-            .article-story__time
-              .article-story__year.article-story__year--accent
-                +icon-mono('2006')
+          .article-story__story
+            .article-story__main-text.article-story__main-text--dark
+              p
+                | В состав порта вошёл грузовой участок на Мысе Шмидта.
 
-            .article-story__story
-              .article-story__main-text.article-story__main-text--dark
-                p
-                  | В состав порта вошёл грузовой участок на Мысе Шмидта.
+  .story-line__time-range.time-range

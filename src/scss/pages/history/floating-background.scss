@@ -8,30 +8,17 @@
   width: 100vw;
 
   &__slider {
-    width: max-content;
     height: 100%;
     will-change: transform;
-
-    -moz-transform-style: flat;
-    -webkit-transform-style: flat;
-    -ms-transform-style: flat;
-    transform-style: flat;
-
-    -webkit-transform-style: preserve-3d;
-    -webkit-transform: translateZ(0);
-
     transition: transform 1.8s ease 0.1s !important;
   }
 
   &__list {
     height: 100%;
-    min-width: max-content;
+    min-width: 100%;
     display: flex;
-    justify-content: stretch;
+    flex-direction: column;
     gap: 0px;
-
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
   }
 
   @include mq(xl, max) {
@@ -58,39 +45,32 @@
     background-repeat: repeat;
   }
 
-  &__first,
-  &__second,
-  &__third {
-    height: 100%;
-    flex-shrink: 0;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: top center;
-  }
+  &__item {
+    width: 100%;
 
-  &__first {
-    width: 30%;
-    background-image: url('../../assets/images/port-history/pattern-1.png');
-    // background-position: left top;
-
-    @include mq(sm, max) {
-      width: 34%;
+    &--first,
+    &--second,
+    &--third {
+      height: 100%;
+      flex-shrink: 0;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: top center;
     }
-  }
 
-  &__second {
-    width: 40%;
-    background-image: url('../../assets/images/port-history/pattern-2.png');
-    // background-position: center top;
-  }
+    &--first {
+      background-image: url('../../assets/images/port-history/pattern-1.png');
+      background-position: center top;
+    }
 
-  &__third {
-    width: 30%;
-    background-image: url('../../assets/images/port-history/pattern-3.png');
-    // background-position: center top;
+    &--second {
+      background-image: url('../../assets/images/port-history/pattern-2.png');
+      // background-position: center top;
+    }
 
-    @include mq(sm, max) {
-      width: 26%;
+    &--third {
+      background-image: url('../../assets/images/port-history/pattern-3.png');
+      // background-position: center top;
     }
   }
 }

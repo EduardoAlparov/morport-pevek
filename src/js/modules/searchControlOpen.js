@@ -42,25 +42,24 @@ export default () => {
 
   // adding search results to results-list-div:
 
-  // if(searchInput) {
-  //   searchInput.addEventListener('input', (e) => {
-  //     if (e.target.value.length > 0) {
-  //       searchListWrapper.innerHTML = '';
+  if(searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      if (e.target.value.length > 0) {
+        searchListWrapper.innerHTML = '';
 
-  //       let newList = document.createElement('div');
-  //       newList.classList.add('search-control__values-list');
+        let newList = document.createElement('div');
+        newList.classList.add('search-control__values-list');
 
-  //       searchListWrapper.append(newList);
+        searchListWrapper.append(newList);
 
-  //       let newElement = document.createElement('a');
-  //       newElement.classList.add('search-control__value');
-  //       newElement.classList.add('select-box__option');
-  //       newElement.innerHTML = e.target.value;
-  //       newList.append(newElement);
-  //     } else {
-  //       searchListWrapper.innerHTML = '';
-  //     }
-  //   })
-  // }
+        let newElement = document.createElement('a');
+        newElement.classList.add('search-control__value');
+        // newElement.innerHTML = e.target.value;
+        newList.append(newElement);
+      } else {
+        searchListWrapper.innerHTML = '';
+      }
+    })
+  }
 
 }
