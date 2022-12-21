@@ -1,63 +1,22 @@
 .story-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
   width: 100%;
   height: 100%;
-  padding-top: 60px;
-  padding-right: 80px;
-  will-change: transform;
-
-  -moz-transform-style: flat;
-  -webkit-transform-style: flat;
-  -ms-transform-style: flat;
-  transform-style: flat;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform: translateZ(0);
-
-  transition: transform 1.3s ease !important;
-
-  @include mq(md, max) {
-    padding-right: 60px;
-  }
+  padding-top: 3rem;
 
   &__list {
     position: relative;
-
-    width: max-content;
-    height: 100%;
     display: flex;
-    gap: 60px;
-
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-
-    @include mq(xl, max) {
-      gap: 60px;
-    }
-
-    @include mq(sm, max) {
-      padding: 0;
-    }
+    flex-direction: column;
+    padding-left: 13.5rem;
+    will-change: transform;
+    transition: transform 1.3s ease !important;
   }
 
   &__item {
-    height: 100%;
-    width: 1380px;
+    height: auto !important;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
-
-    @include mq(xl, max) {
-      width: 1024px;
-    }
-
-    @include mq(sm, max) {
-      width: 760px;
-      gap: 60px;
-    }
+    gap: 5rem;
+    padding: 3rem 0;
 
     &--text {
       display: flex;
@@ -65,66 +24,8 @@
       justify-content: center;
       align-items: flex-start;
 
-      padding-left: 36px;
-      padding-right: 36px;
-    }
-
-    &--first {
-      position: relative;
-
-      padding-left: 0;
-      padding-right: 0;
-
-      .story-line__small-col {
-        .story-line__img {
-          position: relative;
-          z-index: 5;
-
-          margin-left: auto;
-        }
-
-        @include mq(sm, max) {
-          padding-top: 90px;
-          flex: 1 1 auto;
-        }
-      }
-
-      .story-line__big-col {
-        padding-left: 16vw;
-        padding-top: 22.5vh;
-
-        @include mq(xl, max) {
-          padding-left: 140px;
-          display: flex;
-          align-items: flex-end;
-        }
-
-        @include mq(sm, max) {
-          padding-left: 0;
-        }
-
-        .story-line__img {
-          position: relative;
-          z-index: 15;
-        }
-      }
-
-      @include mq(sm, max) {
-        width: 456px;
-        gap: 40px;
-      }
-    }
-
-    &--big {
-      width: 1892px;
-
-      @include mq(sm, max) {
-        width: 1350px;
-      }
-
-      @include mq(sm, max) {
-        width: 1000px;
-      }
+      padding-left: 3.6rem;
+      padding-right: 3.6rem;
     }
   }
 
@@ -134,7 +35,6 @@
     &--center {
       display: flex;
       align-items: center;
-      justify-content: center;
 
       @include mq(sm, max) {
         align-items: unset;
@@ -142,64 +42,43 @@
     }
 
     &--cascade {
+      max-width: 62.2rem;
       flex-direction: column;
       justify-content: flex-start;
-      gap: 40px;
+      gap: 4rem;
 
       @include mq(sm, max) {
         justify-content: space-between;
-        gap: 20px;
+        gap: 2rem;
       }
 
       .story-line__img {
-
         &:first-child {
           margin-right: auto;
-        }
-
-        &:last-child {
-          margin-left: auto;
         }
       }
     }
   }
 
   &__big-col {
-    padding-right: 36px;
-    flex-grow: 1;
-
-    @include mq(sm, max) {
-      padding-right: 0;
-    }
-
-    .story-line__row {
-      &:first-child {
-        margin-right: auto;
-      }
-
-      &:last-child {
-        margin-left: auto;
-      }
-    }
+    flex-basis: 50%;
   }
 
   &__small-col {
-    padding-left: 36px;
-    flex: 0 0 486px;
+    flex: 0 0 48.5rem;
 
     @include mq(xl, max) {
-      flex: 0 0 426px;
+      flex: 0 0 42.5rem;
     }
 
     @include mq(sm, max) {
-      padding-left: 0;
       flex: 0 0 320px;
     }
   }
 
   &__row {
     display: flex;
-    gap: 100px;
+    gap: 10rem;
 
     @include mq(sm, max) {
       gap: 60px;
@@ -207,58 +86,54 @@
   }
 
   &__img {
-    &--small {
-      width: 353px;
-      height: 248px;
-
-      @include mq(sm, max) {
-        width: 206px;
-        height: 145px;
-      }
-    }
-
-    &--big {
-      width: 720px;
-      height: 484px;
-
-      @include mq(xl, max) {
-        width: 514px;
-        height: 345px;
-      }
-
-      @include mq(sm, max) {
-        width: 380px;
-        height: 256px;
-      }
-    }
-
-    &--midd {
-      width: 448px;
-      height: 316px;
-
-      @include mq(xl, max) {
-        width: 320px;
-        height: 225px;
-      }
-
-      @include mq(sm, max) {
-        width: 240px;
-        height: 170px;
-      }
-    }
 
     img {
       min-height: 100%;
       object-fit: cover;
       object-position: center;
     }
+
+    &--small {
+      width: 38.7rem;
+      height: 27.2rem;
+
+      @include mq(sm, max) {
+
+      }
+    }
+
+    &--big {
+      width: 62.1rem;
+      height: 41.7rem;
+
+      @include mq(xl, max) {
+
+      }
+
+      @include mq(sm, max) {
+
+      }
+    }
+
+    &--midd {
+      width: 44.8rem;
+      height: 31.6rem;
+
+      @include mq(xl, max) {
+
+      }
+
+      @include mq(sm, max) {
+
+      }
+    }
   }
 
   &__article {
-    padding-top: 12.5vh;
+    padding-top: 7.5rem;
 
     @include mq(xl, max) {
-      padding-top: 60px;
+      padding-top: 6rem;
     }
 
     @include mq(sm, max) {
@@ -267,72 +142,7 @@
     }
   }
 
-  &__absolute-numbers {
+  &__time-range {
     position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 15;
-
-    ._hidden {
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    @include mq(xl, max) {
-      top: 0;
-      transform: translateY(0%);
-
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      h1 {
-        line-height: 100%;
-      }
-    }
-  }
-
-  &__decore {
-    display: none;
-
-    .icon {
-      width: 107.99px;
-      height: 75.07px;
-
-      fill: var(--color-white);
-    }
-
-    @include mq(xl, max) {
-      display: block;
-    }
-
-    @include mq(sm, max) {
-      .icon {
-        width: 50.99px;
-        height: 37.07px;
-
-        fill: var(--color-white);
-      }
-    }
-  }
-
-  ._outer-index-25 {
-    z-index: 25;
-  }
-
-  ._outer-index-20 {
-    position: relative;
-    z-index: 20;
-  }
-
-  ._outer-index-15 {
-    position: relative;
-    z-index: 15;
-  }
-
-  ._outer-index-5 {
-    position: relative;
-    z-index: 5;
   }
 }

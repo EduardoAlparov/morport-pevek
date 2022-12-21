@@ -5,13 +5,18 @@ import Swiper, {
   FreeMode,
   Parallax,
   Controller,
+  Autoplay,
 } from 'swiper';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default () => {
   const container = document.querySelector(".floating-background");
   const floatingList = document.querySelector(".floating-background__list");
 
-  const contentContainer = document.querySelector('.port-history-section__container');
+  const historyContent = document.querySelector('.port-history-section__content');
+  const historyTitle = document.querySelector('.port-history-section__title');
   const range = document.querySelector('.port-history-section__range');
   const rangeLine = document.querySelector('.port-history-section__line');
   const contentSection = document.querySelector('.port-history-section');
@@ -21,75 +26,78 @@ export default () => {
   if (!container) {
     return;
   } else {
-    const newWidth = storyList.clientWidth  + ( (window.innerWidth - contentContainer.clientWidth));
-    floatingList.style.width = newWidth + 'px';
+
   }
 
-  const storySwiper = new Swiper('.port-history-section__title',{
-    modules: [Navigation, Pagination, Mousewheel, FreeMode, Parallax, Controller],
-    direction: 'horizontal',
-    slidesPerView: "auto",
-    speed: 400,
+  const storySwiper = new Swiper('.story-line',{
+    modules: [Navigation, Pagination, Mousewheel, FreeMode, Parallax, Controller, Autoplay],
+    direction: 'vertical',
+    spaceBetween: 60,
+    slidesPerView: 'auto',
+    autoHeight: true,
     preloadImages: true,
-
-    longSwipesRatio: 1,
-    touchReleaseOnEdges: true,
-    resistance: false,
-    // threshold: 50,
-    nested: true,
-
-    freeMode: {
-      enabled: true,
-      momentumBounce: false,
-      momentumRatio: 0.5,
-      momentumVelocityRatio: 0.5,
-    },
-
+    allowTouchMove: false,
+    speed: 50,
 
     mousewheel: {
       releaseOnEdges: true,
-      sensitivity: 3,
+      sensitivity: 1,
+      thresholdDelta: 50
     },
 
-    wrapperClass: 'story-line',
-    slideClass: 'story-line__list',
+    wrapperClass: 'story-line__list',
+    slideClass: 'story-line__item',
 
     breakpoints: {
-      768: {
-        speed: 700,
-      },
       1199: {
-        freeMode: {
-          enabled: true,
-          momentumBounce: true,
-          momentumRatio: 1,
-          momentumVelocityRatio: 1,
-        },
+        freeMode: true,
       },
     },
 
+
     on: {
-      setTranslate: function () {
-        contentSection.classList.toggle('port-history-section--accent-background', this.progress >= 0.24);
-        contentSection.classList.toggle('port-history-section--card-background', this.progress >= 0.8);
-
-        document.querySelector('.header').classList.toggle('_set-dark-colors', this.progress >= 0.8);
-        document.querySelector('.breadcrumbs').classList.toggle('_set-dark-colors', this.progress >= 0.8);
-        range.classList.toggle('port-history-section__range--dark', this.progress >= 0.8);
-
-        rangeLine.style.width = (this.progress.toFixed(2) * 100) + "%";
+      scroll: () => {
+        if(storySwiper.isBeginning) {
+          setTimeout(() => {
+            document.body.style.paddingRight = '0px';
+            document.body.classList.remove('disable-scroll');
+            // scrolltriggerStory.enable(true);
+          }, 500);
+        }
+        if(storySwiper.isEnd) {
+          setTimeout(() => {
+            document.body.style.paddingRight = '0px';
+            document.body.classList.remove('disable-scroll');
+          }, 500);
+        }
       }
     }
   })
 
+
+  storySwiper.mousewheel.disable()
+
+  let scrolltriggerStory = ScrollTrigger.create({
+    trigger: '#scroll-trigger',
+    start: "-50",
+    end: "max",
+    onToggle: (self) => {
+      document.body.classList.add('disable-scroll');
+      let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+      document.body.style.paddingRight = paddingOffset;
+      storySwiper.mousewheel.enable()
+      scrolltriggerStory.disable();
+    }
+  });
+
+
   const floatingSwiper = new Swiper('.floating-background',{
     modules: [Navigation, Mousewheel],
-    direction: 'horizontal',
-    slidesPerView: "auto",
+    direction: 'vertical',
+    slidesPerView: 'auto',
     speed: 400,
     freeMode: true,
     preloadImages: true,
-
 
     wrapperClass: 'floating-background__slider',
     slideClass: 'floating-background__list',
@@ -102,13 +110,13 @@ export default () => {
     breakpoints: {
       768: {
         speed: 700,
-        followFinger: false,
+        followFinger: true,
       }
     },
 
   })
 
-  storySwiper.controller.control = floatingSwiper;
+  // storySwiper.controller.control = floatingSwiper;
 
   if (window.matchMedia('(hover: none)').matches) {
 

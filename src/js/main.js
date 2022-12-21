@@ -17,7 +17,7 @@ import technicSlidersControl from './modules/technicSlidersControl';
 import historyHeadingAnimation from './modules/historyHeadingAnimation';
 import clientsHeadingAnimation from './modules/clientsHeadingAnimation';
 import linkHoverAnimation from './modules/linkHoverAnimation';
-import galleryPopupControl from './modules/galleryPopupControl';
+
 
 import customSelectControl from './modules/customSelectControl';
 import infoButtonsListSlider from './modules/infoButtonsListSlider';
@@ -70,9 +70,6 @@ documenReady(() => {
   // ===========================================================================
   // buttons list slider control
   infoButtonsListSlider();
-  // ===========================================================================
-  // gallery popup control
-  galleryPopupControl();
   // ===========================================================================
   //
   portStoryLine();

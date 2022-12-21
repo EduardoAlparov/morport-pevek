@@ -35,17 +35,6 @@ export default () => {
         slide: "technic__slide",
         slideSelected: "technic__slide--selected",
       },
-
-      on : {
-
-        selectSlide : () => {
-
-        },
-
-        unselectSlide : (e) => {
-          console.log(e);
-        }
-      }
     });
 
 
@@ -66,49 +55,5 @@ export default () => {
         slideSelected: "mobile-carousel__slide--selected",
       }
     });
-
-    const sliderWrapper = document.querySelector('.technic__slider-wrapper');
-    const sliders = document.querySelectorAll('.mobile-carousel__slide');
-    const mobileCarousel = document.querySelector('.mobile-carousel');
-
-
-    sliderWrapper.addEventListener('click', (e) => {
-      if( e.target.classList.contains('slide__image') ) {
-
-        let arrNom = Array.from(document.querySelectorAll('.slide')).indexOf(e.target.closest('.slide'))
-        myCarousel.slideTo(arrNom);
-        // e.target.closest('.slide')
-        mobileCarousel.classList.add('mobile-carousel--open');
-        document.body.classList.add('disable-scroll');
-      }
-    });
-
-    mobileCarousel.addEventListener('click', (e) => {
-      if (e.target.classList.contains('mobile-carousel__close') |
-        !e.target.closest('.mobile-carousel__slider')
-      ) {
-        mobileCarousel.classList.remove('mobile-carousel--open');
-        document.body.classList.remove('disable-scroll');
-      }
-    });
-
-    if(sliders.length > 0) {
-      sliders.forEach( (slider) => {
-        slider.addEventListener('click', (e) => {
-          if(e.target.classList.contains('mobile-carousel__thumb-button')) {
-            let parentSlide = e.target.closest('.mobile-carousel__slide');
-            let slideMainImage = parentSlide.querySelector('.mobile-carousel__main-image');
-
-            parentSlide.querySelectorAll('.mobile-carousel__thumb-button').forEach( btn => {
-              btn.classList.remove('mobile-carousel__thumb-button--active');
-            })
-
-            slideMainImage.innerHTML  = '';
-            slideMainImage.innerHTML  = e.target.innerHTML;
-            e.target.classList.add('mobile-carousel__thumb-button--active');
-          }
-        });
-      })
-    }
   }
 }

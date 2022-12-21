@@ -237,6 +237,11 @@
     font-size: 22px;
     line-height: 150%;
     cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-accent);
+    }
   }
 }
 

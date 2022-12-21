@@ -1,6 +1,7 @@
 section.port-history-section.section
-  .section__body.port-history-section__body#scroll-trigger
-    .site-container.port-history-section__container#scroll-to
+  .section__body
+    .site-container.port-history-section__container
+
       .section__breadcrumbs.breadcrumbs.breadcrumbs--light.breadcrumbs--pt
         ul.breadcrumbs__list
           li.breadcrumbs__item
@@ -10,18 +11,11 @@ section.port-history-section.section
             a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
               | История порта
 
-      .port-history-section__title
+      .port-history-section__content#scroll-trigger
+        h1.section__title.section__title--not-border.port-history-section__title
+          | История порта
 
-        h1.port-history-section__first-word.section__title.section__title--white.section__title--big.section__title--not-border._hidden
-          | История
-
-        h1.port-history-section__second-word.section__title.section__title--white.section__title--big.section__title--not-border._hidden
-          | порта
-
-        .port-history-section__range
-          .port-history-section__line-wrapper
-            .port-history-section__line
-
-        include story-line.pug
+        .port-history-section__story-line
+          include story-line.pug
 
   include floating-background.pug
