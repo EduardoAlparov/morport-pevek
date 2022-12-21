@@ -1,9 +1,23 @@
 .time-range {
-  background: repeating-linear-gradient(to bottom,
-            #535B6E 0px, #535b6e 1px,
-            transparent 2px, transparent 6px);
+  position: relative;
+  height: 100%;
 
-  &::after {
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    will-change: transform;
+    transition: transform 1.3s ease !important;
+    background: repeating-linear-gradient(to bottom,
+    #535B6E 0px, #535b6e 1px,
+    transparent 2px, transparent 6px);
+
+    &::after {
     content  : "";
     position : absolute;
     z-index  : 1;
@@ -13,39 +27,27 @@
     height: 5rem;
     pointer-events: none;
     background-image: linear-gradient(to top,
-                    rgba(83, 91, 110, 1) 0px, rgba(83, 91, 110, 1) 1px,
-                    transparent 2px, transparent 6px,
-                    rgba(83, 91, 110, 0.9) 7px, rgba(83, 91, 110, 0.9) 8px,
-                    transparent 9px, transparent 13px,
-                    rgba(83, 91, 110, 0.8) 14px, rgba(83, 91, 110, 0.8) 15px,
-                    transparent 16px, transparent 20px,
-                    rgba(83, 91, 110, 0.7) 21px, rgba(83, 91, 110, 0.7) 22px,
-                    transparent 23px, transparent 27px,
-                    rgba(83, 91, 110, 0.6) 28px, rgba(83, 91, 110, 0.6) 29px,
-                    transparent 30px, transparent 34px,
-                    rgba(83, 91, 110, 0.5) 35px, rgba(83, 91, 110, 0.5) 36px,
-                    transparent 37px, transparent 41px,
-                    rgba(83, 91, 110, 0.4) 42px, rgba(83, 91, 110, 0.4) 43px,
-                    transparent 44px, transparent 48px,
-                    rgba(83, 91, 110, 0.3) 49px, rgba(83, 91, 110, 0.3) 50px,
-                    transparent 51px, transparent 55px,
-                    rgba(83, 91, 110, 0.2) 56px, rgba(83, 91, 110, 0.2) 57px,
-                    transparent 58px, transparent 62px,
-                    rgba(83, 91, 110, 0.1) 63px, rgba(83, 91, 110, 0.1) 64px,
-                    transparent 65px, transparent 69px,
-                    );
-  }
-
-  &__body {
-    position: absolute;
-  }
-
-  &__line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1px;
-    width: 38px;
-    background-color: var(--color-white);
+                rgba(83, 91, 110, 1) 0px, rgba(83, 91, 110, 1) 1px,
+                transparent 2px, transparent 6px,
+                rgba(83, 91, 110, 0.9) 7px, rgba(83, 91, 110, 0.9) 8px,
+                transparent 9px, transparent 13px,
+                rgba(83, 91, 110, 0.8) 14px, rgba(83, 91, 110, 0.8) 15px,
+                transparent 16px, transparent 20px,
+                rgba(83, 91, 110, 0.7) 21px, rgba(83, 91, 110, 0.7) 22px,
+                transparent 23px, transparent 27px,
+                rgba(83, 91, 110, 0.6) 28px, rgba(83, 91, 110, 0.6) 29px,
+                transparent 30px, transparent 34px,
+                rgba(83, 91, 110, 0.5) 35px, rgba(83, 91, 110, 0.5) 36px,
+                transparent 37px, transparent 41px,
+                rgba(83, 91, 110, 0.4) 42px, rgba(83, 91, 110, 0.4) 43px,
+                transparent 44px, transparent 48px,
+                rgba(83, 91, 110, 0.3) 49px, rgba(83, 91, 110, 0.3) 50px,
+                transparent 51px, transparent 55px,
+                rgba(83, 91, 110, 0.2) 56px, rgba(83, 91, 110, 0.2) 57px,
+                transparent 58px, transparent 62px,
+                rgba(83, 91, 110, 0.1) 63px, rgba(83, 91, 110, 0.1) 64px,
+                transparent 65px, transparent 69px,
+                );
+    }
   }
 }
