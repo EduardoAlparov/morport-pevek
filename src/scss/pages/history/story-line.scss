@@ -1,10 +1,10 @@
 .story-line {
+  position: relative;
   width: 100%;
   height: 100%;
   padding-top: 3rem;
 
   &__list {
-    position: relative;
     display: flex;
     flex-direction: column;
     padding-left: 13.5rem;
@@ -144,5 +144,9 @@
 
   &__time-range {
     position: absolute;
+    left: 0;
+    top: 17.5rem;
+    width: 16px;
+    height: 100%;
   }
 }

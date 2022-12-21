@@ -7,8 +7,6 @@ export default () => {
 
   infoNav.querySelectorAll('.nav__item').forEach( item => {
     item.addEventListener('click', (e) => {
-      e.preventDefault();
-
       infoNav.querySelectorAll('.nav__item').forEach( i => {
         i.classList.remove('nav__item--active');
       })

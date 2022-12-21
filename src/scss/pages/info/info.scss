@@ -101,13 +101,7 @@
     .nav__item {
       &--active {
         .nav__link {
-          background-color: var(--color-accent);
-          color: var(--color-white);
-          padding-left: 35px;
-
-          &::after {
-            content: '';
-          }
+          color: var(--color-accent);
         }
       }
     }

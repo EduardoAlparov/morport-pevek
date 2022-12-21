@@ -31,9 +31,17 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: var(--color-white);
+
+    @include mq(xxl, max) {
+      font-size: 150px;
+    }
+
+    @include mq(xxl, max) {
+      font-size: 120px;
+    }
   }
 
-  ._set-dark-colors {
+  &._set-dark-colors {
     h1 {
       color: var(--color-title);
     }
