@@ -12,21 +12,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default () => {
+  const storyList = document.querySelector(".story-line__list");
   const container = document.querySelector(".floating-background");
   const floatingList = document.querySelector(".floating-background__list");
+  const rangeLine = document.querySelector('.time-range');
+  const historySection = document.querySelector('.port-history-section');
+  const header = document.querySelector('.header');
 
-  const historyContent = document.querySelector('.port-history-section__content');
-  const historyTitle = document.querySelector('.port-history-section__title');
-  const range = document.querySelector('.port-history-section__range');
-  const rangeLine = document.querySelector('.port-history-section__line');
-  const contentSection = document.querySelector('.port-history-section');
 
-  const storyList = document.querySelector(".story-line__list");
 
   if (!container) {
     return;
   } else {
-
+    floatingList.style.height = storyList.offsetHeight + 'px';
+    rangeLine.style.height = storyList.offsetHeight + 'px';
   }
 
   const storySwiper = new Swiper('.story-line',{
@@ -70,6 +69,14 @@ export default () => {
             document.body.classList.remove('disable-scroll');
           }, 500);
         }
+
+        if(storySwiper.activeIndex == 2) {
+          historySection.classList.add('port-history-section--accent-background');
+        } else if(storySwiper.activeIndex == 5) {
+          historySection.classList.add('port-history-section--card-background');
+          historySection.classList.add('_set-dark-colors');
+          header.classList.add('_set-dark-colors');
+        }
       }
     }
   })
@@ -82,12 +89,8 @@ export default () => {
     start: "-50",
     end: "max",
     onToggle: (self) => {
-      document.body.classList.add('disable-scroll');
-      let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
-      document.body.style.paddingRight = paddingOffset;
       storySwiper.mousewheel.enable()
-      scrolltriggerStory.disable();
-    }
+    },
   });
 
 
@@ -116,12 +119,6 @@ export default () => {
 
   })
 
-  // storySwiper.controller.control = floatingSwiper;
-
-  if (window.matchMedia('(hover: none)').matches) {
-
-  } else {
-
-  }
+  storySwiper.controller.control = floatingSwiper;
 
 }
