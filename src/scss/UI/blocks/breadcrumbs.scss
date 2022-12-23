@@ -20,7 +20,12 @@
     padding-top: 113px;
 
     @include mq(xl, max) {
-      padding-top: 30px;
+      padding-top: 83px;
+      margin-bottom: 30px;
+    }
+
+    @include mq(md, max) {
+      padding-top: 53px;
     }
   }
 

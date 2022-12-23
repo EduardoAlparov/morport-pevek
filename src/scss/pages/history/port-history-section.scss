@@ -4,6 +4,7 @@
   width: 100%;
   background-color: var(--color-title);
   transition: background-color 1s ease-in;
+  overflow: unset;
 
   &--accent-background {
     background-color: var(--color-accent);
@@ -14,17 +15,32 @@
   }
 
   &__body {
-    display: flex;
-    padding-top: 96px;
-    padding-bottom: 37px;
+  }
+
+  &__container {
+
   }
 
   &__content {
-    min-height: 100vh;
+    height: 700px;
     overflow: hidden;
+
+    @include mq(xxl, max) {
+      height: 600px;
+    }
+
+    @include mq(xl, max) {
+      height: 500px;
+    }
+
+    @include mq(sm, max) {
+      height: 100vh;
+    }
   }
 
   &__title {
+    position: relative;
+    z-index: 70;
     font-weight: 700;
     font-size: 180px;
     line-height: 100%;
@@ -39,6 +55,28 @@
     @include mq(xxl, max) {
       font-size: 120px;
     }
+
+    @include mq(xl, max) {
+      font-size: 100px;
+    }
+
+    @include mq(lg, max) {
+      font-size: 72px;
+    }
+
+    @include mq(sm, max) {
+      font-size: 50px;
+    }
+  }
+
+  &__empty-block {
+    flex: 1 0 1px;
+    width: 100%;
+    height: 1px;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   &._set-dark-colors {
@@ -46,5 +84,15 @@
       color: var(--color-title);
     }
   }
+}
 
+.history-swiper-enable {
+  .port-history-section__title {
+    position: sticky;
+    top: 0;
+
+    @include mq(sm, max) {
+      position: static;
+    }
+  }
 }

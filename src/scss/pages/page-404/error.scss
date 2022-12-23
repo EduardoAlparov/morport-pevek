@@ -66,6 +66,7 @@
     top: calc(100% - 120px);
     transform: translateX(-50%);
 
+    max-width: 1687px;
     width: 100vw;
     padding-top: 86%;
 
@@ -74,7 +75,8 @@
     border-top-right-radius: 100%;
 
     @include mq(custom, min, 2500) {
-      padding-top: 140%;
+      max-width: 2500px;
+      padding-top: 110%;
       top: calc(100% - 40px);
     }
 

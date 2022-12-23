@@ -13,9 +13,14 @@
     gap: 0px;
     will-change: transform;
     transition: transform 1.3s ease !important;
-    background: repeating-linear-gradient(to bottom,
-    #535B6E 0px, #535b6e 1px,
-    transparent 2px, transparent 6px);
+    background: repeating-linear-gradient(
+      to bottom,
+    #535B6E 0px,
+    #535B6E 1px,
+      transparent 2px,
+      transparent 6px,
+      #535B6E 7px,
+      #535B6E 8px);
 
     &::after {
     content  : "";

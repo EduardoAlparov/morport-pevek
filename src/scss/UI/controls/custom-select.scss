@@ -144,7 +144,7 @@
     z-index: 25;
 
     width: 100%;
-    padding: 20px 5px 10px 30px;
+    padding: 20px 5px 20px 30px;
 
     animation-name: HideList;
     animation-duration: 0.5s;
@@ -161,11 +161,19 @@
   }
 
   &__list {
-    max-height: 150px;
-    overflow: scroll;
+    max-height: 141px;
+    overflow-y: scroll;
 
     scrollbar-color: var(--color-other) transparent !important;
     scrollbar-width: thin !important;
+
+    li {
+      &:last-child {
+        label {
+          margin-bottom: 0;
+        }
+      }
+    }
 
     &::-webkit-scrollbar {
       width: 5px;
@@ -205,7 +213,7 @@
 
     transition: padding-left 0.2s ease-out;
 
-    @include hover {
+    @media (any-hover: hover) {
       &:hover {
         padding-left: 32px;
         color: var(--color-accent);
@@ -235,6 +243,8 @@
     }
 
     @include notHover {
+      transition: unset;
+
       &.active {
         padding-left: 32px;
         color: var(--color-accent);

@@ -25,8 +25,8 @@
     }
 
     @include mq(sm, max) {
-      gap: 5px;
-      padding: 20px 0;
+      gap: 0;
+      padding: 0;
     }
   }
 

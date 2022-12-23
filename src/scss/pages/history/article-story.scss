@@ -3,14 +3,14 @@
   flex-direction: column;
   gap: 56px;
 
-  @include mq(sm, max) {
-    gap: 40px;
+  @include mq(xl, max) {
+    gap: 24px;
   }
 
   &--horizontal {
     flex-direction: row;
 
-    @include mq(sm, max) {
+    @include mq(lg, max) {
       flex-direction: column;
     }
 
@@ -34,8 +34,8 @@
 
     color: var(--color-white);
 
-    @include mq(sm, max) {
-
+    @include mq(md, max) {
+      font-size: 12px;
     }
   }
 
@@ -46,9 +46,9 @@
 
       fill: var(--color-white);
 
-      @include mq(sm, max) {
-        width: 109.56px;
-        height: 57.28px;
+      @include mq(lg, max) {
+        width: 129px;
+        height: 66px;
       }
     }
 
@@ -57,7 +57,7 @@
         width: 297.47px;
         height: 85.92px;
 
-        @include mq(sm, max) {
+        @include mq(lg, max) {
           width: 195px;
           height: 57.28px;
         }
@@ -75,6 +75,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include mq(xl, max) {
+      gap: 15px;
+    }
   }
 
   &__main-text {
@@ -87,6 +91,10 @@
 
     &--dark {
       color: var(--color-title);
+    }
+
+    @include mq(xl, max) {
+      font-size: 18px;
     }
 
     @include mq(sm, max) {
@@ -104,10 +112,6 @@
 
     &--dark {
       color: rgba(10, 22, 49, .4)
-    }
-
-    @include mq(sm, max) {
-      font-size: 12px;
     }
   }
 }
