@@ -61,14 +61,6 @@
     }
   }
 
-  &__inner-wrapper {
-    position: relative;
-    z-index: 10;
-
-    width: 100%;
-    height: 100%;
-  }
-
   &__inputs {
     position: absolute;
     // z-index: -1;
@@ -85,12 +77,20 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
+
+      .scheme__pseudo-button  {
+        transform: translate(-41%, -68%);
+      }
     }
 
     &--capitol {
       top: 32%;
       left: 21%;
       transform: translate(-50%, -50%);
+
+      .scheme__pseudo-button  {
+        transform: translate(-15%, -65%);
+      }
 
       @include mq(sm, max) {
         .scheme__button-wrapper {
@@ -109,24 +109,71 @@
       top: 43%;
       left: 67%;
       transform: translate(-50%, -50%);
+
+      .scheme__pseudo-button  {
+        transform: translate(-50%, -70%);
+      }
     }
 
     &--boxes {
       top: 60%;
       left: 68%;
       transform: translate(-50%, -50%);
+
+      .scheme__pseudo-button  {
+        transform: translate(-57%, -68%);
+      }
     }
 
     &--berth-one {
       top: 68%;
       left: 49%;
       transform: translate(-50%, -50%);
+
+      .scheme__pseudo-button  {
+        transform: translate(-48%, -41%);
+        width: 225px;
+        height: 95px;
+      }
     }
 
     &--berth-two {
       top: 56%;
       left: 26%;
       transform: translate(-50%, -50%);
+
+      .scheme__pseudo-button  {
+        width: 185px;
+        height: 87px;
+        transform: translate(-50%, -48%);
+      }
+    }
+  }
+
+  &__inner-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__pseudo-button {
+    display: none;
+
+    @include mq(md, max) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 150px;
+      height: 80px;
+      background-color: transparent;
+    }
+
+    @include mq(md, max) {
+      width: 130px;
+      height: 60px;
     }
   }
 
@@ -313,7 +360,6 @@
       background-color: transparent;
     }
 
-
     @include mq(xl, max) {
       max-height: 102px;
       font-size: 12px;
@@ -444,6 +490,14 @@
 #storages:checked {
   & ~ .scheme__masks-wrapper {
 
+    .scheme__mask-wrapper--storage {
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+      }
+    }
+
     .scheme__mask--storages {
       opacity: 1;
     }
@@ -467,12 +521,32 @@
         opacity: 1;
         visibility: visible;
       }
+
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+
+        .scheme__pseudo-button {
+          display: block;
+        }
+
+      }
+
     }
   }
 }
 
 #capitol:checked {
   & ~ .scheme__masks-wrapper {
+
+    .scheme__mask-wrapper--capitol {
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+      }
+    }
 
     .scheme__mask--capitol {
       opacity: 1;
@@ -497,12 +571,31 @@
         opacity: 1;
         visibility: visible;
       }
+
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+
+        .scheme__pseudo-button {
+          display: block;
+        }
+
+      }
     }
   }
 }
 
 #hostel:checked {
   & ~ .scheme__masks-wrapper {
+
+    .scheme__mask-wrapper--hostel {
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+      }
+    }
 
     .scheme__mask--hostel {
       opacity: 1;
@@ -527,12 +620,31 @@
         opacity: 1;
         visibility: visible;
       }
+
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+
+        .scheme__pseudo-button {
+          display: block;
+        }
+
+      }
     }
   }
 }
 
 #boxes:checked {
   & ~ .scheme__masks-wrapper {
+
+    .scheme__mask-wrapper--boxes {
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+      }
+    }
 
     .scheme__mask--boxes {
       opacity: 1;
@@ -556,12 +668,32 @@
         opacity: 1;
         visibility: visible;
       }
+
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+
+        .scheme__pseudo-button {
+          display: block;
+        }
+
+      }
     }
   }
 }
 
 #berth-two:checked {
   & ~ .scheme__masks-wrapper {
+
+    .scheme__mask-wrapper--berth-two {
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+      }
+    }
+
 
     .scheme__mask--berth-two {
       opacity: 1;
@@ -586,12 +718,31 @@
         opacity: 1;
         visibility: visible;
       }
+
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+
+        .scheme__pseudo-button {
+          display: block;
+        }
+
+      }
     }
   }
 }
 
 #berth-one:checked {
   & ~ .scheme__masks-wrapper {
+
+    .scheme__mask-wrapper--berth-one {
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+      }
+    }
 
     .scheme__mask--berth-one {
       opacity: 1;
@@ -615,6 +766,18 @@
       .scheme__tooltip-wrapper {
         opacity: 1;
         visibility: visible;
+      }
+
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+
+
+        .scheme__pseudo-button {
+          display: block;
+        }
+
       }
     }
   }

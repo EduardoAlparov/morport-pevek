@@ -35,6 +35,8 @@
     }
 
     @include mq(sm, max) {
+      align-items: flex-start !important;
+
       .contacts__list {
         align-items: flex-start;
       }

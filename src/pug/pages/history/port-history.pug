@@ -1,5 +1,5 @@
 section.port-history-section.section
-  .section__body
+  .section__body.port-history-section__body
     .site-container.port-history-section__container
 
       .section__breadcrumbs.breadcrumbs.breadcrumbs--light.breadcrumbs--pt
@@ -11,11 +11,13 @@ section.port-history-section.section
             a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
               | История порта
 
-      .port-history-section__content#scroll-trigger
-        h1.section__title.section__title--not-border.port-history-section__title
-          | История порта
+      h1.section__title.section__title--not-border.port-history-section__title
+        | История порта
 
+      .port-history-section__content#scroll-trigger
         .port-history-section__story-line
           include story-line.pug
+
+    .port-history-section__empty-block
 
   include floating-background.pug

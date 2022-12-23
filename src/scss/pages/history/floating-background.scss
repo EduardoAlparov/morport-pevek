@@ -4,8 +4,14 @@
   left: 0;
   z-index: -1;
 
-  height: 100%;
+  height: 100vh;
   width: 100vw;
+
+  @include mq(lg, max) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 
   &__slider {
     height: 100%;
@@ -18,29 +24,6 @@
     display: flex;
     flex-direction: column;
     gap: 0px;
-  }
-
-  @include mq(xl, max) {
-    display: flex;
-    gap: 0;
-  }
-
-  @include mq(md, max) {
-    min-width: unset;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 100%;
-    // background-image: url('../../assets/images/port-history/hue.png');
-    // background-repeat: repeat;
   }
 
   &__item {

@@ -33,7 +33,7 @@ export default () => {
       let placemarkCoordinates = JSON.parse("[" + mapWrapper.dataset.placemarkCoord + "]");
       let mapZoom = Number(mapWrapper.dataset.zoom);
       let iconHref = mapWrapper.dataset.iconHref;
-      let mapControls = JSON.parse("[" + mapWrapper.dataset.controls + "]");
+      let mapControls = mapWrapper.dataset.controls.split(', ');
 
       if (mapWrapper) {
         ymaps.ready(init);
@@ -43,7 +43,7 @@ export default () => {
             center: centerCoordinates, // Pevek port
             zoom: mapZoom,
             controls: mapControls,
-            behaviors: [],
+            behaviors: ['drag', 'scrollZoom'],
           }, {});
 
           myMap.geoObjects.add(

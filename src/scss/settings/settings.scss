@@ -214,6 +214,18 @@ img {
   flex-direction: column;
   min-height: 100vh;
   // overflow: hidden;
+
+  &--error-page {
+    .footer {
+      display: none;
+    }
+  }
+
+  &.history-swiper-enable {
+    .footer {
+      display: none;
+    }
+  }
 }
 
 .page-main {
