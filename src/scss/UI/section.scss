@@ -99,3 +99,12 @@
     }
   }
 }
+
+.tariffs-section {
+  @include mq(sm, max) {
+    .section__title {
+      padding-bottom: 0;
+      border-width: 0 0 0 0;
+    }
+  }
+}

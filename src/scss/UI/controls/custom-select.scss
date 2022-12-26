@@ -91,7 +91,7 @@
   &__icon {
     position: absolute;
     top: 50%;
-    right: 25px;
+    right: 30px;
     transform: translateY(-50%);
 
     width: 20px;
@@ -101,9 +101,13 @@
     svg {
       width: 18px;
       height: 18px;
-
+      stroke-width: 2px;
       color: var(--color-title);
       stroke: var(--color-title);
+    }
+
+    @include mq(sm, max) {
+      right: 24px;
     }
   }
 
@@ -134,7 +138,7 @@
     }
 
     @include mq(sm, max) {
-      padding: 17px 25px 12px 24px;
+      padding: 20px 25px 8px 24px;
     }
   }
 

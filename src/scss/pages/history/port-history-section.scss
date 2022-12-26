@@ -14,13 +14,6 @@
     background-color: var(--color-order);
   }
 
-  &__body {
-  }
-
-  &__container {
-
-  }
-
   &__content {
     height: 700px;
     overflow: hidden;
@@ -36,6 +29,10 @@
     @include mq(sm, max) {
       height: 100vh;
     }
+  }
+
+  &__story-line {
+    height: 100%;
   }
 
   &__title {

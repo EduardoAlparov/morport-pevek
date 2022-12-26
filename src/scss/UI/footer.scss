@@ -95,7 +95,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 30px;
     }
+
   }
 
   &__address {
@@ -219,7 +221,7 @@
     }
 
     @include mq(sm, max) {
-      margin-bottom: 25px;
+      margin-bottom: 0;
 
       font-size: 12px;
       line-height: 140%;

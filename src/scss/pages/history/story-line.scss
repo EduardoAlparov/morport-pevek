@@ -1,6 +1,7 @@
 .story-line {
   position: relative;
   width: 100%;
+  height: 100%;
   padding-top: 3rem;
 
   &__list {
@@ -11,7 +12,6 @@
     will-change: transform;
     transition: transform 1.3s ease !important;
   }
-
 
   .swiper-slide {
     height: auto;
@@ -27,11 +27,6 @@
     &-next {
       opacity: 1;
     }
-
-    @include mq(xxl, max) {
-
-    }
-
   }
 
   &__item {
@@ -281,6 +276,86 @@
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
+    }
+  }
+
+  &__navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 50;
+
+    width: 100%;
+    padding: 17px 0;
+    padding-left: 45px;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    background-color: var(--color-white);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 55;
+
+      width: 45px;
+      height: 60px;
+
+      background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    .swiper {
+      width: 86px;
+    }
+
+    .swiper-slide {
+      opacity: 1;
+      width: max-content;
+    }
+
+    .swiper-slide-active {
+      .icon {
+        fill: var(--color-accent);
+      }
+    }
+
+    @include mq(sm, max) {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__navigation-list {
+    position: relative;
+    display: flex;
+  }
+
+  &__navigation-item {
+    .icon {
+      width: 51px;
+      height: 26px;
+      fill: var(--color-title);
+    }
+
+    &--big{
+      .icon {
+        width: 86px;
+      }
     }
   }
 }
