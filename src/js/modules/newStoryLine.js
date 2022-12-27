@@ -28,10 +28,12 @@ export default () => {
   if(!historySlider) {
     return;
   } else {
-    document.body.classList.add('hide-scrollbar');
-    scrollingBackgroundList.style.height = historyList.clientHeight + 'px';
-    historyTimeRange.style.height = scrollingBackgroundList.clientHeight + 'px';
+
   }
+
+  document.body.classList.add('hide-scrollbar');
+  scrollingBackgroundList.style.height = historyList.clientHeight + 'px';
+  historyTimeRange.style.height = scrollingBackgroundList.clientHeight + 'px';
 
   window.addEventListener('resize', () => {
     historyTimeRange.style.height = scrollingBackgroundList.clientHeight + 'px';

@@ -6,6 +6,7 @@
   min-height: 100vh;
   display: flex;
   align-items: stretch;
+  overflow: hidden;
   background-color: var(--color-title);
   transition: background-color 1s ease-in;
 
