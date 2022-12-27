@@ -82,7 +82,7 @@
     }
 
     @include mq(sm, max) {
-      padding: 18px 24px 13px;
+      padding: 20px 24px 13px 22px;
       font-size: 16px;
       line-height: 150%;
     }
@@ -121,7 +121,8 @@
     pointer-events: none;
 
     @include mq(sm, max) {
-      padding: 18px;
+      right: 26px;
+      padding: 16px;
     }
   }
 
@@ -133,13 +134,18 @@
       width: 25px;
       height: 25px;
 
-      fill: var(--color-title);
+      stroke-width: 1.5px;
       stroke: var(--color-title);
       transition: var(--transition);
+    }
 
-      @include mq(sm, max) {
-        width: 19px;
-        height: 19px;
+    @include mq(sm, max) {
+      width: 19px;
+      height: 19px;
+
+      svg {
+        width: 21px;
+        height: 21px;
       }
     }
   }
