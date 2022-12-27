@@ -1,7 +1,7 @@
 export default () => {
   const searchLine = document.querySelector('.search-control');
   const searchInput = searchLine.querySelector('.search-control__input');
-  const searchListWrapper = searchLine.querySelector('.search-control__values');
+  const searchListWrapper = searchLine.querySelector('.search-control__values-list');
 
 
   searchLine.closest('.page-wrapper').addEventListener('click', (e) => {
@@ -42,24 +42,17 @@ export default () => {
 
   // adding search results to results-list-div:
 
-  if(searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      if (e.target.value.length > 0) {
-        searchListWrapper.innerHTML = '';
-
-        let newList = document.createElement('div');
-        newList.classList.add('search-control__values-list');
-
-        searchListWrapper.append(newList);
-
-        let newElement = document.createElement('a');
-        newElement.classList.add('search-control__value');
-        // newElement.innerHTML = e.target.value;
-        newList.append(newElement);
-      } else {
-        searchListWrapper.innerHTML = '';
-      }
-    })
-  }
+  // if(searchInput) {
+  //   searchInput.addEventListener('input', (e) => {
+  //     if (e.target.value.length > 0) {
+  //       let newElement = document.createElement('a');
+  //       newElement.classList.add('search-control__value');
+  //       newElement.innerHTML = e.target.value;
+  //       searchListWrapper.append(newElement);
+  //     } else {
+  //       searchListWrapper.innerHTML = '';
+  //     }
+  //   })
+  // }
 
 }

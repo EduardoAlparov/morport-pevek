@@ -26,8 +26,10 @@ export default () => {
     return;
   } else {
     window.scrollTo(0, 0);
-    historyPageWrapper.classList.add('history-swiper-enable')
+    historyPageWrapper.classList.add('history-swiper-enable');
+    document.body.classList.add('hide-scrollbar');
     floatingList.style.height = storyList.offsetHeight + 'px';
+    // container.style.height = historySection.offsetHeight + 'px';
     rangeLine.style.height = floatingList.offsetHeight + 500 + 'px';
   }
 
@@ -65,8 +67,10 @@ export default () => {
 
     on: {
       slideChange: () => {
+        console.log(storySwiper.progress);
+
         if(storySwiper.isEnd) {
-          console.log('end');
+
           window.removeEventListener('wheel', fn);
           window.removeEventListener('mousewheel', fn);
           window.removeEventListener('DOMMouseScroll', fn);

@@ -25,6 +25,7 @@ import infoButtonsListSlider from './modules/infoButtonsListSlider';
 import portStoryLine from './modules/portStoryLine';
 
 import schemeTextControl from './modules/schemeTextControl';
+import newStoryLine from './modules/newStoryLine';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -73,6 +74,7 @@ documenReady(() => {
   // ===========================================================================
   //
   portStoryLine();
+  newStoryLine();
   // ===========================================================================
   //
   schemeTextControl();
