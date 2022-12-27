@@ -1,0 +1,11 @@
+extends layout/error.pug
+
+block variables
+  - const headerClass = "fix-block"
+  - const bodyClass = "page-history preload"
+  - const pageTitle = "История порта"
+  - const siteLang = "ru"
+  - const heading = "История порта"
+
+block content
+  include pages/history-new/main.pug

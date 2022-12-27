@@ -204,11 +204,19 @@
     right: 0;
     left: 0;
     top: calc(100% + 10px);
-
     width: 100%;
 
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     border-radius: 24px;
     background-color: var(--color-white);
+
+    &--opened {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
   }
 
   &__values-list {

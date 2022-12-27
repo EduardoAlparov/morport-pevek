@@ -1,0 +1,237 @@
+.history-slider
+  .history-slider__wrapper.swiper#story-line-swiper
+    ul.history-slider__list.swiper-wrapper
+      li.history-slider__item.history-slider__heading.swiper-slide
+        .site-container.swiper-parallax
+          .section__breadcrumbs.breadcrumbs.breadcrumbs--light
+            ul.breadcrumbs__list
+              li.breadcrumbs__item
+                a( href="/" ).breadcrumbs__link
+                  | Главная
+              li.breadcrumbs__item
+                a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+                  | История порта
+
+          h1.section__title.section__title--not-border.port-history-section__title.history-slider__title
+            | История порта
+
+        .history-slider__time-range
+          .site-container
+            .history-time-range
+              .history-time-range__mask
+
+
+      li.history-slider__item.site-container.swiper-slide
+        .story-line__item.story-line__item--first.swiper-parallax
+          .story-line__col.story-line__small-col
+            .story-line__article.article-story
+              .article-story__time
+                .article-story__date
+                  | 20 апреля
+                .article-story__year
+                  +icon-mono('1951')
+
+              .article-story__story
+                .article-story__main-text
+                  p
+                    | День рождения порта. Созданию порта способствовали открытие
+                    | богатых месторождений золота в Чаунском районе Чукотского
+                    | полуострова и их дальнейшая активная разработка.
+
+                .article-story__secondary-text
+                  p
+                    | Порт состоял из одной причальной линии, включающей четыре
+                    | свайных причала длиной 429,5 метра, при этом ещё не имел почти
+                    | никакой механизации, производственных и служебных помещений,
+                    | и по существу не отвечал своему назначению. Всего на тот момент
+                    | имелось 3 гусеничных крана, работы велись судовыми лебёдками и
+                    | вручную, в смене работало до 900 человек
+                    | (в основном — заключённые).
+
+
+          .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+            .story-line__img.story-line__img--small
+              +picture('story-line/image-1.jpg', 'фотография архива порта Певек')
+            .story-line__img.story-line__img--small
+              +picture('story-line/image-2.jpg', 'фотография архива порта Певек')
+
+      li.history-slider__item.site-container.swiper-slide
+        .story-line__item.story-line__item--second.swiper-parallax
+          .story-line__col.story-line__big-col.story-line__col--center
+            .story-line__img.story-line__img--big
+              +picture('story-line/image-3.jpg', 'панорама порта Певек')
+
+          .story-line__col.story-line__small-col
+            .story-line__article.article-story
+              .article-story__time
+                .article-story__date
+                  | 25 октября
+                .article-story__year
+                  +icon-mono('1957')
+
+              .article-story__story
+                .article-story__main-text
+                  p
+                    | Решением СМ СССР арктический порт Певек вошёл в состав
+                    | Дальневосточного морского пароходства ММФ.
+
+                .article-story__secondary-text
+                  p
+                    | В том же году началось масштабное строительство
+                    | гидротехнических сооружений, производственных корпусов и жилья
+                    | для работников порта.
+
+      li.history-slider__item.site-container.swiper-slide
+        .story-line__item.story-line__item--third.story-line__item--no-date.swiper-parallax
+          .story-line__col.story-line__small-col
+            .story-line__article.article-story
+              .article-story__time
+                .article-story__year.article-story__year--double
+                  +icon-mono('1960')
+
+              .article-story__story
+                .article-story__main-text
+                  p
+                    | Проходили реконструкция, расширение и дальнейшее развитие
+                    | порта. Здесь было впервые в Арктике построено 4 шпунтовых
+                    | причала с твердым бетонным покрытием.
+
+                .article-story__secondary-text
+                  p
+                    | Общая длина причальной стенки достигла 499 метров. Действовало
+                    | 14 портальных кранов, построены стояночный и ремонтный гаражи.
+                    | Также были сданы в эксплуатацию четыре восьмиквартирных и один
+                    | шестнадцатиквартирный дома, расширено общежитие для работников
+                    | порта, велись работы по благоустройству территории порта.
+
+          .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+            .story-line__img.story-line__img--small
+              +picture('story-line/image-7.jpg', 'фотография архива порта Певек')
+            .story-line__img.story-line__img--small
+              +picture('story-line/image-8.jpg', 'фотография архива порта Певек')
+
+      li.history-slider__item.site-container.swiper-slide
+        .story-line__item.story-line__item--four.story-line__item--no-date.swiper-parallax
+          .story-line__col.story-line__big-col.story-line__col--center
+            .story-line__img.story-line__img--big
+              +picture('story-line/image-6.jpg', 'панорама порта Певек')
+
+          .story-line__col.story-line__small-col
+            .story-line__article.article-story
+              .article-story__time
+                .article-story__year.article-story__year--double
+                  +icon-mono('1970')
+
+              .article-story__story
+                .article-story__main-text
+                  p
+                    | Продолжались работы по реконструкции, переоснащению и
+                    | техническому перевооружению портового хозяйства.
+
+                .article-story__secondary-text
+                  p
+                    | В порт прибыли суда усиленного ледового класса типа
+                    | «Норильск», предназначенные для перевозки грузов в районы
+                    | Арктики. Интенсивность грузовых работ на судах этого типа
+                    | в порту стала одной из самых высоких в отрасли. В это время
+                    | порт Певек стал базовым портом для переработки
+                    | перевалочных грузов Колымского направления.
+
+      li.history-slider__item.site-container.swiper-slide
+        .story-line__item.story-line__item--five.story-line__item--no-date.swiper-parallax
+          .story-line__col.story-line__small-col
+            .story-line__article.article-story
+              .article-story__time
+                .article-story__year
+                  +icon-mono('1983')
+
+              .article-story__story
+                .article-story__main-text
+                  p
+                    | За достигнутые успехи в обеспечении перегрузки
+                    | народнохозяйственных грузов для развивающихся районов Колымы и
+                    | Чукотки морской торговый порт Певек был награждён орденом
+                    | «Знак Почёта».
+
+          .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+            .story-line__img.story-line__img--small
+              +picture('story-line/image-4.jpg', 'фотография архива порта Певек')
+            .story-line__img.story-line__img--small
+                  +picture('story-line/image-5.jpg', 'фотография архива порта Певек')
+
+      li.history-slider__item.site-container.swiper-slide
+        .story-line__item.story-line__item--six.story-line__item--no-date.swiper-parallax
+          .story-line__col.story-line__big-col.story-line__col--center
+            .story-line__img.story-line__img--big
+              +picture('story-line/image-9.jpg', 'панорама порта Певек')
+
+          .story-line__col.story-line__small-col
+            .story-line__article.article-story
+              .article-story__time
+                .article-story__year.article-story__year--double.article-story__year--accent
+                  +icon-mono('1990')
+
+              .article-story__story
+                .article-story__main-text.article-story__main-text--dark
+                  p
+                    | В связи с ликвидацией основных предприятий горнодобывающей
+                    | промышленности Чаун-Чукотки произошло резкое падение
+                    | грузооборота.
+
+                .article-story__secondary-text.article-story__secondary-text--dark
+                  p
+                    | В порт прибыли суда усиленного ледового класса типа
+                    | «Норильск», предназначенные для перевозки грузов в районы
+                    | Арктики. Интенсивность грузовых работ на судах этого типа
+                    | в порту стала одной из самых высоких в отрасли. В это время
+                    | порт Певек стал базовым портом для переработки
+                    | перевалочных грузов Колымского направления.
+
+      li.history-slider__item.site-container.swiper-slide
+        .story-line__item.story-line__item--big.story-line__item--no-date.swiper-parallax
+          .story-line__col.story-line__small-col
+            .story-line__article.article-story.article-story--horizontal
+              .article-story__time
+                .article-story__year.article-story__year--accent
+                  +icon-mono('1997')
+
+              .article-story__story
+                .article-story__main-text.article-story__main-text--dark
+                  p
+                    | Морской порт Певек был преобразован в открытое
+                    | акционерное общество.
+          .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+            .story-line__row
+              .story-line__img.story-line__img--midd
+                +picture('story-line/image-10.jpg', 'фотография архива порта Певек')
+
+      li.history-slider__item.site-container.swiper-slide
+        .story-line__item.story-line__item--eight.story-line__item--big.story-line__item--no-date.swiper-parallax
+          .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
+            .story-line__img.story-line__img--midd
+              +picture('story-line/image-11.jpg', 'фотография архива порта Певек')
+
+          .story-line__col.story-line__small-col
+            .story-line__article.article-story.article-story--horizontal
+              .article-story__time
+                .article-story__year.article-story__year--accent
+                  +icon-mono('2006')
+
+              .article-story__story
+                .article-story__main-text.article-story__main-text--dark
+                  p
+                    | В состав порта вошёл грузовой участок на Мысе Шмидта.
+
+      li.history-slider__item.swiper-slide.swiper-parallax
+        .site-container
+          .history-slider__line
+        include ../../parts/footer.pug
+
+
+      .scrolling-background
+        .scrolling-background__slider-wrapper
+          .scrolling-background__slider
+            .scrolling-background__list
+              .scrolling-background__item.scrolling-background__item--first
+              .scrolling-background__item.scrolling-background__item--second
+              .scrolling-background__item.scrolling-background__item--third
