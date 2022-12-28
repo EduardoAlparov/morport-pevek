@@ -282,7 +282,7 @@
 
   &__navigation {
     position: fixed;
-    top: 0;
+    top: -100%;
     right: 0;
     left: 0;
     z-index: 50;
@@ -294,8 +294,15 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-
+    transition: var(--transition);
     background-color: var(--color-white);
+
+    &--visible {
+      top: 0;
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
 
     &::before,
     &::after {
@@ -344,6 +351,8 @@
   &__navigation-list {
     position: relative;
     display: flex;
+    will-change: transform;
+    transition: transform 1.6s ease !important;
   }
 
   &__navigation-item {
@@ -357,6 +366,11 @@
       .icon {
         width: 86px;
       }
+    }
+
+    &--empty {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
