@@ -39,20 +39,4 @@ export default () => {
       }, 400);
     }
   })
-
-  // adding search results to results-list-div:
-
-  // if(searchInput) {
-  //   searchInput.addEventListener('input', (e) => {
-  //     if (e.target.value.length > 0) {
-  //       let newElement = document.createElement('a');
-  //       newElement.classList.add('search-control__value');
-  //       newElement.innerHTML = e.target.value;
-  //       searchListWrapper.append(newElement);
-  //     } else {
-  //       searchListWrapper.innerHTML = '';
-  //     }
-  //   })
-  // }
-
 }

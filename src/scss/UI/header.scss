@@ -138,8 +138,12 @@
     right: 0;
     left: 0;
     z-index: 59;
-
     width: 100%;
+    transition: var(--transition);
+
+    &--hidden {
+      top: -72px;
+    }
   }
 }
 

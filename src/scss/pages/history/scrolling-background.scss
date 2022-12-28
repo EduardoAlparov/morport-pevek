@@ -6,9 +6,9 @@
   width: 100vw;
 
   @include mq(lg, max) {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    // opacity: 0;
+    // visibility: hidden;
+    // pointer-events: none;
   }
 
   &__slider-wrapper {
@@ -33,6 +33,7 @@
 
   &__item {
     flex-grow: 1;
+    flex-basis: calc(100% / 3);
     width: 100%;
 
     &--first,
@@ -48,6 +49,12 @@
       background-image: url('../../assets/images/port-history/pattern-1.png');
       background-position: top 200px left;
       background-size: 85% auto;
+
+      @include mq(sm, max) {
+        background-image: url('../../assets/images/port-history/pattern-1-mobile.png');
+        background-position: top 51px left;
+        background-size: 100% auto;
+      }
     }
 
     &--second {
