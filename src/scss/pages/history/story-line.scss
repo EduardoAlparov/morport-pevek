@@ -10,7 +10,7 @@
     flex-direction: column;
     min-height: max-content;
     will-change: transform;
-    transition: transform 1.3s ease !important;
+    transition: transform 1.3s ease-out !important;
   }
 
   .swiper-slide {
@@ -289,8 +289,7 @@
 
     width: 100%;
     padding: 17px 0;
-    padding-left: 45px;
-
+    // padding-left: 45px;
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -313,7 +312,7 @@
       z-index: 55;
 
       width: 45px;
-      height: 60px;
+      height: 100%;
 
       background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     }
@@ -324,21 +323,6 @@
 
     &::after {
       right: 0;
-    }
-
-    .swiper {
-      width: 86px;
-    }
-
-    .swiper-slide {
-      opacity: 1;
-      width: max-content;
-    }
-
-    .swiper-slide-active {
-      .icon {
-        fill: var(--color-accent);
-      }
     }
 
     @include mq(sm, max) {
@@ -353,9 +337,36 @@
     display: flex;
     will-change: transform;
     transition: transform 1.6s ease !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__navigation-item {
+    flex-shrink: 0;
+    min-width: 52px;
+    display: block;
+    padding-right: 10px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--color-title);
+    white-space: nowrap;
+
+    &:first-child {
+      // width: 0;
+      // min-width: unset;
+      // margin-right: 0;
+    }
+
     .icon {
       width: 51px;
       height: 26px;
@@ -371,6 +382,10 @@
     &--empty {
       opacity: 0;
       visibility: hidden;
+    }
+
+    &--active {
+      color: var(--color-accent);
     }
   }
 }

@@ -139,10 +139,10 @@
     left: 0;
     z-index: 59;
     width: 100%;
-    transition: var(--transition);
+    transition: 0.3s ease;
 
     &--hidden {
-      top: -72px;
+      top: -110px;
     }
   }
 }

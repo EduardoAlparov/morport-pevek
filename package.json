@@ -90,7 +90,7 @@
 		"@fancyapps/ui": "4.0.31",
 		"gsap": "3.11.3",
 		"reset-css": "^5.0.1",
-		"simple-parallax-js": "5.6.2",
+		"smooth-scrollbar": "8.8.1",
 		"swiper": "8.4.5",
 		"vanilla-lazyload": "^17.6.1"
 	}

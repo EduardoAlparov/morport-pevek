@@ -1,7 +1,7 @@
 .article-story {
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 40px;
 
   @include mq(xl, max) {
     gap: 24px;
@@ -15,6 +15,7 @@
     }
 
     .article-story__story {
+      padding-top: 10px;
       max-width: 258px;
     }
   }
@@ -40,34 +41,23 @@
   }
 
   &__year {
-    .icon {
-      width: 164.33px;
-      height: 85.92px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 100%;
+    color: var(--color-white);
 
-      fill: var(--color-white);
-
-      @include mq(lg, max) {
-        width: 129px;
-        height: 66px;
-      }
-    }
-
-    &--double {
-      .icon {
-        width: 297.47px;
-        height: 85.92px;
-
-        @include mq(lg, max) {
-          width: 195px;
-          height: 57.28px;
-        }
-      }
+    span {
+      line-height: 100%;
     }
 
     &--accent {
-      .icon {
-        fill: var(--color-accent);
-      }
+      color: var(--color-accent);
+    }
+
+    @include mq(lg, max) {
+      font-size: 80px;
     }
   }
 

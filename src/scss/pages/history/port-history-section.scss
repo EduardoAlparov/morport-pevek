@@ -35,36 +35,7 @@
     height: 100%;
   }
 
-  &__title {
-    position: relative;
-    z-index: 70;
-    font-weight: 700;
-    font-size: 180px;
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: var(--color-white);
 
-    @include mq(xxl, max) {
-      font-size: 150px;
-    }
-
-    @include mq(xxl, max) {
-      font-size: 120px;
-    }
-
-    @include mq(xl, max) {
-      font-size: 100px;
-    }
-
-    @include mq(lg, max) {
-      font-size: 72px;
-    }
-
-    @include mq(sm, max) {
-      font-size: 50px;
-    }
-  }
 
   &__empty-block {
     flex: 1 0 1px;
