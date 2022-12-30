@@ -1,35 +1,29 @@
 .history-slider
-  .history-slider__wrapper.swiper#story-line-swiper
-    ul.history-slider__list.swiper-wrapper
-      li.history-slider__item.history-slider__heading.swiper-slide
-        .site-container.swiper-parallax
-          .section__breadcrumbs.breadcrumbs.breadcrumbs--light
-            ul.breadcrumbs__list
-              li.breadcrumbs__item
-                a( href="/" ).breadcrumbs__link
-                  | Главная
-              li.breadcrumbs__item
-                a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
-                  | История порта
+  .history-slider__wrapper
+    .site-container
+      .history-slider__heading
+        .history-slider__breadcrumbs.section__breadcrumbs.breadcrumbs.breadcrumbs--light
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a( href="/" ).breadcrumbs__link
+                | Главная
+            li.breadcrumbs__item
+              a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+                | История порта
 
-          h1.section__title.section__title--not-border.port-history-section__title.history-slider__title
-            | История порта
+        h1.section__title.section__title--not-border.history-slider__title
+          | История порта
 
-        .history-slider__time-range
-          .site-container
-            .history-time-range
-              .history-time-range__mask
-
-
-      li.history-slider__item.site-container.swiper-slide
-        .story-line__item.story-line__item--first.swiper-parallax
+      ul.history-slider__list
+        li.history-slider__item.story-line__item._set-title-background
           .story-line__col.story-line__small-col
             .story-line__article.article-story
               .article-story__time
                 .article-story__date
                   | 20 апреля
                 .article-story__year
-                  +icon-mono('1951')
+                  span
+                    | 1951
 
               .article-story__story
                 .article-story__main-text
@@ -48,46 +42,45 @@
                     | вручную, в смене работало до 900 человек
                     | (в основном — заключённые).
 
-
           .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
-            .story-line__img.story-line__img--small
-              +picture('story-line/image-1.jpg', 'фотография архива порта Певек')
-            .story-line__img.story-line__img--small
-              +picture('story-line/image-2.jpg', 'фотография архива порта Певек')
+              .story-line__img.story-line__img--small
+                +picture('story-line/image-1.jpg', 'фотография архива порта Певек')
+              .story-line__img.story-line__img--small
+                +picture('story-line/image-2.jpg', 'фотография архива порта Певек')
 
-      li.history-slider__item.site-container.swiper-slide
-        .story-line__item.story-line__item--second.swiper-parallax
+        li.history-slider__item.story-line__item._set-title-background
           .story-line__col.story-line__big-col.story-line__col--center
             .story-line__img.story-line__img--big
               +picture('story-line/image-3.jpg', 'панорама порта Певек')
 
           .story-line__col.story-line__small-col
-            .story-line__article.article-story
-              .article-story__time
-                .article-story__date
-                  | 25 октября
-                .article-story__year
-                  +icon-mono('1957')
+              .story-line__article.article-story
+                .article-story__time
+                  .article-story__date
+                    | 25 октября
+                  .article-story__year
+                    span
+                      | 1957
 
-              .article-story__story
-                .article-story__main-text
-                  p
-                    | Решением СМ СССР арктический порт Певек вошёл в состав
-                    | Дальневосточного морского пароходства ММФ.
+                .article-story__story
+                  .article-story__main-text
+                    p
+                      | Решением СМ СССР арктический порт Певек вошёл в состав
+                      | Дальневосточного морского пароходства ММФ.
 
-                .article-story__secondary-text
-                  p
-                    | В том же году началось масштабное строительство
-                    | гидротехнических сооружений, производственных корпусов и жилья
-                    | для работников порта.
+                  .article-story__secondary-text
+                    p
+                      | В том же году началось масштабное строительство
+                      | гидротехнических сооружений, производственных корпусов и жилья
+                      | для работников порта.
 
-      li.history-slider__item.site-container.swiper-slide
-        .story-line__item.story-line__item--third.story-line__item--no-date.swiper-parallax
+        li.history-slider__item.story-line__item.story-line__item--no-date._set-title-background
           .story-line__col.story-line__small-col
             .story-line__article.article-story
               .article-story__time
-                .article-story__year.article-story__year--double
-                  +icon-mono('1960')
+                .article-story__year
+                  span
+                    | 1960-70
 
               .article-story__story
                 .article-story__main-text
@@ -105,45 +98,45 @@
                     | порта, велись работы по благоустройству территории порта.
 
           .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
-            .story-line__img.story-line__img--small
-              +picture('story-line/image-7.jpg', 'фотография архива порта Певек')
-            .story-line__img.story-line__img--small
-              +picture('story-line/image-8.jpg', 'фотография архива порта Певек')
+              .story-line__img.story-line__img--small
+                +picture('story-line/image-7.jpg', 'фотография архива порта Певек')
+              .story-line__img.story-line__img--small
+                +picture('story-line/image-8.jpg', 'фотография архива порта Певек')
 
-      li.history-slider__item.site-container.swiper-slide
-        .story-line__item.story-line__item--four.story-line__item--no-date.swiper-parallax
+        li.history-slider__item.story-line__item.story-line__item--no-date._set-accent-background
           .story-line__col.story-line__big-col.story-line__col--center
             .story-line__img.story-line__img--big
               +picture('story-line/image-6.jpg', 'панорама порта Певек')
 
           .story-line__col.story-line__small-col
-            .story-line__article.article-story
-              .article-story__time
-                .article-story__year.article-story__year--double
-                  +icon-mono('1970')
+              .story-line__article.article-story
+                .article-story__time
+                  .article-story__year
+                    span
+                      | 1970-80
 
-              .article-story__story
-                .article-story__main-text
-                  p
-                    | Продолжались работы по реконструкции, переоснащению и
-                    | техническому перевооружению портового хозяйства.
+                .article-story__story
+                  .article-story__main-text
+                    p
+                      | Продолжались работы по реконструкции, переоснащению и
+                      | техническому перевооружению портового хозяйства.
 
-                .article-story__secondary-text
-                  p
-                    | В порт прибыли суда усиленного ледового класса типа
-                    | «Норильск», предназначенные для перевозки грузов в районы
-                    | Арктики. Интенсивность грузовых работ на судах этого типа
-                    | в порту стала одной из самых высоких в отрасли. В это время
-                    | порт Певек стал базовым портом для переработки
-                    | перевалочных грузов Колымского направления.
+                  .article-story__secondary-text
+                    p
+                      | В порт прибыли суда усиленного ледового класса типа
+                      | «Норильск», предназначенные для перевозки грузов в районы
+                      | Арктики. Интенсивность грузовых работ на судах этого типа
+                      | в порту стала одной из самых высоких в отрасли. В это время
+                      | порт Певек стал базовым портом для переработки
+                      | перевалочных грузов Колымского направления.
 
-      li.history-slider__item.site-container.swiper-slide
-        .story-line__item.story-line__item--five.story-line__item--no-date.swiper-parallax
+        li.history-slider__item.story-line__item.story-line__item--no-date._set-accent-background
           .story-line__col.story-line__small-col
             .story-line__article.article-story
               .article-story__time
                 .article-story__year
-                  +icon-mono('1983')
+                  span
+                    | 1983
 
               .article-story__story
                 .article-story__main-text
@@ -154,59 +147,59 @@
                     | «Знак Почёта».
 
           .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
-            .story-line__img.story-line__img--small
-              +picture('story-line/image-4.jpg', 'фотография архива порта Певек')
-            .story-line__img.story-line__img--small
-                  +picture('story-line/image-5.jpg', 'фотография архива порта Певек')
+              .story-line__img.story-line__img--small
+                +picture('story-line/image-4.jpg', 'фотография архива порта Певек')
+              .story-line__img.story-line__img--small
+                    +picture('story-line/image-5.jpg', 'фотография архива порта Певек')
 
-      li.history-slider__item.site-container.swiper-slide
-        .story-line__item.story-line__item--six.story-line__item--no-date.swiper-parallax
+        li.history-slider__item.story-line__item.story-line__item--no-date._set-white-background
           .story-line__col.story-line__big-col.story-line__col--center
             .story-line__img.story-line__img--big
               +picture('story-line/image-9.jpg', 'панорама порта Певек')
 
           .story-line__col.story-line__small-col
-            .story-line__article.article-story
-              .article-story__time
-                .article-story__year.article-story__year--double.article-story__year--accent
-                  +icon-mono('1990')
+              .story-line__article.article-story
+                .article-story__time
+                  .article-story__year.article-story__year--accent
+                    span
+                      | 1990-97
 
-              .article-story__story
-                .article-story__main-text.article-story__main-text--dark
-                  p
-                    | В связи с ликвидацией основных предприятий горнодобывающей
-                    | промышленности Чаун-Чукотки произошло резкое падение
-                    | грузооборота.
+                .article-story__story
+                  .article-story__main-text.article-story__main-text--dark
+                    p
+                      | В связи с ликвидацией основных предприятий горнодобывающей
+                      | промышленности Чаун-Чукотки произошло резкое падение
+                      | грузооборота.
 
-                .article-story__secondary-text.article-story__secondary-text--dark
-                  p
-                    | В порт прибыли суда усиленного ледового класса типа
-                    | «Норильск», предназначенные для перевозки грузов в районы
-                    | Арктики. Интенсивность грузовых работ на судах этого типа
-                    | в порту стала одной из самых высоких в отрасли. В это время
-                    | порт Певек стал базовым портом для переработки
-                    | перевалочных грузов Колымского направления.
+                  .article-story__secondary-text.article-story__secondary-text--dark
+                    p
+                      | В порт прибыли суда усиленного ледового класса типа
+                      | «Норильск», предназначенные для перевозки грузов в районы
+                      | Арктики. Интенсивность грузовых работ на судах этого типа
+                      | в порту стала одной из самых высоких в отрасли. В это время
+                      | порт Певек стал базовым портом для переработки
+                      | перевалочных грузов Колымского направления.
 
-      li.history-slider__item.site-container.swiper-slide
-        .story-line__item.story-line__item--big.story-line__item--no-date.swiper-parallax
+        li.history-slider__item.story-line__item.story-line__item--big.story-line__item--no-date._set-white-background
           .story-line__col.story-line__small-col
             .story-line__article.article-story.article-story--horizontal
               .article-story__time
                 .article-story__year.article-story__year--accent
-                  +icon-mono('1997')
+                  span
+                    | 1997
 
               .article-story__story
                 .article-story__main-text.article-story__main-text--dark
                   p
                     | Морской порт Певек был преобразован в открытое
                     | акционерное общество.
+
           .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
             .story-line__row
               .story-line__img.story-line__img--midd
                 +picture('story-line/image-10.jpg', 'фотография архива порта Певек')
 
-      li.history-slider__item.site-container.swiper-slide
-        .story-line__item.story-line__item--eight.story-line__item--big.story-line__item--no-date.swiper-parallax
+        li.history-slider__item.story-line__item.story-line__item--big.story-line__item--no-date._set-white-background
           .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
             .story-line__img.story-line__img--midd
               +picture('story-line/image-11.jpg', 'фотография архива порта Певек')
@@ -215,50 +208,26 @@
             .story-line__article.article-story.article-story--horizontal
               .article-story__time
                 .article-story__year.article-story__year--accent
-                  +icon-mono('2006')
+                  span
+                    | 2006
 
               .article-story__story
                 .article-story__main-text.article-story__main-text--dark
                   p
                     | В состав порта вошёл грузовой участок на Мысе Шмидта.
 
-      li.history-slider__item.swiper-slide.swiper-parallax
-        .site-container
-          .history-slider__line
-        include ../../parts/footer.pug
+    .scrolling-background
+      .scrolling-background__list(data-parallax="5")
+        .scrolling-background__item.scrolling-background__item--first
+        .scrolling-background__item.scrolling-background__item--second
+        .scrolling-background__item.scrolling-background__item--third
+
+    include ../../parts/footer.pug
 
 
-      .scrolling-background
-        .scrolling-background__slider-wrapper
-          .scrolling-background__slider
-            .scrolling-background__list
-              .scrolling-background__item.scrolling-background__item--first
-              .scrolling-background__item.scrolling-background__item--second
-              .scrolling-background__item.scrolling-background__item--third
+  //- .story-line__navigation
+  //-   ul.story-line__navigation-list
 
 
-  .story-line__navigation
-    .story-line__navigation-wrapper.swiper
-      ul.story-line__navigation-list.swiper-wrapper
-        //- for heading
-        li.story-line__navigation-item.story-line__navigation-item--empty.swiper-slide
-          +icon-mono('1951')
-        li.story-line__navigation-item.swiper-slide
-          +icon-mono('1951')
-        li.story-line__navigation-item.swiper-slide
-          +icon-mono('1957')
-        li.story-line__navigation-item.story-line__navigation-item--big.swiper-slide
-          +icon-mono('1960')
-        li.story-line__navigation-item.story-line__navigation-item--big.swiper-slide
-          +icon-mono('1970')
-        li.story-line__navigation-item.swiper-slide
-          +icon-mono('1983')
-        li.story-line__navigation-item.story-line__navigation-item--big.swiper-slide
-          +icon-mono('1990')
-        li.story-line__navigation-item.swiper-slide
-          +icon-mono('1997')
-        li.story-line__navigation-item.swiper-slide
-          +icon-mono('2006')
-        //- for footer
-        li.story-line__navigation-item.story-line__navigation-item--empty.swiper-slide
-          +icon-mono('1951')
+        //- .history-slider__time-range
+        //-   .history-time-range
