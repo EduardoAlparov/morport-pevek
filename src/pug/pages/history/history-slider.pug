@@ -14,8 +14,8 @@
         h1.section__title.section__title--not-border.history-slider__title
           | История порта
 
-      ul.history-slider__list
-        li.history-slider__item.story-line__item._set-title-background
+      ul.history-slider__list.story-line
+        li.story-line__item.story-line__item--mobile-slider._set-title-background
           .story-line__col.story-line__small-col
             .story-line__article.article-story
               .article-story__time
@@ -48,7 +48,7 @@
               .story-line__img.story-line__img--small
                 +picture('story-line/image-2.jpg', 'фотография архива порта Певек')
 
-        li.history-slider__item.story-line__item._set-title-background
+        li.story-line__item.story-line__item--no-dash._set-title-background
           .story-line__col.story-line__big-col.story-line__col--center
             .story-line__img.story-line__img--big
               +picture('story-line/image-3.jpg', 'панорама порта Певек')
@@ -74,7 +74,7 @@
                       | гидротехнических сооружений, производственных корпусов и жилья
                       | для работников порта.
 
-        li.history-slider__item.story-line__item.story-line__item--no-date._set-title-background
+        li.story-line__item.story-line__item--mobile-slider.story-line__item--no-date._set-title-background
           .story-line__col.story-line__small-col
             .story-line__article.article-story
               .article-story__time
@@ -103,7 +103,7 @@
               .story-line__img.story-line__img--small
                 +picture('story-line/image-8.jpg', 'фотография архива порта Певек')
 
-        li.history-slider__item.story-line__item.story-line__item--no-date._set-accent-background
+        li.story-line__item.story-line__item--no-dash.story-line__item--no-date._set-accent-background
           .story-line__col.story-line__big-col.story-line__col--center
             .story-line__img.story-line__img--big
               +picture('story-line/image-6.jpg', 'панорама порта Певек')
@@ -130,7 +130,7 @@
                       | порт Певек стал базовым портом для переработки
                       | перевалочных грузов Колымского направления.
 
-        li.history-slider__item.story-line__item.story-line__item--no-date._set-accent-background
+        li.story-line__item.story-line__item--mobile-slider.story-line__item--no-date._set-accent-background
           .story-line__col.story-line__small-col
             .story-line__article.article-story
               .article-story__time
@@ -152,7 +152,7 @@
               .story-line__img.story-line__img--small
                     +picture('story-line/image-5.jpg', 'фотография архива порта Певек')
 
-        li.history-slider__item.story-line__item.story-line__item--no-date._set-white-background
+        li.story-line__item.story-line__item--no-dash.story-line__item--no-date._set-white-background
           .story-line__col.story-line__big-col.story-line__col--center
             .story-line__img.story-line__img--big
               +picture('story-line/image-9.jpg', 'панорама порта Певек')
@@ -180,7 +180,7 @@
                       | порт Певек стал базовым портом для переработки
                       | перевалочных грузов Колымского направления.
 
-        li.history-slider__item.story-line__item.story-line__item--big.story-line__item--no-date._set-white-background
+        li.story-line__item.story-line__item--big.story-line__item--no-date._set-white-background
           .story-line__col.story-line__small-col
             .story-line__article.article-story.article-story--horizontal
               .article-story__time
@@ -199,7 +199,7 @@
               .story-line__img.story-line__img--midd
                 +picture('story-line/image-10.jpg', 'фотография архива порта Певек')
 
-        li.history-slider__item.story-line__item.story-line__item--big.story-line__item--no-date._set-white-background
+        li.story-line__item.story-line__item--big.story-line__item--no-dash.story-line__item--no-date._set-white-background
           .story-line__col.story-line__big-col.story-line__col--cascade.story-line__col--center
             .story-line__img.story-line__img--midd
               +picture('story-line/image-11.jpg', 'фотография архива порта Певек')
@@ -216,18 +216,16 @@
                   p
                     | В состав порта вошёл грузовой участок на Мысе Шмидта.
 
-    .scrolling-background
-      .scrolling-background__list(data-parallax="5")
-        .scrolling-background__item.scrolling-background__item--first
-        .scrolling-background__item.scrolling-background__item--second
-        .scrolling-background__item.scrolling-background__item--third
+        .history-slider__time-range
+          .history-time-range
+            .history-time-range__body
 
-    include ../../parts/footer.pug
+      .history-slider__line
 
+      include ../../parts/footer.pug
+  .scrolling-background
+    .scrolling-background__list
+      .scrolling-background__item.scrolling-background__item--first.jarallax-one.jarallax
+      .scrolling-background__item.scrolling-background__item--second.jarallax-two.jarallax
+      .scrolling-background__item.scrolling-background__item--third.jarallax-two.jarallax
 
-  //- .story-line__navigation
-  //-   ul.story-line__navigation-list
-
-
-        //- .history-slider__time-range
-        //-   .history-time-range

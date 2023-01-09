@@ -9,7 +9,11 @@
   overflow: hidden;
   overflow-y: auto;
   background-color: var(--color-title);
-  transition: background-color 0.5s ease-in;
+  transition: background-color 1s ease;
+
+  @include mq(lg, max) {
+    transition: background-color 0.2s ease;
+  }
 
   &--accent-background {
     background-color: var(--color-accent);
@@ -23,9 +27,24 @@
     will-change: transform;
     transition: transform 0.1s linear !important;
   }
+  
+  .scrollbar-track-y {
+    @include mq(sm, max) {
+      opacity: 0 !important;
+    }
+  }
 
   &__breadcrumbs {
-    padding: 180px 0 30px 0;
+    padding: 19rem 0 2rem 0;
+
+    @include mq(xl, max) {
+      padding: 16rem 0 2rem 0;
+    }
+
+    @include mq(md, max) {
+      padding: 90px 0 0 0;
+      margin-bottom: 22px;
+    }
   }
 
   &__wrapper {
@@ -36,87 +55,69 @@
     will-change: transform;
     transform-box: border-box;
     transition: transform 1s ease !important;
+    
+  }
+
+  
+  &__heading {
+    margin-bottom: 7.5rem;
+    
+    @include mq(xl, max) {
+      margin-bottom: 5rem;
+    }
+
+    @include mq(lg, max) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq(sm, max) {
+      margin-bottom: 28px;
+    }
   }
 
   &__list {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    gap: 60px;
+    gap: 6rem;
+    margin-bottom: 10rem;
     will-change: transform;
     transition: transform 1.6s ease !important;
 
-    .swiper-slide {
-      .swiper-parallax {
-        transition: transform 1s, opacity 1.3s !important;
-      }
+    @include mq(lg, max) {
+      margin-bottom: 60px;
     }
 
-    .swiper-slide {
-      .swiper-parallax {
-        opacity: 0;
-      }
+    @include mq(md, max) {
+      padding-top: 0;
+      gap: 40px;
     }
-
-    .swiper-slide-active {
-      opacity: 1;
-      .swiper-parallax {
-        opacity: 1;
-      }
-    }
-
-    .swiper-slide-visible {
-      opacity: 1;
-      .swiper-parallax {
-        opacity: 1;
-      }
-    }
-
-    .swiper-slide-prev {
-      .swiper-parallax {
-        opacity: 0;
-      }
-    }
-
-    @include mq(sm, max) {
-      padding-top: 60px;
-    }
-  }
-
-  &__item {
-    position: relative;
-    width: 100%;
-
-    will-change: transform;
-    transition: transform 1.6s ease !important;
-  }
-
-  &__heading {
-
   }
 
   &__title {
     position: relative;
     z-index: 70;
     font-weight: 700;
-    font-size: 180px;
+    font-size: 18rem;
     line-height: 100%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: var(--color-white);
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
 
     @include mq(xxl, max) {
-      font-size: 150px;
+      font-size: 15rem;
     }
 
     @include mq(xxl, max) {
-      font-size: 120px;
+      font-size: 12rem;
     }
 
     @include mq(xl, max) {
-      font-size: 100px;
+      font-size: 10rem;
     }
 
     @include mq(lg, max) {
@@ -135,7 +136,7 @@
     left: 0;
     z-index: -1;
     height: 100%;
-    width: 100%;
+    width: max-content;
 
     @include mq(lg, max) {
       opacity: 0;
@@ -146,63 +147,15 @@
 
   &__line {
     width: 100%;
-    height: 1px;
-    background-color: #d8d8d8;
+    height: 3rem;
+    margin-top: 3rem;
+    border-style: solid;
+    border-color: #d8d8d8;
+    border-width: 0 0 1px 0;
+    background-color: var(--color-white);
 
     @include mq(md, max) {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
+      display: none;
     }
   }
-}
-
-.history-time-range {
-  position: relative;
-  z-index: -1;
-  width: 16px;
-  height: 100%;
-  will-change: transform;
-  transition: transform 1.3s ease !important;
-  background: repeating-linear-gradient(
-    to bottom,
-  #535B6E 0px,
-  #535B6E 1px,
-    transparent 2px,
-    transparent 6px,
-    #535B6E 7px,
-    #535B6E 8px);
-
-  &::before {
-    content  : "";
-    position : absolute;
-    z-index  : 1;
-    top: -5.5rem;
-    right: 0;
-    width: 100%;
-    height: 5rem;
-    pointer-events: none;
-    background-image: linear-gradient(to top,
-                rgba(83, 91, 110, 1) 0px, rgba(83, 91, 110, 1) 1px,
-                transparent 2px, transparent 6px,
-                rgba(83, 91, 110, 0.9) 7px, rgba(83, 91, 110, 0.9) 8px,
-                transparent 9px, transparent 13px,
-                rgba(83, 91, 110, 0.8) 14px, rgba(83, 91, 110, 0.8) 15px,
-                transparent 16px, transparent 20px,
-                rgba(83, 91, 110, 0.7) 21px, rgba(83, 91, 110, 0.7) 22px,
-                transparent 23px, transparent 27px,
-                rgba(83, 91, 110, 0.6) 28px, rgba(83, 91, 110, 0.6) 29px,
-                transparent 30px, transparent 34px,
-                rgba(83, 91, 110, 0.5) 35px, rgba(83, 91, 110, 0.5) 36px,
-                transparent 37px, transparent 41px,
-                rgba(83, 91, 110, 0.4) 42px, rgba(83, 91, 110, 0.4) 43px,
-                transparent 44px, transparent 48px,
-                rgba(83, 91, 110, 0.3) 49px, rgba(83, 91, 110, 0.3) 50px,
-                transparent 51px, transparent 55px,
-                rgba(83, 91, 110, 0.2) 56px, rgba(83, 91, 110, 0.2) 57px,
-                transparent 58px, transparent 62px,
-                rgba(83, 91, 110, 0.1) 63px, rgba(83, 91, 110, 0.1) 64px,
-                transparent 65px, transparent 69px,
-                );
-    }
 }
