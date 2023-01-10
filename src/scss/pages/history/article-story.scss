@@ -1,10 +1,14 @@
 .article-story {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 3.5rem;
 
   @include mq(xl, max) {
-    gap: 24px;
+    gap: 2.4rem;
+  }
+
+  @include mq(sm, max) {
+    gap: 14px;
   }
 
   &--horizontal {
@@ -15,15 +19,19 @@
     }
 
     .article-story__story {
-      padding-top: 10px;
-      max-width: 258px;
+      padding-top: 1rem;
+      max-width: 25.8rem;
     }
   }
 
   &__time {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
+
+    @include mq(sm, max) {
+      gap: 13px;
+    }
   }
 
   &__date {
@@ -44,8 +52,9 @@
     font-family: 'BebasNeue';
     font-style: normal;
     font-weight: 400;
-    font-size: 120px;
+    font-size: 11.5rem;
     line-height: 100%;
+    letter-spacing: -0.03em;
     color: var(--color-white);
 
     span {
@@ -57,7 +66,8 @@
     }
 
     @include mq(lg, max) {
-      font-size: 80px;
+      font-size: 78px;
+      letter-spacing: 0;
     }
   }
 

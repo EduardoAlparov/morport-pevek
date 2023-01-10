@@ -117,12 +117,6 @@ export default () => {
       574: {
         spaceBetween: 20,
       },
-    },
-
-    on: {
-      click: () => {
-        console.log(paginationSwiper.clickedIndex);
-      }
     }
   });
 
