@@ -30,6 +30,7 @@ export default () => {
   const accentTriggers = document.querySelectorAll("._set-accent-background");
   const whiteTriggers = document.querySelectorAll("._set-white-background");
 
+  // -start- transform with transition and with custom scrolls instead of browser scrollbar
   class DisableScrollPlugin extends ScrollbarPlugin {
     static pluginName = 'disableScroll';
   
@@ -58,7 +59,9 @@ export default () => {
       },
     },
   });
+  // -end- transform with transition and with custom scrolls instead of browser scrollbar
 
+  // -start- hide header then scroll up and changing background color
   scrollbar.addListener((status) => {
     header.classList.toggle('header--hidden', (scrollbar.offset.y >= 1));
     historyNav.classList.toggle('story-nav--visible', (scrollbar.offset.y >= 1));
@@ -82,10 +85,19 @@ export default () => {
         historySlider.classList.add('history-slider--white-background');
       }
     });
-
-
   });
+  // -end- hide header then scroll up and changing background color
 
+  // -start- render mobile paginations items
+  historyLineItems.forEach(storyItem => {
+    let liItem = document.createElement('li');
+    liItem.classList.add('story-nav__item');
+    liItem.innerText = storyItem.querySelector('.article-story__year').firstElementChild.textContent;
+    historyNavList.append(liItem);
+  });
+  // -end- render mobile paginations items
+
+  // -start- swiper for horizontal direction images on mobile 
   if (window.matchMedia("(max-width: 575px)").matches) {
     const imgSwiper = new Swiper('.story-line__item--mobile-slider', {
       slidesPerView: 'auto',
@@ -96,12 +108,6 @@ export default () => {
 
       wrapperClass: 'story-line__col--cascade',
       slideClass: 'story-line__img',
-
-      on: {
-        init: function() {
-          console.log('init mobile swiper');
-        }
-      }
     });
   } else {
     jarallax(document.querySelectorAll('.jarallax-one'), {
@@ -116,57 +122,67 @@ export default () => {
       imgPosition: 'bottom center',
     });
   }
+  // -end- swiper for horizontal direction images on mobile 
 
-  if (window.matchMedia("(max-width: 767px)").matches) {
+  // -start- swiper for year mobile pagination
+  const paginationSwiper =  new Swiper('.story-nav__body', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    allowTouchMove: false,
+    watchSlidesProgress: true,
+    updateOnWindowResize: true,
+    // enabled: true,
 
-    historyLineItems.forEach(storyItem => {
-      let liItem = document.createElement('li');
-      liItem.classList.add('story-nav__item');
-      liItem.innerText = storyItem.querySelector('.article-story__year').firstElementChild.textContent;
-      historyNavList.append(liItem);
-    });
+    slideClass: 'story-nav__item',
+    slideActiveClass: 'story-nav__item--active',
 
-    const paginationSwiper =  new Swiper('.story-nav__body', {
-      spaceBetween: 10,
-      slidesPerView: 'auto',
-      allowTouchMove: false,
-      watchSlidesProgress: true,
-      updateOnWindowResize: true,
+    breakpoints: {
+      767: {
+        enabled: false
+      },
+    }
+  });
 
-      slideClass: 'story-nav__item',
-      slideActiveClass: 'story-nav__item--active',
-    });
+  paginationBehavior();
+  
+  window.addEventListener('resize', function() {
+    paginationBehavior()
+  })
 
-    let currentItem;
-    scrollbar.addListener((status) => {
-      historyLineItems.forEach( item => {
-        if(isElementInViewport(item)) {
-          if(item === currentItem) {
-            return;
-          } else {
-            let navItems = document.querySelectorAll('.story-nav__item');
-            navItems.forEach( navItem => {
-              navItem.classList.remove('story-nav__item--active');
-
-              if(navItem.textContent === item.querySelector('.article-story__year').firstElementChild.textContent) {
-                navItem.classList.add('story-nav__item--active');
-              }
-            })
+  function paginationBehavior() {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      let currentItem;
+      scrollbar.addListener((status) => {
+        historyLineItems.forEach( item => {
+          if(isElementInViewport(item)) {
+            if(item === currentItem) {
+              return;
+            } else {
+              let navItems = document.querySelectorAll('.story-nav__item');
+              navItems.forEach( navItem => {
+                navItem.classList.remove('story-nav__item--active');
+  
+                if(navItem.textContent === item.querySelector('.article-story__year').firstElementChild.textContent) {
+                  navItem.classList.add('story-nav__item--active');
+                }
+              })
+            }
+  
+          currentItem = item;
+  
+          paginationSwiper.slides.forEach(slide => {
+            if(slide.classList.contains('story-nav__item--active')) {
+              paginationSwiper.slideTo(paginationSwiper.slides.indexOf(slide), 200);
+            }
+          })
           }
-
-        currentItem = item;
-
-        paginationSwiper.slides.forEach(slide => {
-          if(slide.classList.contains('story-nav__item--active')) {
-            paginationSwiper.slideTo(paginationSwiper.slides.indexOf(slide), 200);
-          }
+  
         })
-        }
-
-      })
-
-    });
+  
+      });
+    }
   }
+  // -end- swiper for year mobile pagination
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -178,5 +194,4 @@ export default () => {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-
 }

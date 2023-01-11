@@ -26,6 +26,7 @@
   .scroll-content {
     will-change: transform;
     transition: transform 0.1s linear !important;
+    -moz-transition: transform 0.1s linear !important;
   }
   
   .scrollbar-track-y {
