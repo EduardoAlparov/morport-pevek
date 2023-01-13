@@ -32,11 +32,15 @@
   &__list {
     display: flex;
     align-items: center;
-    gap: 16px;
   }
 
   &__item {
     position: relative;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &::after {
       content: '/';

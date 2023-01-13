@@ -23,22 +23,17 @@
   --transition: 200ms ease-in;
 }
 
-
 @import "./helpers/**/*";
 @import "./vendor/**/*";
 @import "./settings/**/*";
 @import "./UI/**/*";
 @import "./pages/**/*";
 
-
 body {
   position: relative;
-
   min-width: 319px;
   min-height: 100vh;
-
   font: var(--font-body);
   color: var(--color-text);
-
   text-rendering: optimizeSpeed;
 }

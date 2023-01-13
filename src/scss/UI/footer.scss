@@ -101,7 +101,6 @@
       justify-content: center;
       gap: 30px;
     }
-
   }
 
   &__address {
@@ -146,11 +145,16 @@
 
   &__nav {
     .nav__list {
-      gap: 24px;
+      // gap: 24px;
     }
 
     .nav__item {
       height: 20px;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .nav__link {
@@ -160,7 +164,6 @@
     .nav__icon {
       height: 26px;
     }
-
 
     @include mq(sm, max) {
       display: none;
@@ -177,12 +180,12 @@
   &__contacts {
     padding-top: 5px;
 
-    .contacts__list {
-      gap: 18px;
-    }
-
     .contacts__item {
-      gap: 7px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     @include mq(md, max) {
