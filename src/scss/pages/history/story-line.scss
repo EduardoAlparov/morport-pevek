@@ -7,8 +7,13 @@
     z-index: 12;
     display: flex;
     align-items: flex-start;
-    gap: 5rem;
+    column-gap: 5rem;
     padding: 3rem 0 3rem 13.5rem;
+    margin-bottom: 6rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &--text {
       display: flex;
@@ -69,7 +74,7 @@
     @include mq(xl, max) {
       align-items: center;
       padding: 3rem 0 3rem 6.5rem;
-      gap: 3.2rem;
+      column-gap: 3.2rem;
 
       &::after {
         top: 14rem;
@@ -87,7 +92,12 @@
     @include mq(sm, max) {
       flex-direction: column;
       align-items: start;
-      gap: 40px;
+
+      margin-bottom: 40px;
+    
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &--no-dash {
@@ -263,6 +273,10 @@
     @include mq(md, max) {
       height: 100%;
       padding-top: 0;
+    }
+
+    @include mq(sm, max) {
+      margin-bottom: 40px;
     }
   }
 }

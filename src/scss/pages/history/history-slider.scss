@@ -56,9 +56,7 @@
     will-change: transform;
     transform-box: border-box;
     transition: transform 1s ease !important;
-    
   }
-
   
   &__heading {
     margin-bottom: 7.5rem;
@@ -82,7 +80,6 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-    gap: 6rem;
     margin-bottom: 10rem;
     will-change: transform;
     transition: transform 1.6s ease !important;
@@ -93,7 +90,6 @@
 
     @include mq(md, max) {
       padding-top: 0;
-      gap: 40px;
     }
   }
 

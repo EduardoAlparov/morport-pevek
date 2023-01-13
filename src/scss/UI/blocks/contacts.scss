@@ -2,10 +2,22 @@
   &--vertical {
     .contacts__list {
       flex-direction: column;
-      gap: 31px;
+    }
+
+    .contacts__item {
+      margin-bottom: 31px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       @include mq(sm, max) {
-        gap: 12px;
+        margin-bottom: 12px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+  
       }
     }
   }
@@ -13,11 +25,11 @@
   &--horizontal {
     .contacts__list {
       flex-wrap: wrap;
-      gap: 40px;
+      column-gap: 40px;
 
       @include mq(md, max) {
         flex-wrap: nowrap;
-        gap: 12px;
+        column-gap: 12px;
       }
     }
 
@@ -82,22 +94,32 @@
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 5px;
 
     @include mq(md, max) {
       align-items: center;
     }
 
-    @include mq(sm, max) {
-      gap: 7px;
-    }
   }
 
   &__title {
+    margin-bottom: 5px;
     font-size: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include mq(md, max) {
       font-size: 12px;
+    }
+
+    
+    @include mq(sm, max) {
+      margin-bottom: 7px;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 

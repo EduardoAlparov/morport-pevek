@@ -1,7 +1,7 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 22px;
+  column-gap: 22px;
 
   @include mq(sm, max) {
     flex-direction: column;

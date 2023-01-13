@@ -28,14 +28,12 @@
 
   &__controls {
     position: relative;
-
     flex-basis: 25.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 74px;
     padding: 0 6px 10px 70px;
-
     opacity: 1;
 
     @include mq(xxl, max) {
@@ -54,7 +52,7 @@
       flex-basis: auto;
       flex-direction: row-reverse;
       align-items: center;
-      gap: 15px;
+      column-gap: 15px;
       margin-left: auto;
       padding-top: 0;
       padding-left: 0;
@@ -74,11 +72,11 @@
   &__site-control {
     display: flex;
     align-items: center;
-    gap: 35px;
+    column-gap: 35px;
     padding-right: 9px;
 
     @include mq(xl, max) {
-      gap: 20px;
+      column-gap: 20px;
       padding-right: 0;
     }
   }

@@ -1,18 +1,10 @@
 .article-story {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
-
-  @include mq(xl, max) {
-    gap: 2.4rem;
-  }
-
-  @include mq(sm, max) {
-    gap: 14px;
-  }
 
   &--horizontal {
     flex-direction: row;
+    column-gap: 20px;
 
     @include mq(lg, max) {
       flex-direction: column;
@@ -27,24 +19,32 @@
   &__time {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    margin-bottom: 3.5rem;
 
+    @include mq(xl, max) {
+      margin-bottom: 2.4rem;
+    }
+  
     @include mq(sm, max) {
-      gap: 13px;
+      margin-bottom: 0;
     }
   }
 
   &__date {
+    margin-bottom: 1rem;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     letter-spacing: 0.1em;
-
     color: var(--color-white);
 
     @include mq(md, max) {
       font-size: 12px;
+    }
+    
+    @include mq(sm, max) {
+      margin-bottom: 13px;
     }
   }
 
@@ -74,19 +74,14 @@
   &__story {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
-    @include mq(xl, max) {
-      gap: 15px;
-    }
   }
 
   &__main-text {
+    margin-bottom: 20px;
     font-style: normal;
     font-weight: 550;
     font-size: 20px;
     line-height: 110%;
-
     color: var(--color-white);
 
     &--dark {
@@ -94,6 +89,7 @@
     }
 
     @include mq(xl, max) {
+      margin-bottom: 15px;
       font-size: 18px;
     }
 

@@ -6,13 +6,23 @@
   &--vertical {
     .nav__list {
       flex-direction: column;
-      gap: 10px;
+    }
+    .nav__item {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   &--light {
-    .nav__list {
-      gap: 3px;
+    .nav__item {
+      margin-bottom: 3px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .nav__link {
