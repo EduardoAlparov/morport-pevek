@@ -30,6 +30,10 @@ export default () => {
   const accentTriggers = document.querySelectorAll("._set-accent-background");
   const whiteTriggers = document.querySelectorAll("._set-white-background");
 
+  if(!historySlider) {
+    return;
+  }
+
   // -start- transform with transition and with custom scrolls instead of browser scrollbar
   class DisableScrollPlugin extends ScrollbarPlugin {
     static pluginName = 'disableScroll';
