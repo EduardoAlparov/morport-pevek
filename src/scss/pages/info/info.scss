@@ -179,12 +179,4 @@
       margin-bottom: 16px;
     }
   }
-
-  &__doc-list {
-    min-height: 700px;
-
-    @include mq(xl, max) {
-      min-height: unset;
-    }
-  }
 }

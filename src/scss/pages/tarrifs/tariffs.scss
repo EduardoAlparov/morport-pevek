@@ -43,15 +43,17 @@
 
   &__tariffs-item {
     width: 331px;
-    height: 321px;
+    min-height: 32.1rem;
+    display: flex;
 
     @include mq(xl, max) {
       width: calc(50% - 10px);
+      min-height: 20rem;
     }
 
     @include mq(sm, max) {
       width: 100%;
-      height: 151px;
+      min-height: 15.1rem;
     }
   }
 
