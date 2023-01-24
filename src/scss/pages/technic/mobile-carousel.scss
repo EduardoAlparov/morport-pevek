@@ -4,17 +4,13 @@
   left: 0;
   bottom: 0;
   z-index: 40;
-
-  right: -9999px;
+  right: -999rem;
   opacity: 0;
   visibility: hidden;
-
   width: 100%;
   height: 100%;
   display: none;
-
   background-color: rgba(0,0,0, .84);
-
   transition: right 1s;
 
   @include mq(sm, max) {
@@ -37,19 +33,18 @@
 
   &__slider {
     position: relative;
-
-    padding: 20px 0 0;
+    padding: 2rem 0 0;
   }
 
   &__slider-wrapper {
     display: flex;
     align-items: flex-start;
-    gap: 0px;
+    gap: 0;
   }
 
   &__slide {
     flex: 0 0 90%;
-    padding-right: 10px;
+    padding-right: 1rem;
 
     &--selected {
       .mobile-carousel__thumb-list {
@@ -60,44 +55,39 @@
   }
 
   &__main-image {
-    height: 350px;
+    height: 35rem;
     overflow: hidden;
 
     img {
       min-height: 100%;
-
       object-fit: cover;
       object-position: center;
     }
 
     @include mq(xxs, max) {
-      height: 250px;
+      height: 25rem;
     }
   }
 
   &__thumb-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    padding: 10px 20px;
-
+    gap: 0.6rem;
+    padding: 1rem 2rem;
     opacity: 0;
     visibility: hidden;
-
     transition: var(--transition);
   }
 
   &__thumb-button {
     position: relative;
-
-    width: 40px;
-    height: 30px;
+    width: 4rem;
+    height: 3rem;
     display: block;
     overflow: hidden;
 
     img {
       min-height: 100%;
-
       object-fit: cover;
       object-position: center;
       pointer-events: none;
@@ -111,10 +101,8 @@
       bottom: 0;
       left: 0;
       z-index: 1;
-
       width: 100%;
       height: 100%;
-
       pointer-events: none;
       background:  linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),;
     }
@@ -128,22 +116,20 @@
 
   &__close {
     position: absolute;
-    top: -40px;
-    right: 15px;
-
-    width: 48px;
-    height: 48px;
+    top: -4rem;
+    right: 1.5rem;
+    width: 4.8rem;
+    height: 4.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: rgba(242, 245, 250, 0.2);
     border-radius: 100%;
 
     svg {
       display: block;
-      width: 15px;
-      height: 15px;
+      width: 1.5rem;
+      height: 1.5rem;
       pointer-events: none;
     }
   }

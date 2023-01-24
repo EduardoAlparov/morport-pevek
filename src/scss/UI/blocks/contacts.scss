@@ -5,14 +5,14 @@
     }
 
     .contacts__item {
-      margin-bottom: 31px;
+      margin-bottom: 3.1rem;
 
       &:last-child {
         margin-bottom: 0;
       }
 
       @include mq(sm, max) {
-        margin-bottom: 12px;
+        margin-bottom: 1.2rem;
 
         &:last-child {
           margin-bottom: 0;
@@ -25,11 +25,11 @@
   &--horizontal {
     .contacts__list {
       flex-wrap: wrap;
-      column-gap: 40px;
+      column-gap: 4rem;
 
       @include mq(md, max) {
         flex-wrap: nowrap;
-        column-gap: 12px;
+        column-gap: 1.2rem;
       }
     }
 
@@ -37,7 +37,7 @@
       color: var(--color-white);
 
       @include mq(sm, max) {
-        font-size: 14px;
+        font-size: 1.4rem;
       }
 
       @include hover {
@@ -48,41 +48,41 @@
 
   &--big {
     .contacts__list {
-      gap: 20px;
+      gap: 2rem;
 
       @include mq(md, max) {
         align-items: flex-start;
-        gap: 20px;
+        gap: 2rem;
       }
     }
 
     .contacts__item {
-      gap: 10px;
+      gap: 1rem;
 
       @include mq(md, max) {
         align-items: flex-start;
-        gap: 8px;
+        gap: 0.8rem;
       }
     }
 
     .contacts__title {
       font-weight: 550;
-      font-size: 24px;
+      font-size: 2.4rem;
       line-height: 110%;
       color: var(--color-title);
 
       @include mq(md, max) {
-        font-size: 20px;
+        font-size: 2rem;
       }
     }
 
     .contacts__link {
-      font-size: 22px;
+      font-size: 2.2rem;
       line-height: 150%;
       color: var(--color-text);
 
       @include mq(md, max) {
-        font-size: 16px;
+        font-size: 1.6rem;
       }
     }
   }
@@ -102,20 +102,20 @@
   }
 
   &__title {
-    margin-bottom: 5px;
-    font-size: 14px;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
 
     &:last-child {
       margin-bottom: 0;
     }
 
     @include mq(md, max) {
-      font-size: 12px;
+      font-size: 1.2rem;
     }
 
     
     @include mq(sm, max) {
-      margin-bottom: 7px;
+      margin-bottom: 0.7rem;
   
       &:last-child {
         margin-bottom: 0;
@@ -124,7 +124,7 @@
   }
 
   &__link {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 140%;
     color: var(--color-title);
     transition: var(--transition);
@@ -134,7 +134,7 @@
     }
 
     @include mq(md, max) {
-      font-size: 14px;
+      font-size: 1.4rem;
     }
   }
 }

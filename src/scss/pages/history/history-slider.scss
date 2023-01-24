@@ -43,8 +43,8 @@
     }
 
     @include mq(md, max) {
-      padding: 90px 0 0 0;
-      margin-bottom: 22px;
+      padding: 9rem 0 0 0;
+      margin-bottom: 2.2rem;
     }
   }
 
@@ -70,7 +70,7 @@
     }
 
     @include mq(sm, max) {
-      margin-bottom: 28px;
+      margin-bottom: 2.8rem;
     }
   }
 
@@ -85,7 +85,7 @@
     transition: transform 1.6s ease !important;
 
     @include mq(lg, max) {
-      margin-bottom: 60px;
+      margin-bottom: 6rem;
     }
 
     @include mq(md, max) {
@@ -118,11 +118,11 @@
     }
 
     @include mq(lg, max) {
-      font-size: 72px;
+      font-size: 7.2rem;
     }
 
     @include mq(sm, max) {
-      font-size: 50px;
+      font-size: 5rem;
     }
   }
 
@@ -148,7 +148,7 @@
     margin-top: 3rem;
     border-style: solid;
     border-color: #d8d8d8;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 0.1rem 0;
     background-color: var(--color-white);
 
     @include mq(md, max) {

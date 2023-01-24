@@ -2,26 +2,25 @@
   $this: &;
 
   &__main {
-    padding: 50px 0 0;
+    padding: 5rem 0 0;
 
     @include mq(xl, max) {
-      padding: 36px 0 0;
+      padding: 3.6rem 0 0;
     }
 
     @include mq(md, max) {
-      padding: 20px 0 56px;
+      padding: 2rem 0 5.6rem;
 
       border-style: solid;
       border-color: #d9d8d8;
-      border-width: 0 0 1px 0;
+      border-width: 0 0 0.1rem 0;
     }
   }
 
   &__wrapper {
     position: relative;
-
     width: 100%;
-    min-width: 320px;
+    min-width: 32rem;
     overflow: hidden;
     padding-top: 56%;
 
@@ -52,7 +51,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-
     height: 100%;
     min-width: 100%;
 
@@ -63,7 +61,6 @@
 
   &__inputs {
     position: absolute;
-    // z-index: -1;
   }
 
   &__item {
@@ -132,8 +129,8 @@
 
       .scheme__pseudo-button  {
         transform: translate(-48%, -41%);
-        width: 225px;
-        height: 95px;
+        width: 22.5rem;
+        height: 9.5rem;
       }
     }
 
@@ -166,45 +163,43 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1;
-      width: 150px;
-      height: 80px;
+      width: 15rem;
+      height: 8rem;
       background-color: transparent;
     }
 
     @include mq(md, max) {
-      width: 130px;
-      height: 60px;
+      width: 13rem;
+      height: 6rem;
     }
   }
 
   &__button-wrapper {
     position: absolute;
-    top: -80px;
+    top: -8rem;
     left: 50%;
     transform: translateX(-50%);
     transition: var(--transition);
 
     @include mq(md, max) {
-      top: -40px;
+      top: -4rem;
     }
   }
 
   &__button {
     position: relative;
     display: block;
-    padding: 12px 16px 10px;
-
+    padding: 1.2rem 1.6rem 1rem;
     font-weight: 550;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 110%;
     color: var(--color-title);
     text-align: center;
     white-space: nowrap;
-
     background-color: var(--color-white);
     border-radius: 10rem;
-    cursor: pointer;
     transition: var(--transition);
+    cursor: pointer;
 
     &::before {
       content: '';
@@ -212,11 +207,10 @@
       top: 98%;
       left: 50%;
       transform: translateX(-50%);
-
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 10.4px 6px 0 6px;
+      border-width: 1.04rem 0.6rem 0 0.6rem;
       border-color: #ffffff transparent transparent transparent;
       transition: var(--transition);
     }
@@ -231,11 +225,11 @@
     }
 
     @include mq(md, max) {
-      padding: 5.5px 8px 5.5px;
-      font-size: 10px;
+      padding: 0.55rem 0.8rem 0.55rem;
+      font-size: 1rem;
 
       &::before {
-        border-width: 5px 3px 0 3px;
+        border-width: 0.5rem 0.3rem 0 0.3rem;
       }
     }
   }
@@ -244,7 +238,6 @@
     position: absolute;
     top: 0;
     left: 0;
-
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
@@ -264,25 +257,21 @@
     top: 0;
     left: 0;
     transform: translate(-50%,-50%);
-
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 100%;
     background-color: var(--color-card);
+    transition: var(--transition);
     cursor: pointer;
 
-    transition: var(--transition);
-
     .icon {
-      width: 10px;
-      height: 10px;
-
+      width: 1rem;
+      height: 1rem;
       stroke: var(--color-title);
-      stroke-width: 1.5px;
+      stroke-width: 0.15rem;
     }
 
     @include hover {
@@ -291,55 +280,52 @@
   }
 
   &__desc-wrapper {
-    width: 380px;
-    padding: 32px;
+    width: 38rem;
+    padding: 3.2rem;
     overflow: hidden;
-
     background-color: var(--color-white);
 
     @include mq(xl, max) {
-      width: 280px;
-      padding: 16px;
+      width: 28rem;
+      padding: 1.6rem;
     }
 
     @include mq(md, max) {
-      width: 200px;
+      width: 20rem;
     }
   }
 
   &__desc {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 2.4rem;
 
     @include mq(xl, max) {
-      gap: 12px;
+      gap: 1.2rem;
     }
   }
 
   &__desc-title {
     font-weight: 550;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 110%;
     color: var(--color-title);
 
     @include mq(xl, max) {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
   }
 
   &__desc-text {
-    max-height: 140px;
+    max-height: 14rem;
     overflow: auto;
-
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 140%;
-
     scrollbar-color: var(--color-other) transparent !important;
     scrollbar-width: thin !important;
 
     &::-webkit-scrollbar {
-      width: 5px;
+      width: 0.5rem;
     }
 
     &::-webkit-scrollbar-track  {
@@ -347,22 +333,20 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      width: 2px;
-      height: 76px;
-
-      border-radius: 3px;
-      border: 3px solid var(--color-other);
+      width: 0.2rem;
+      height: 7.6rem;
+      border-radius: 0.3rem;
+      border: 0.3rem solid var(--color-other);
       background-color: var(--color-other);
     }
 
     &::-webkit-scrollbar-track-piece {
-
       background-color: transparent;
     }
 
     @include mq(xl, max) {
-      max-height: 102px;
-      font-size: 12px;
+      max-height: 10.2rem;
+      font-size: 1.2rem;
       line-height: 140%;
     }
   }
@@ -374,7 +358,6 @@
     bottom: 0;
     left: 0;
     z-index: 30;
-
     width: 100%;
     height: 100%;
   }
@@ -388,10 +371,8 @@
   &__mask {
     position: absolute;
     display: block;
-
     width: 10%;
     height: 10%;
-
     opacity: 0;
     transition: var(--transition);
     cursor: pointer;
@@ -475,7 +456,7 @@
 
     .scheme__desc-wrapper {
       width: 100%;
-      padding: 20px 0 0;
+      padding: 2rem 0 0;
     }
 
     .scheme__desc-text {
@@ -486,10 +467,8 @@
 }
 
 // checked control on css
-
 #storages:checked {
   & ~ .scheme__masks-wrapper {
-
     .scheme__mask-wrapper--storage {
       @include mq(md, max) {
         label {

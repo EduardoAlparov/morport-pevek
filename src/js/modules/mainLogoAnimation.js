@@ -12,53 +12,52 @@ export default () => {
     return;
   }
 
+  let coefficient = parseFloat(window.getComputedStyle(document.documentElement, null).getPropertyValue('font-size')) / 10;
   let style = window.getComputedStyle(scaleTitle, null).getPropertyValue('font-size');
   let fontSize = parseFloat(style);
   let gap = parseFloat(window.getComputedStyle(scaleTitle.parentElement, null).getPropertyValue('gap'));
   let top = parseFloat(window.getComputedStyle(scaleTitle.parentElement.closest('.animated-logo'), null).getPropertyValue('padding-top'));
 
   document.body.onresize = () => {
-
     style = window.getComputedStyle(scaleTitle, null).getPropertyValue('font-size');
     fontSize = parseFloat(style);
-
+    
     if (window.matchMedia("(min-width: 1679px)").matches) {
-      if(fontSize !== 316) {
-        scaleTitle.style.fontSize = "316px";
-        scaleTitle.parentElement.style.gap = 300 + "px";
+      if(fontSize !== (316 * coefficient)) {
+        scaleTitle.style.fontSize = "31.6rem";
+        scaleTitle.parentElement.style.gap = 30 + "rem";
       }
     } else if (window.matchMedia("(min-width: 1090px)").matches) {
-      if(fontSize !== 270) {
-        scaleTitle.style.fontSize = "270px";
+      if(fontSize !== (270 * coefficient)) {
+        scaleTitle.style.fontSize = "27rem";
       }
     } else if (window.matchMedia("(min-width: 991px)").matches) {
 
-      if(fontSize !== 110) {
-        scaleTitle.style.fontSize = "110px";
+      if(fontSize !== (110 * coefficient)) {
+        scaleTitle.style.fontSize = "11rem";
       }
     } else {}
 
     if (window.matchMedia("(max-width: 1199px)").matches) {
       scaleTitle.parentElement.style.gap = "0px";
     } else if(window.matchMedia("(max-width: 1350px)").matches) {
-      scaleTitle.parentElement.style.gap = "60px";
+      scaleTitle.parentElement.style.gap = "6rem";
     } else if(window.matchMedia("(max-width: 1500px)").matches) {
-      scaleTitle.parentElement.style.gap = "200px";
+      scaleTitle.parentElement.style.gap = "20rem";
     } else  {
-      scaleTitle.parentElement.style.gap = "307px";
+      scaleTitle.parentElement.style.gap = "30.7rem";
     }
 
     if (window.matchMedia("(max-width: 1199px)").matches) {
-      scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "30px";
+      scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "3rem";
     } else {
-      scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "88px";
+      scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "8.8rem";
     }
 
     style = window.getComputedStyle(scaleTitle, null).getPropertyValue('font-size');
     fontSize = parseFloat(style);
     gap = parseFloat(window.getComputedStyle(scaleTitle.parentElement, null).getPropertyValue('gap'));
     top = parseFloat(window.getComputedStyle(scaleTitle.parentElement.closest('.animated-logo'), null).getPropertyValue('top'));
-
   }
 
   ScrollTrigger.create({
@@ -99,5 +98,4 @@ export default () => {
       }
     }
   }
-
 }

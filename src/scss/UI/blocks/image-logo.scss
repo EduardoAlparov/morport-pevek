@@ -1,32 +1,30 @@
 .image-log {
   display: block;
-  width: 487px;
-  height: 90px;
+  width: 48.7rem;
+  height: 9rem;
 
   svg {
     width: 100%;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     fill: var(--color-accent);
     transition: fill .3s ease-in-out;
   }
 
   @include mq(md, max) {
     width: unset;
-    height: 40px;
+    height: 4rem;
 
     svg {
-      width: 236px;
+      width: 23.6rem;
     }
   }
 
   @include mq(custom, max, 360) {
     svg {
-      width: 215px;
+      width: 21.5rem;
     }
   }
 }

@@ -28,10 +28,8 @@ export default () => {
             select.querySelector('.select-box__current').classList.remove('active');
           }
         })
-
       }
     })
-
   })
 }
 
@@ -39,7 +37,7 @@ function findLableForControl(el) {
   let idVal = el.id;
   let labels = document.getElementsByTagName('label');
   for( var i = 0; i < labels.length; i++ ) {
-     if (labels[i].htmlFor == idVal)
-          return labels[i];
+    if (labels[i].htmlFor == idVal)
+        return labels[i];
   }
 }

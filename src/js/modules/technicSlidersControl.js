@@ -13,7 +13,6 @@ export default () => {
       infinite: false,
       Dots: false,
       center: false,
-      // fill: false,
       friction: 0.85,
       slidesPerPage: 'auto',
 

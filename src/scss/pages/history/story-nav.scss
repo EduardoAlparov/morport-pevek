@@ -4,10 +4,9 @@
     right: 0;
     left: 0;
     z-index: 50;
-
     width: 100%;
-    padding: 16px 0 12px;
-    padding-left: 45px;
+    padding: 1.6rem 0 1.2rem;
+    padding-left: 4.5rem;
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
@@ -31,10 +30,8 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 55;
-
-      width: 45px;
+      width: 4.5rem;
       height: 100%;
-
       background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     }
 
@@ -53,7 +50,7 @@
     }
 
   &__body {
-    max-width: 83px;
+    max-width: 8.3rem;
 
     .swiper-wrapper {
       width: max-content;
@@ -69,26 +66,26 @@
 
   &__item {
     flex-shrink: 0;
-    min-width: 52px;
+    min-width: 5.2rem;
     width: max-content !important;
     display: block;
     font-family: 'BebasNeue';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 3.2rem;
     line-height: 100%;
     color: var(--color-title);
     white-space: nowrap;
 
     .icon {
-      width: 51px;
-      height: 26px;
+      width: 5.1rem;
+      height: 2.6rem;
       fill: var(--color-title);
     }
 
     &--big{
       .icon {
-        width: 86px;
+        width: 8.6rem;
       }
     }
 

@@ -29,15 +29,15 @@
     animation-iteration-count: infinite;
 
     .icon {
-      width: 218px;
-      height: 268px;
+      width: 21.8rem;
+      height: 26.8rem;
 
       fill: var(--color-white);
 
 
       @include mq(md, max) {
-        width: 109px;
-        height: 134px;
+        width: 10.9rem;
+        height: 13.4rem;
       }
     }
   }

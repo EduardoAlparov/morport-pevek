@@ -1,6 +1,6 @@
 .video-button {
-  width: 104px;
-  height: 104px;
+  width: 10.4rem;
+  height: 10.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,19 +12,19 @@
   background-color: var(--color-white);
 
   svg {
-    height: 26px;
-    width: 30px;
+    height: 2.6rem;
+    width: 3rem;
     display: block;
-    padding-left: 7px;
+    padding-left: 0.7rem;
   }
 
   @include mq(md, max) {
-    width: 72px;
-    height: 72px;
+    width: 7.2rem;
+    height: 7.2rem;
 
     svg {
-      height: 17px;
-      width: 17px;
+      height: 1.7rem;
+      width: 1.7rem;
     }
   }
 

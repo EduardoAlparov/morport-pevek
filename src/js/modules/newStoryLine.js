@@ -135,7 +135,6 @@ export default () => {
     allowTouchMove: false,
     watchSlidesProgress: true,
     updateOnWindowResize: true,
-    // enabled: true,
 
     slideClass: 'story-nav__item',
     slideActiveClass: 'story-nav__item--active',

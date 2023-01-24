@@ -1,38 +1,34 @@
 .gallery {
-  $gapBig: 16px;
-  $gapSmall: 10px;
+  $gapBig: 1.6rem;
+  $gapSmall: 1rem;
 
   &__body {
     display: flex;
     flex-direction: column;
     gap: $gapBig;
-    padding: 50px 0;
-
+    padding: 5rem 0;
     border-style: solid;
     border-color: #d9d8d8;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 0.1rem 0;
 
     @include mq(sm, max) {
       gap: $gapSmall;
-      padding: 20px 0;
+      padding: 2rem 0;
     }
   }
 
   &__grid-contanier {
     display: grid;
     grid-auto-flow: row dense;
-
     grid-template-columns: repeat(4, 0.25fr);
-    grid-template-rows: repeat(auto-fill, minmax(auto, 304px));
-
+    grid-template-rows: repeat(auto-fill, minmax(auto, 30.4rem));
     column-gap: $gapBig;
     row-gap: $gapBig;
-
     width: 100%;
 
     @include mq(lg, max) {
       grid-template-columns: repeat(3, 0.5fr);
-      grid-template-rows: repeat(auto-fill, minmax(auto, 280px));
+      grid-template-rows: repeat(auto-fill, minmax(auto, 28rem));
 
       &:nth-child(2n+1) {
         .gallery__cell:last-child {
@@ -55,28 +51,21 @@
     }
 
     @include mq(xxs, max) {
-      grid-template-rows: repeat(auto-fill, minmax(auto, 257px));
+      grid-template-rows: repeat(auto-fill, minmax(auto, 25.7rem));
     }
   }
 
   &__cell {
     position: relative;
-
     display: block;
-
     border: none;
     outline: none;
-
     background-color: var(--color-other);
-    height: 304px;
+    height: 30.4rem;
 
     &--small {
       grid-column: span 1;
       grid-row: span 1;
-
-      @include mq(lg, max) {
-
-      }
 
       @include mq(sm, max) {
         grid-column: unset;
@@ -86,7 +75,6 @@
 
     &--big {
       height: auto;
-
       grid-column: span 2;
       grid-row: span 2;
 
@@ -101,7 +89,7 @@
       }
 
       @include mq(xxs, max) {
-        height: 257px;
+        height: 25.7rem;
       }
     }
 
@@ -113,10 +101,8 @@
       bottom: 0;
       right: 0;
       z-index: 2;
-
       width: 100%;
       height: 100%;
-
       transition: background-color var(--transition);
     }
 
@@ -126,26 +112,18 @@
       }
     }
 
-    @include mq(lg, max) {
-
-    }
-
     @include mq(xxs, max) {
-      height: 257px;
+      height: 25.7rem;
     }
   }
 
   &__add-button {
     display: flex;
     justify-content: center;
-    margin-top: 36px;
+    margin-top: 3.6rem;
 
     @include mq(sm, max) {
-      margin-top: 20px;
+      margin-top: 2rem;
     }
-  }
-
-  @include mq(sm, max) {
-
   }
 }

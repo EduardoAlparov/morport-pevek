@@ -23,7 +23,6 @@ export class Modal {
     this.events();
   }
 
-
   events() {
     if (this.modals.length) {
       document.addEventListener('click', function (e) {

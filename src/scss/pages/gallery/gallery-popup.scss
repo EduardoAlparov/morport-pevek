@@ -5,16 +5,12 @@
   bottom: 0;
   left: 0;
   z-index: 100;
-
   width: 100%;
   height: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: rgba(10, 22, 49, 0.8);
-
   right: -10000px;
   left: unset;
   visibility: hidden;
@@ -30,18 +26,12 @@
 
   &__container {
     position: relative;
-
     height: 100%;
     width: 61vw;
     max-width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    // @include mq(xxl, max) {
-    //   width: 75vw;
-    // }
 
     @include mq(md, max) {
       width: 100%;
@@ -50,11 +40,9 @@
 
   &__carousel {
     position: relative;
-
     width: 100%;
     max-width: 100%;
     height: 72%;
-
     background-color: var(--color-other);
 
     @include mq(sm, max) {
@@ -76,7 +64,6 @@
 
   &__carousel-item {
     position: relative;
-
     height: 100%;
     width: 100%;
     min-width: 100%;
@@ -87,10 +74,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
-
       min-width: 100%;
       min-height: 100%;
-
       object-fit: cover;
       object-position: center;
     }
@@ -101,7 +86,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -127,52 +111,49 @@
   &__carousel-pagination {
     position: absolute;
     left: 0;
-    bottom: 54px;
-
+    bottom: 5.4rem;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 3rem;
 
     @include mq(md, max) {
-      left: 20px;
-      bottom: 20px;
+      left: 2rem;
+      bottom: 2rem;
     }
 
     @include mq(sm, max) {
-      gap: 16px;
+      gap: 1.6rem;
     }
   }
 
   &__num {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 140%;
     letter-spacing: 0.2em;
     color: var(--color-white);
 
     @include mq(sm, max) {
-      font-size: 12px;
+      font-size: 1.2rem;
     }
   }
 
   &__range {
-    width: 64px;
-    height: 1px;
-
+    width: 6.4rem;
+    height: 0.1rem;
     background-color: rgba(255, 255, 255, .5);
 
     @include mq(sm, max) {
-      width: 32px;
+      width: 3.2rem;
     }
   }
 
   &__close-button {
     position: absolute;
-    top: -20px;
-    left: calc(100% + 70px);
-
+    top: -2rem;
+    left: calc(100% + 7rem);
 
     @include mq(xl, max) {
-      left: calc(100% + 20px);
+      left: calc(100% + 2rem);
     }
 
     @include mq(md, max) {

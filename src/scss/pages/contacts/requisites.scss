@@ -1,22 +1,20 @@
 .requisites {
   &__title {
-    margin-bottom: 9px;
-
+    margin-bottom: 0.9rem;
     font-weight: 550;
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 110%;
     color: var(--color-title);
 
     @include mq(md, max) {
-      margin-bottom: 2px;
-      font-size: 20px;
+      margin-bottom: 0.2rem;
+      font-size: 2rem;
     }
   }
 
   &__requisites-item {
-    margin-bottom: 10px;
-
-    font-size: 22px;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
     line-height: 150%;
 
     &:last-child {
@@ -24,8 +22,8 @@
     }
 
     @include mq(md, max) {
-      margin-bottom: 4px;
-      font-size: 16px;
+      margin-bottom: 0.4rem;
+      font-size: 1.6rem;
     }
   }
 }

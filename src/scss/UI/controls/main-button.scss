@@ -1,36 +1,29 @@
 .main-button {
   position: relative;
   overflow: hidden;
-
   width: min-content;
   display: block;
-  padding: 23px 53px;
-
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 50px;
-
+  padding: 2.3rem 5.3rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.6);
+  border-radius: 5rem;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 130%;
   color: var(--color-white);
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
-
   background-color: transparent;
   transition: border-color .4s ease-in-out;
-
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 
-
   @include mq(md, max) {
-    padding: 25px 40px;
+    padding: 2.5rem 4rem;
   }
 
   &__text {
     position: relative;
     z-index: 10;
-
     transition: .4s ease-in-out;
   }
 
@@ -38,15 +31,12 @@
     position: absolute;
     left: -50%;
     top: 110%;
-
     width: 100%;
     height: 0;
     padding-top: 110%;
     display: block;
-
     background-color: var(--color-other);
     border-radius: 100%;
-
     transition-property: top, left, transform;
     transition-duration: .4s;
     transition-timing-function: ease;

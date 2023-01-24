@@ -94,7 +94,7 @@
   }
 
   &__body {
-    min-height: 680px;
+    min-height: 68rem;
     width: 100%;
     display: flex;
 
@@ -106,7 +106,7 @@
       min-height: 100vh;
       display: grid;
       grid-template-rows: 1fr min-content;
-      grid-template-columns: 1fr 40%;
+      grid-template-columns: 1fr 30%;
       grid-template-areas:
         "title menu"
         "contacts contacts";
@@ -132,14 +132,14 @@
   &__title {
     @include mq(md, max) {
       white-space: nowrap;
-      font-size: 48px !important;
-      padding-bottom: 20px !important;
+      font-size: 4.8rem !important;
+      padding-bottom: 2rem !important;
     }
   }
 
   &__left-col,
   &__right-col {
-    padding-top: 240px;
+    padding-top: 24rem;
 
     @include mq(md, max) {
       padding-top: 0;
@@ -150,7 +150,7 @@
     position: relative;
 
     flex-basis: 74.5%;
-    padding-right: 25px;
+    padding-right: 2.5rem;
 
     @include mq(xxl, max) {
       flex-basis: auto;
@@ -168,7 +168,7 @@
     }
 
     @include mq(xxs, max) {
-      padding-top: 75px;
+      padding-top: 7.5rem;
     }
 
     @media screen and (max-height: 370px) {
@@ -178,8 +178,8 @@
 
   &__contacts {
     position: absolute;
-    left: -8px;
-    bottom: 63px;
+    left: -0.8rem;
+    bottom: 6.3rem;
 
     .contacts__title {
       color: rgba($color: white, $alpha: 0.3);
@@ -196,9 +196,9 @@
 
       @include mq(xl, max) {
         display: block;
-        padding: 20px 0;
+        padding: 2rem 0;
         overflow: hidden;
-        margin-top: 20px;
+        margin-top: 2rem;
 
         border-style: solid;
         border-color: rgba(255,255,255, .1);
@@ -223,7 +223,7 @@
     flex-shrink: 0;
     flex-basis: 25.5%;
     display: flex;
-    padding-left: 70px;
+    padding-left: 7rem;
 
     border-style: solid;
     border-color: rgba(255,255,255, .1);
@@ -240,7 +240,7 @@
     @include mq(md, max) {
       grid-area: menu;
       flex-basis: unset;
-      padding: 30px 0 10px;
+      padding: 3rem 0 1rem;
 
       border-width: 0 0 0 0;
     }
@@ -250,13 +250,13 @@
     .contacts__list {
       @include mq(xl, max) {
         flex-direction: row;
-        gap: 40px;
+        gap: 4rem;
       }
     }
 
     .contacts__item {
       align-items: flex-start;
-      gap: 2px;
+      gap: 0.2rem;
       flex-shrink: 0;
       flex-grow: 1;
     }
@@ -268,7 +268,7 @@
     @include mq(md, max) {
       display: block;
       position: absolute;
-      top: 12px;
+      top: 1.2rem;
       left: 0;
     }
   }

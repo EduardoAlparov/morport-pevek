@@ -1,6 +1,6 @@
 .animated-logo {
   width: 100%;
-  padding-top: 88px;
+  padding-top: 8.8rem;
   max-height: max-content;
   overflow: hidden;
   will-change: padding-top;
@@ -9,12 +9,12 @@
 
   @include mq(lg, max) {
     height: max-content;
-    padding-top: 30px;
-    left: 0px;
+    padding-top: 3rem;
+    left: 0;
   }
 
   @include mq(sm, max) {
-    padding-top: 72px;
+    padding-top: 7.2rem;
     position: static;
   }
 
@@ -22,52 +22,49 @@
     width: 0;
     display: flex;
     align-items: baseline;
-    gap: 307px;
+    gap: 30.7rem;
     will-change: gap;
     opacity: 0;
     overflow: hidden;
-
     transition: gap 0.5s linear, width 3s, opacity 3s .3s;
 
     @include mq(custom, max, 1500) {
-      gap: 200px;
+      gap: 20rem;
     }
 
     @include mq(custom, max, 1350) {
-      gap: 60px;
+      gap: 6rem;
     }
 
     @include mq(lg, max) {
       flex-direction: column;
       align-items: center;
-      gap: 0px;
+      gap: 0;
     }
   }
 
   &__title {
-    padding-right: 15px;
+    padding-right: 1.5rem;
     font-weight: 700;
-    font-size: 316px;
+    font-size: 31.6rem;
     line-height: 111%;
     letter-spacing: -0.03em;
     color: var(--color-white);
-
     will-change: font-size;
     transition: font-size 0.4s ease-out, width 3s, opacity 3s;
 
     @include mq(custom, max, 1090) {
-      font-size: 270px;
+      font-size: 27rem;
     }
 
     @include mq(md, max) {
       padding-right: 0;
-
-      font-size: 110px;
+      font-size: 11rem;
       line-height: 100%;
     }
 
     @include mq(xxs, max) {
-      padding-right: 12px;
+      padding-right: 1.2rem;
     }
   }
 
@@ -78,40 +75,37 @@
   &__sub-items {
     display: flex;
     align-items: center;
-    gap: 20px;
-
-    line-height: 316px;
+    gap: 2rem;
+    line-height: 31.6rem;
     opacity: 0;
     transition: opacity 4s 3s;
 
     @include mq(lg, max) {
       flex-direction: column;
       align-items: center;
-      gap: 0px;
+      gap: 0;
     }
   }
 
   &__icon {
-    width: 25px;
-    height: 47px;
+    width: 2.5rem;
+    height: 4.7rem;
 
     svg {
       max-width: 100%;
       max-height: 100%;
-
       fill: var(--color-white);
     }
 
     @include mq(xl, max) {
-      width: 20px;
-      height: 37px;
+      width: 2rem;
+      height: 3.7rem;
     }
-
   }
 
   &__text {
     color: var(--color-white);
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 130%;
     letter-spacing: 0.2em;
 
@@ -120,7 +114,7 @@
     }
 
     @include mq(xl, max) {
-      font-size: 11px;
+      font-size: 1.1rem;
       line-height: 120%;
     }
   }
