@@ -18,11 +18,8 @@ import historyHeadingAnimation from './modules/historyHeadingAnimation';
 import clientsHeadingAnimation from './modules/clientsHeadingAnimation';
 import linkHoverAnimation from './modules/linkHoverAnimation';
 
-
 import customSelectControl from './modules/customSelectControl';
 import infoButtonsListSlider from './modules/infoButtonsListSlider';
-
-import portStoryLine from './modules/portStoryLine';
 
 import schemeTextControl from './modules/schemeTextControl';
 import newStoryLine from './modules/newStoryLine';
@@ -50,7 +47,6 @@ documenReady(() => {
   addHorizontalParallaxEffects();
   addVerticalParallaxEffects('.parallax-bg');
   // ===========================================================================
-
   //  scale the logo title:
   mainLogoAnimation();
   // ===========================================================================
@@ -73,7 +69,6 @@ documenReady(() => {
   infoButtonsListSlider();
   // ===========================================================================
   //
-  portStoryLine();
   newStoryLine();
   // ===========================================================================
   //

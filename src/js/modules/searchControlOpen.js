@@ -3,7 +3,6 @@ export default () => {
   const searchInput = searchLine.querySelector('.search-control__input');
   const searchListWrapper = searchLine.querySelector('.search-control__values-list');
 
-
   searchLine.closest('.page-wrapper').addEventListener('click', (e) => {
     if (e.target.closest('.search-control__btn') &&
     !e.target.closest('.search-control__btn').disabled &&

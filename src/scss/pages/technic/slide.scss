@@ -1,7 +1,7 @@
 .slide {
   position: relative;
 
-  padding: 0 25px;
+  padding: 0 2.5rem;
 
   &:last-child {
     padding-right: 0;
@@ -16,7 +16,7 @@
   }
 
   @include mq(md, max) {
-    padding: 0 25px;
+    padding: 0 2.5rem;
 
     &:first-child {
       padding-left: 0;
@@ -24,28 +24,28 @@
   }
 
   @include mq(sm, max) {
-    padding: 20px 0;
+    padding: 2rem 0;
   }
 
 
   &__body {
-    width: 755px;
-    min-height: 654px;
+    width: 75.5rem;
+    min-height: 65.4rem;
     display: grid;
     grid-auto-flow: column dense;
     grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 274px;
-    grid-template-rows: 503px min-content;
-    gap: 27px 30px;
+    grid-template-columns: 1fr 27.4rem;
+    grid-template-rows: 50.3rem min-content;
+    gap: 2.7rem 3rem;
     grid-template-areas:
       "slide__image slide__image"
       "slide__title slide__spec";
 
     @include mq(xxl, max) {
-      width: 629px;
-      min-height: 545px;
-      grid-template-columns: 1fr 230px;
-      grid-template-rows: 415px min-content;
+      width: 62.9rem;
+      min-height: 54.5rem;
+      grid-template-columns: 1fr 23rem;
+      grid-template-rows: 41.5rem min-content;
     }
 
     @include mq(xl, max) {
@@ -54,8 +54,8 @@
     }
 
     @include mq(md, max) {
-      width: 553px;
-      min-height: 520px;
+      width: 55.3rem;
+      min-height: 52rem;
       grid-template-rows: 1.7fr 0.3fr;
     }
 
@@ -72,8 +72,8 @@
     }
 
     @include mq(xs, max) {
-      height: 351px;
-      gap: 21px;
+      height: 35.1rem;
+      gap: 2.1rem;
     }
   }
 
@@ -81,7 +81,6 @@
     grid-area: slide__image;
     position: relative;
     overflow: hidden;
-
     background-color: var(--color-other);
 
     img {
@@ -89,11 +88,9 @@
       top: 50%;
       left: 50%;
       z-index: 1;
-
       width: 100%;
       max-width: unset;
       height: 100%;
-
       object-fit: cover;
       transform: translate(-50%, -50%);
       pointer-events: none;
@@ -102,8 +99,7 @@
 
   &__spec {
     grid-area: slide__spec;
-    min-height: 138px;
-
+    min-height: 13.8rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -114,44 +110,43 @@
   }
 
   &__spec-name {
-    margin-bottom: 10px;
-
+    margin-bottom: 1rem;
     font-weight: 550;
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 110%;
     color: var(--color-title);
 
     @include mq(xl, max) {
-      font-size: 20px;
+      font-size: 2rem;
     }
 
     @include mq(md, max) {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
   }
 
   &__spec-value {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 150%;
   }
 
   &__title {
     grid-area: slide__title;
-    font-size: 38px;
+    font-size: 3.8rem;
 
     @include mq(xxl, max) {
-      font-size: 32px;
+      font-size: 3.2rem;
     }
 
     @include mq(md, max) {
-      font-size: 24px;
+      font-size: 2.4rem;
     }
   }
 
   &__number {
     position: absolute;
     bottom: 0;
-    left: 30px;
+    left: 3rem;
 
     @include mq(sm, max) {
       display: none;

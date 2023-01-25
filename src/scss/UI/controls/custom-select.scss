@@ -1,59 +1,51 @@
 .select-box {
   position: relative;
-
   display: block;
-  width: 420px;
+  width: 42rem;
   margin: 0 auto;
-
   font-family: inherit;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 2.2rem;
   line-height: 150%;
   color: var(--color-text);
 
   @include mq(xl, max) {
-    width: 380px;
+    width: 38rem;
   }
 
   @include mq(md, max) {
-    width: 320px;
+    width: 32rem;
   }
 
   @include mq(sm, max) {
     width: 100%;
-
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   &__label {
     position: absolute;
-    top: 5px;
-
-    padding-left: 30px;
-
-    font-size: 12px;
+    top: 0.5rem;
+    padding-left: 3rem;
+    font-size: 1.2rem;
     line-height: 140%;
     color: rgba(101, 108, 125, .6);
-
     pointer-events: none;
 
     @include mq(sm, max) {
-      padding-left: 24px;
-      font-size: 10px;
+      padding-left: 2.4rem;
+      font-size: 1rem;
     }
   }
 
   &__current {
     position: relative;
-
-    height: 66px;
-
-    cursor: pointer;
+    height: 6.6rem;
+    overflow: hidden;
     outline: none;
     background-color: var(--color-white);
-    border: 1px solid #CED0D6;
-    border-radius: 50px;
-    overflow: hidden;
+    border: 0.1rem solid #CED0D6;
+    border-radius: 5rem;
+    cursor: pointer;
 
     &.active {
       color: var(--color-accent);
@@ -84,30 +76,28 @@
     }
 
     @include mq(sm, max) {
-      height: 52px;
+      height: 5.2rem;
     }
   }
 
   &__icon {
     position: absolute;
     top: 50%;
-    right: 30px;
+    right: 3rem;
     transform: translateY(-50%);
-
-    width: 20px;
-
+    width: 2rem;
     transition: 0.1s ease;
 
     svg {
-      width: 18px;
-      height: 18px;
-      stroke-width: 2px;
+      width: 1.8rem;
+      height: 1.8rem;
+      stroke-width: 0.2rem;
       color: var(--color-title);
       stroke: var(--color-title);
     }
 
     @include mq(sm, max) {
-      right: 24px;
+      right: 2.4rem;
     }
   }
 
@@ -127,8 +117,7 @@
     display: none;
     width: 100%;
     margin: 0;
-    padding: 21px 30px 17px 30px;
-
+    padding: 2.1rem 3rem 1.7rem 3rem;
     color: var(--color-text);
 
     @include hover {
@@ -138,36 +127,32 @@
     }
 
     @include mq(sm, max) {
-      padding: 20px 25px 8px 24px;
+      padding: 2rem 2.5rem 0.8rem 2.4rem;
     }
   }
 
   &__list-wrapper {
     position: absolute;
-    top: calc(100% + 9px);
+    top: calc(100% + 0.9rem);
     z-index: 25;
-
     width: 100%;
-    padding: 20px 5px 20px 30px;
-
+    padding: 2rem 0.5rem 2rem 3rem;
     animation-name: HideList;
     animation-duration: 0.5s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: step-start;
-
     background-color: var(--color-white);
-    border: 1px solid var(--color-accent);
-    border-radius: 24px;
+    border: 0.1rem solid var(--color-accent);
+    border-radius: 2.4rem;
     list-style: none;
     opacity: 0;
     overflow: hidden;
   }
 
   &__list {
-    max-height: 141px;
+    max-height: 14.1rem;
     overflow-y: scroll;
-
     scrollbar-color: var(--color-other) transparent !important;
     scrollbar-width: thin !important;
 
@@ -180,7 +165,7 @@
     }
 
     &::-webkit-scrollbar {
-      width: 5px;
+      width: 0.5rem;
     }
 
     &::-webkit-scrollbar-track  {
@@ -188,38 +173,33 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      width: 2px;
-      height: 76px;
-
-      border-radius: 3px;
-      border: 3px solid var(--color-other);
+      width: 0.2rem;
+      height: 7.6rem;
+      border-radius: 0.3rem;
+      border: 0.3rem solid var(--color-other);
       background-color: var(--color-other);
     }
 
     &::-webkit-scrollbar-track-piece {
-
       background-color: transparent;
     }
 
     @include mq(sm, max) {
-      height: 140px;
+      height: 14rem;
     }
   }
 
   &__option {
     position: relative;
-
     display: block;
     padding-left: 0;
-    margin-bottom: 20px;
-
+    margin-bottom: 2rem;
     background-color: #fff;
-
     transition: padding-left 0.2s ease-out;
 
     @media (any-hover: hover) {
       &:hover {
-        padding-left: 32px;
+        padding-left: 3.2rem;
         color: var(--color-accent);
         background-color: #fbfbfb;
 
@@ -236,13 +216,10 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-
-      width: 20px;
-      height: 24px;
-
+      width: 2rem;
+      height: 2.4rem;
       background-image: url('../../assets/images/icons/mono/anchor.svg');
       background-size: contain;
-
       transition: opacity .1s ease-out;
     }
 
@@ -250,7 +227,7 @@
       transition: unset;
 
       &.active {
-        padding-left: 32px;
+        padding-left: 3.2rem;
         color: var(--color-accent);
         background-color: #fbfbfb;
 
@@ -259,7 +236,6 @@
         }
       }
     }
-
   }
 }
 

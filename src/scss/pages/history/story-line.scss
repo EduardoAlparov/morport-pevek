@@ -92,8 +92,7 @@
     @include mq(sm, max) {
       flex-direction: column;
       align-items: start;
-
-      margin-bottom: 40px;
+      margin-bottom: 4rem;
     
       &:last-child {
         margin-bottom: 0;
@@ -143,7 +142,7 @@
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
-        gap: 20px;
+        gap: 2rem;
 
         .swiper-slide-prev {
           opacity: 1;
@@ -190,7 +189,7 @@
     gap: 10rem;
 
     @include mq(sm, max) {
-      gap: 60px;
+      gap: 6rem;
     }
   }
 
@@ -215,8 +214,8 @@
       }
 
       @include mq(sm, max) {
-        width: 235px;
-        height: 166px;
+        width: 23.5rem;
+        height: 16.6rem;
       }
     }
 
@@ -231,20 +230,20 @@
 
       @include mq(sm, max) {
         width: 100%;
-        height: 350px;
+        height: 35rem;
       }
 
       @include mq(xs, max) {
-        height: 300px;
+        height: 30rem;
       }
 
       @include mq(xxs, max) {
-        height: 250px;
+        height: 25rem;
       }
 
       @include mq(custom, max, 370) {
-        width: 320px;
-        height: 215px;
+        width: 32rem;
+        height: 21.5rem;
       }
     }
 
@@ -252,13 +251,9 @@
       width: 44.8rem;
       height: 31.6rem;
 
-      @include mq(xxl, max) {
-
-      }
-
       @include mq(sm, max) {
-        width: 320px;
-        height: 215px;
+        width: 32rem;
+        height: 21.5rem;
       }
     }
   }
@@ -276,7 +271,7 @@
     }
 
     @include mq(sm, max) {
-      margin-bottom: 40px;
+      margin-bottom: 4rem;
     }
   }
 }

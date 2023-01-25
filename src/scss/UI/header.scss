@@ -3,7 +3,7 @@
   z-index: 32;
 
   width: 100%;
-  padding-top: 25px;
+  padding-top: 2.5rem;
 
   &__body {
     position: relative;
@@ -11,10 +11,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 3rem;
 
     @include mq(xxs, max) {
-      gap: 18px;
+      gap: 1.8rem;
     }
   }
 
@@ -32,8 +32,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 74px;
-    padding: 0 6px 10px 70px;
+    gap: 7.4rem;
+    padding: 0 0.6rem 1rem 7rem;
     opacity: 1;
 
     @include mq(xxl, max) {
@@ -41,8 +41,7 @@
     }
 
     @include mq(xl, max) {
-      flex-basis: 40%;
-      gap: 20px;
+      gap: 2rem;
     }
 
     @include mq(md, max) {
@@ -52,7 +51,7 @@
       flex-basis: auto;
       flex-direction: row-reverse;
       align-items: center;
-      column-gap: 15px;
+      column-gap: 1.5rem;
       margin-left: auto;
       padding-top: 0;
       padding-left: 0;
@@ -60,23 +59,23 @@
 
     @include mq(sm, max) {
       padding-right: 0;
-      padding-bottom: 5px;
+      padding-bottom: 0.5rem;
     }
 
     @include mq(xxs, max) {
       margin-left: auto;
-      padding-bottom: 15px;
+      padding-bottom: 1.5rem;
     }
   }
 
   &__site-control {
     display: flex;
     align-items: center;
-    column-gap: 35px;
-    padding-right: 9px;
+    column-gap: 3.5rem;
+    padding-right: 0.9rem;
 
     @include mq(xl, max) {
-      column-gap: 20px;
+      column-gap: 2rem;
       padding-right: 0;
     }
   }
@@ -88,11 +87,11 @@
   }
 
   @include mq(md, max) {
-    padding: 20px 0;
+    padding: 2rem 0;
   }
 
   @include mq(sm, max) {
-    padding: 16px 0;
+    padding: 1.6rem 0;
   }
 }
 
@@ -103,16 +102,12 @@
     right: 0;
     left: 0;
     z-index: 19;
-
     width: 100%;
-
 
     &__controls {
       position: relative;
-
       padding-top: 0;
       padding-right: 0px;
-
       opacity: 0;
       transition: opacity 4s 3s;
     }
@@ -140,7 +135,7 @@
     transition: 0.3s ease;
 
     &--hidden {
-      top: -110px;
+      top: -11rem;
     }
   }
 }
@@ -168,7 +163,7 @@
     }
 
     .header__site-control {
-      height: 27px;
+      height: 2.7rem;
       flex-grow: 1;
       flex-direction: row-reverse;
       justify-content: space-between;

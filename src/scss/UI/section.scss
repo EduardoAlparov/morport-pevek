@@ -2,34 +2,34 @@
   overflow: hidden;
 
   &__body {
-    padding-top: 45px;
+    padding-top: 4.5rem;
 
     @include mq(xl, max) {
       overflow: hidden;
     }
 
     @include mq(sm, max) {
-      padding-top: 20px;
+      padding-top: 2rem;
     }
   }
 
   &__breadcrumbs {
-    margin-bottom: 45px;
+    margin-bottom: 4.5rem;
 
     @include mq(sm, max) {
-      margin-bottom: 19px;
+      margin-bottom: 1.9rem;
     }
   }
 
   &__title {
-    padding-bottom: 56px;
+    padding-bottom: 5.6rem;
 
     border-style: solid;
     border-color: #d9d8d8;
     border-width: 0 0 1px 0;
 
     font-weight: 550;
-    font-size: 100px;
+    font-size: 10rem;
     line-height: 90%;
     letter-spacing: -0.03em;
     color: var(--color-title);
@@ -41,8 +41,8 @@
     &--white {
       color: var(--color-white);
       padding-bottom: 0;
-      margin-top: -12px;
-      margin-left: -4px;
+      margin-top: -1.2rem;
+      margin-left: -0.4rem;
 
       @include mq(sm, max) {
         margin-top: 0;
@@ -51,34 +51,34 @@
 
     &--big {
       font-weight: 700;
-      font-size: 260px;
+      font-size: 26rem;
       line-height: 100%;
       letter-spacing: -0.03em;
       text-transform: uppercase;
 
       @include mq(xl, max) {
-        font-size: 132px !important;
+        font-size: 13.2rem !important;
       }
 
       @include mq(sm, max) {
         padding-bottom: 0 !important;
-        font-size: 56px !important;
+        font-size: 5.6rem !important;
       }
     }
 
     &--tech {
-      padding-bottom: 116px;
+      padding-bottom: 11.6rem;
     }
 
     @include mq(xl, max) {
-      padding-bottom: 20px;
+      padding-bottom: 2rem;
 
-      font-size: 72px;
+      font-size: 7.2rem;
       line-height: 100%;
     }
 
     @include mq(sm, max) {
-      font-size: 48px;
+      font-size: 4.8rem;
       line-height: 100%;
       letter-spacing: -0.01em;
     }
@@ -86,16 +86,16 @@
 
   &__subtitle {
     font-weight: 550;
-    font-size: 46px;
+    font-size: 4.6rem;
     line-height: 105%;
     color: var(--color-title);
 
     @include mq(xl, max) {
-      font-size: 36px;
+      font-size: 3.6rem;
     }
 
     @include mq(md, max) {
-      font-size: 24px;
+      font-size: 2.4rem;
     }
   }
 }

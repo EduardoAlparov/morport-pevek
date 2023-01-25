@@ -1,20 +1,19 @@
 .search-bar {
   position: relative;
-
-  width: 420px;
-  height: 66px;
+  width: 42rem;
+  height: 6.6rem;
 
   @include mq(xl, max) {
-    width: 380px;
+    width: 38rem;
   }
 
   @include mq(md, max) {
-    width: 320px;
+    width: 32rem;
   }
 
   @include mq(sm, max) {
     width: 100%;
-    height: 52px;
+    height: 5.2rem;
   }
 
   &:hover {
@@ -33,17 +32,14 @@
   &__input {
     width: 100%;
     height: 100%;
-    padding: 20px 30px 10px 30px;
-
+    padding: 2rem 3rem 1rem 3rem;
     border: 1px solid var(--color-other);
-    border-radius: 50px;
-
+    border-radius: 5rem;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 2.2rem;
     line-height: 150%;
     color: var(--color-accent);
     cursor: text;
-
     transition: var(--transition);
 
     &:focus,
@@ -61,7 +57,7 @@
 
     &::placeholder {
       @include mq(md, max) {
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 150%;
       }
     }
@@ -69,12 +65,12 @@
     &::-moz-placeholder {
       color: var(--color-text);
       opacity: 1;
-    }/* Firefox 19+ */
+    }
 
     &:-moz-placeholder {
       color: var(--color-text);
       opacity: 1;
-    }/* Firefox 19+ */
+    }
 
     &:-ms-input-placeholder {
       color: var(--color-text);
@@ -82,8 +78,8 @@
     }
 
     @include mq(sm, max) {
-      padding: 20px 24px 13px 22px;
-      font-size: 16px;
+      padding: 2rem 2.4rem 1.3rem 2.2rem;
+      font-size: 1.6rem;
       line-height: 150%;
     }
   }
@@ -94,20 +90,19 @@
   }
 
   &__label {
-    top: 5px;
-    left: 30px;
-
-    font-size: 12px;
+    top: 0.5rem;
+    left: 3rem;
+    font-size: 1.2rem;
     line-height: 140%;
     opacity: 0.6;
     pointer-events: none;
 
     @include mq(xl, max) {
-      font-size: 10px;
+      font-size: 1rem;
     }
 
     @include mq(sm, max) {
-      left: 24px;
+      left: 2.4rem;
     }
   }
 
@@ -115,37 +110,35 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-
     height: 100%;
-    padding: 20px 30px 24px;
+    padding: 2rem 3rem 2.4rem;
     pointer-events: none;
 
     @include mq(sm, max) {
-      right: 26px;
-      padding: 16px;
+      right: 2.6rem;
+      padding: 1.6rem;
     }
   }
 
   &__icon {
     border-left: 1px solid var(--color-text);
-    padding-left: 14px;
+    padding-left: 1.4rem;
 
     svg {
-      width: 25px;
-      height: 25px;
-
+      width: 2.5rem;
+      height: 2.5rem;
       stroke-width: 1.5px;
       stroke: var(--color-title);
       transition: var(--transition);
     }
 
     @include mq(sm, max) {
-      width: 19px;
-      height: 19px;
+      width: 1.9rem;
+      height: 1.9rem;
 
       svg {
-        width: 21px;
-        height: 21px;
+        width: 2.1rem;
+        height: 2.1rem;
       }
     }
   }

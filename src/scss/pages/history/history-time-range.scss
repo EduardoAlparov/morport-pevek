@@ -1,11 +1,11 @@
 .history-time-range {
     position: relative;
     z-index: -1;
-    width: 16px;
+    width: 1.6rem;
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0.2rem;
     padding: 10.6rem 0 3.3rem 0;
     will-change: transform;
     transition: transform 1.3s ease !important;
@@ -18,7 +18,7 @@
       flex-grow: 1;
       background-image: 
         linear-gradient(to top,
-          rgba(83, 91, 110, 1) 0px, rgba(83, 91, 110, 1) 1px,
+          rgba(83, 91, 110, 1) 0, rgba(83, 91, 110, 1) 1px,
           transparent 2px, transparent 6px,
           rgba(83, 91, 110, 0.9) 7px, rgba(83, 91, 110, 0.9) 8px,
           transparent 9px, transparent 13px,
@@ -68,10 +68,10 @@
           transparent 58px, transparent 62px,
           rgba(83, 91, 110, 1) 63px, rgba(83, 91, 110, 1) 65px
           );
-          background-size: 100% 66px, 100% calc(100% - 132px), 100% 64px;
+          background-size: 100% 6.6rem, 100% calc(100% - 13.2rem), 100% 6.4rem;
           background-repeat: no-repeat;
           background-position-x: center;
-          background-position-y: top, 66px , bottom;
+          background-position-y: top, 6.6rem ,bottom;
     }
   }
   

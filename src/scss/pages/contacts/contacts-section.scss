@@ -1,22 +1,19 @@
 .contacts-section {
-
   &__info-body {
-    padding: 30px 0 99px;
-
+    padding: 3rem 0 9.9rem;
     border-style: solid;
     border-color: #d9d8d8;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 0.1rem 0;
 
     @include mq(md, max) {
-      padding: 30px 0;
+      padding: 3rem 0;
     }
   }
 
   &__icon {
     svg {
-      width: 40px;
-      height: 63px;
-
+      width: 4rem;
+      height: 6.3rem;
       color: var(--color-accent);
     }
 
@@ -26,11 +23,11 @@
   }
 
   &__info-right {
-    padding-left: 24px;
+    padding-left: 2.4rem;
 
     @include mq(md, max) {
       align-items: flex-start;
-      gap: 24px;
+      gap: 2.4rem;
       padding-left: 0;
     }
 
@@ -54,7 +51,8 @@
   }
 
   &__requisites {
-    padding-left: 25px;
+    padding-left: 2.5rem;
+
     @include mq(md, max) {
       padding-left: 0;
     }
@@ -65,14 +63,14 @@
   }
 
   &__map {
-    padding-top: 27px;
-    padding-bottom: 5px;
+    padding-top: 2.7rem;
+    padding-bottom: 0.5rem;
 
     @include mq(md, max) {
-      padding: 30px 0;
+      padding: 3rem 0;
       border-style: solid;
       border-color: #d9d8d8;
-      border-width: 0 0 1px 0;
+      border-width: 0 0 0.1rem 0;
     }
   }
 }

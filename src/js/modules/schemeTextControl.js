@@ -4,7 +4,6 @@ export default () => {
   const schemeButton = document.querySelectorAll('.scheme__button');
   const emptyInput = document.getElementById('empty');
 
-
   if(schemeWrapper && (window.matchMedia("(max-width: 991px)").matches)) {
     schemeWrapper.querySelectorAll('input[type="radio"]').forEach(input => {
       input.addEventListener('change', () => {
@@ -26,11 +25,9 @@ export default () => {
   if(schemeWrapper && !(matchMedia('(hover: none)').matches)) {
     schemeButton.forEach(btn => {
       btn.addEventListener('mouseover', () => {
-        // btn.closest('.scheme__mask-wrapper').querySelector('.scheme__mask').style.opacity = '1';
         btn.closest('.scheme__mask-wrapper').querySelector('.scheme__mask').classList.add('_visible');
 
         btn.addEventListener('mouseout', () => {
-          // btn.closest('.scheme__mask-wrapper').querySelector('.scheme__mask').style.opacity = '0';
           btn.closest('.scheme__mask-wrapper').querySelector('.scheme__mask').classList.remove('_visible');
         })
       })

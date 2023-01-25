@@ -8,7 +8,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 7px;
   line-height: 1.2;
   scroll-behavior: smooth;
 }
@@ -149,36 +149,31 @@ img {
 
 .visually-hidden {
   position: absolute;
-
   overflow: hidden;
   clip: rect(0 0 0 0);
-
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
-
   white-space: nowrap;
-
   border: 0;
-
   clip-path: inset(100%);
 }
 
 .site-container {
   width: 100%;
-  max-width: 1580px;
+  max-width: 158rem;
   margin: 0 auto;
-  padding: 0 7px;
+  padding: 0 0.7rem;
 
   @include mq(xxl, max) {
-    max-width: 95%;
-    padding: 0 10px;
+    // max-width: 95%;
+    padding: 0 1rem;
   }
 
   @include mq(xl, max) {
     max-width: 90%;
-    padding: 0 15px;
+    padding: 0 1.5rem;
   }
 
   @include mq(sm, max) {

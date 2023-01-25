@@ -18,9 +18,7 @@
   &__body {
     position: relative;
     z-index: 36;
-
     flex-grow: 1;
-
     display: flex;
     justify-content: center;
     overflow-y: hidden;
@@ -43,10 +41,8 @@
 
   &__image {
     position: relative;
-
     height: 30vh;
-    max-height: 245px;
-
+    max-height: 24.5rem;
     transform: translateX(-50%);
     transition: transform 3s ease-out;
 
@@ -55,11 +51,9 @@
       top: 50%;
       left: 50%;
       z-index: 1;
-
       width: 100%;
       max-width: unset;
       height: 100%;
-
       object-fit: contain;
       transform: translate(-50%, -50%);
 
@@ -69,17 +63,15 @@
 
       @include mq(xl, max) {
         height: 20vh;
-        max-height: 245px;
+        max-height: 24.5rem;
       }
 
       @include mq(md, max) {
         left: -10%;
         top: 50%;
         transform: translateY(-50%);
-
         width: 100%;
         max-width: unset;
-
         object-fit: cover;
         object-position: right;
       }
@@ -90,31 +82,30 @@
     }
 
     @include mq(md, max) {
-      margin-top: 50px;
+      margin-top: 5rem;
     }
 
     @include mq(sm, max) {
-      height: 145px;
+      height: 14.5rem;
     }
   }
 
   &__button-wrapper {
     display: flex;
     justify-content: center;
-
     opacity: 0;
     transition: opacity 3s 3s;
 
     @include mq(xl, max) {
-      padding-bottom: 55px;
+      padding-bottom: 5.5rem;
     }
 
     @include mq(sm, max) {
-      padding: 65px 0 55px;
+      padding: 6.5rem 0 5.5rem;
     }
 
     @include mq(custom, max, 360) {
-      padding: 25px 0 25px;
+      padding: 2.5rem 0 2.5rem;
     }
   }
 

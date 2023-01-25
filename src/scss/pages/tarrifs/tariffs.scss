@@ -1,38 +1,38 @@
 .tariffs {
   &__control-line {
     display: flex;
-    gap: 23px;
-    margin-bottom: 40px;
+    gap: 2.3rem;
+    margin-bottom: 4rem;
 
     @include mq(sm, max) {
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 30px;
+      gap: 1rem;
+      margin-bottom: 3rem;
     }
   }
 
   &__body {
-    padding: 50px 0 130px;
+    padding: 5rem 0 13rem;
     border-style: solid;
     border-color: #d9d8d8;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 0.1rem 0;
 
     @include mq(sm, max) {
-      padding: 30px 0 60px;
+      padding: 3rem 0 6rem;
     }
   }
 
   &__tariffs-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 1.5rem;
 
     @include mq(xl, max) {
-      margin-bottom: 40px;
+      margin-bottom: 4rem;
     }
 
     @include mq(sm, max) {
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
 
     @include mq(sm, max) {
@@ -42,12 +42,12 @@
   }
 
   &__tariffs-item {
-    width: 331px;
+    width: 33.1rem;
     min-height: 32.1rem;
     display: flex;
 
     @include mq(xl, max) {
-      width: calc(50% - 10px);
+      width: calc(50% - 1rem);
       min-height: 20rem;
     }
 

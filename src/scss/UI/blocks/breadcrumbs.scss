@@ -17,15 +17,15 @@
   }
 
   &--pt {
-    padding-top: 113px;
+    padding-top: 11.3rem;
 
     @include mq(xl, max) {
-      padding-top: 83px;
-      margin-bottom: 30px;
+      padding-top: 8.3rem;
+      margin-bottom: 3rem;
     }
 
     @include mq(md, max) {
-      padding-top: 53px;
+      padding-top: 5.3rem;
     }
   }
 
@@ -36,7 +36,7 @@
 
   &__item {
     position: relative;
-    margin-right: 16px;
+    margin-right: 1.6rem;
 
     &:last-child {
       margin-right: 0;
@@ -45,15 +45,14 @@
     &::after {
       content: '/';
       position: absolute;
-      right: -11px;
-
-      font-size: 14px;
+      right: -1.1rem;
+      font-size: 1.4rem;
       line-height: 150%;
       color: var(--color-title);
 
       @include mq(sm, max) {
-        right: -12px;
-        font-size: 16px;
+        right: -1.2rem;
+        font-size: 1.6rem;
       }
     }
 
@@ -65,7 +64,7 @@
   }
 
   &__link {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 140%;
     color: var(--color-title);
     transition: var(--transition);
@@ -80,7 +79,7 @@
     }
 
     @include mq(sm, max) {
-      font-size: 16px;
+      font-size: 1.6rem;
       white-space: nowrap;
     }
   }

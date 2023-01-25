@@ -1,18 +1,12 @@
 .clients {
   position: relative;
   z-index: 30;
-
-  padding: 80px 0 108px;
+  padding: 8rem 0 10.8rem;
   overflow: hidden;
-
   background-color: var(--color-accent);
 
   @include mq(md, max) {
-    padding: 20px 0 60px;
-  }
-
-  @include mq(xxs, max) {
-    padding: 20px 0 60px;
+    padding: 2rem 0 6rem;
   }
 
   &__mobile-history-text {
@@ -20,24 +14,23 @@
 
     .history__down-content {
       padding-left: 0;
-      gap: 30px;
+      gap: 3rem;
     }
 
     @include mq(md, max) {
       display: block;
-      padding-bottom: 60px;
-      margin-bottom: 60px;
-
-      border-bottom: 1px solid rgba(248, 248, 248, .1)
+      padding-bottom: 6rem;
+      margin-bottom: 6rem;
+      border-bottom: 0.1rem solid rgba(248, 248, 248, .1)
     }
 
     .history__down-text {
       @include mq(sm, max) {
-        font-size: 16px;
+        font-size: 1.6rem;
       }
 
       @include mq(xxs, max) {
-       max-width: 340px;
+       max-width: 34rem;
       }
     }
   }
@@ -46,28 +39,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 120px;
+    margin-bottom: 12rem;
 
     @include mq(md, max) {
-      margin-bottom: 37px;
+      margin-bottom: 3.7rem;
     }
   }
 
   &__title {
     font-weight: 550;
-    font-size: 100px;
+    font-size: 10rem;
     line-height: 90%;
     letter-spacing: -0.03em;
     color: var(--color-white);
-
-    transform: translateY(50px);
+    transform: translateY(5rem);
     opacity: .5;
-
     transition: 1s ease-out;
 
     @include mq(md, max) {
       font-weight: 550;
-      font-size: 48px;
+      font-size: 4.8rem;
       line-height: 100%;
     }
   }
@@ -78,7 +69,6 @@
 
   &__list {
     position: relative;
-
     width: max-content;
     display: flex;
     transition: .6s ease-out;
@@ -86,14 +76,13 @@
 
   &__item {
     flex-shrink: 0;
-    width: 438px;
-    height: 438px;
+    width: 43.8rem;
+    height: 43.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 100%;
-    border: 3px solid rgba(255, 255, 255, 0.1);
+    border: 0.3rem solid rgba(255, 255, 255, 0.1);
 
     &--hidden {
       visibility: hidden;
@@ -102,31 +91,29 @@
     }
 
     @include mq(md, max) {
-      width: 219px;
-      height: 219px;
+      width: 21.9rem;
+      height: 21.9rem;
     }
 
     @include mq(sm, max) {
-      width: 147px;
-      height: 147px;
+      width: 14.7rem;
+      height: 14.7rem;
     }
   }
 
   &__label {
     position: relative;
-
-    max-width: 200px;
-    max-height: 50px;
+    max-width: 20rem;
+    max-height: 5rem;
 
     img {
-
       object-fit: cover;
       object-position: center;
     }
 
     @include mq(sm, max) {
-      max-width: 87px;
-      max-height: 31px;
+      max-width: 8.7rem;
+      max-height: 3.1rem;
     }
   }
 
@@ -135,7 +122,6 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: -1;
-
     width: 100%;
     height: 50%;
   }
