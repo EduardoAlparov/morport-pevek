@@ -35,4 +35,6 @@ Deploy:
     
     script:
         - touch test.txt
-        - scp -r test.txt cp05609@87.249.43.162:/home/c/cp05609/morport/public_html/wp-content/themes/morport/static
+        # - scp -r test.txt cp05609@87.249.43.162:/home/c/cp05609/morport/public_html/wp-content/themes/morport/static
+        - ssh -o StrictHostKeyChecking=no cp05609@vh344.timeweb.ru "cd /home/c/cp05609/morport/public_html/wp-content/themes/morport/static;"
+
