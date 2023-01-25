@@ -36,4 +36,4 @@ Deploy:
     script:
         # - mkdir html
         # - cp -r build/ html
-        - scp -r ./build cp05609@92.53.96.174:/home/c/cp05609/morport/public_html/wp-content/themes/morport/static
+        - scp -r ./build cp05609@87.249.43.162:/home/c/cp05609/morport/public_html/wp-content/themes/morport/static
