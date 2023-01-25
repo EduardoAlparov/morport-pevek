@@ -1,29 +1,29 @@
 stages:
-    - build
+    # - build
     - deploy
 
-Build:
-    stage: build
-    cache:
-        paths:
-            - node_modules/
-    image: node:16.14.2
-    only:
-        - main
-    tags:
-        - global_stage
-    script:
-        - npm i
-        - npm run build:prod
-    artifacts:
-        paths:
-            - build/
+# Build:
+#     stage: build
+#     cache:
+#         paths:
+#             - node_modules/
+#     image: node:16.14.2
+#     only:
+#         - main
+#     tags:
+#         - global_stage
+#     script:
+#         - npm i
+#         - npm run build:prod
+#     artifacts:
+#         paths:
+#             - build/
 
 Deploy:
     stage: deploy
     image: node:16.14.2
-    dependencies: 
-        - Build
+    # dependencies: 
+    #     - Build
     tags:
         - stage
     before_script:
@@ -34,6 +34,5 @@ Deploy:
         - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     
     script:
-        # - mkdir html
-        # - cp -r build/ html
-        - scp -r ./build cp05609@87.249.43.162:/home/c/cp05609/morport/public_html/wp-content/themes/morport/static
+        - touch test.txt
+        - scp -r test.txt cp05609@87.249.43.162:/home/c/cp05609/morport/public_html/wp-content/themes/morport/static
