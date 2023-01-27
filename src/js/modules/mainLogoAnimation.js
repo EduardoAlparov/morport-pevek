@@ -72,7 +72,8 @@ export default () => {
   function introScrollListener(progress, direction, isActive) {
     if (window.matchMedia("(min-width: 991px)").matches) {
       if(direction > 0) {
-        let scaleValue = ((1 - progress).toFixed(3));
+        let scaleValue = ((1 - progress).toFixed(1));
+
         scaleTitle.parentElement.style.gap = gap*scaleValue + "px";
         scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = top*scaleValue + "px";
 
@@ -85,9 +86,11 @@ export default () => {
         }
 
       } else if (direction < 0) {
-        let scaleValue = (1 - progress).toFixed(3);
+        let scaleValue = (1 - progress).toFixed(1);
+
         scaleTitle.parentElement.style.gap = gap*scaleValue + "px";
         scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = top*scaleValue + "px";
+        
         if (fontSize*scaleValue >= 111) {
           scaleTitle.style.fontSize = fontSize*scaleValue + "px";
         } else {

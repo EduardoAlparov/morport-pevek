@@ -73,7 +73,7 @@
     }
   }
 
-  @include hover {
+  @media (any-hover: hover) {
     &:hover {
       background-color: var(--color-accent);
       color: var(--color-white);
