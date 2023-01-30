@@ -5,7 +5,7 @@
   z-index: 50;
   width: 100%;
   height: 100%;
-  background-color: rgba($color: #1e1e1e, $alpha: 60%);
+  background-color: rgba($color: #000000, $alpha: 50%);
   visibility: hidden;
   opacity: 0;
   transition: opacity var(--transition-time), visibility var(--transition-time);
@@ -139,7 +139,7 @@
 
   &__left-col,
   &__right-col {
-    padding-top: 24rem;
+    padding-top: 23.8rem;
 
     @include mq(md, max) {
       padding-top: 0;

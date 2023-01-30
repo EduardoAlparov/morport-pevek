@@ -5,14 +5,12 @@
   &__body {
     display: flex;
     flex-direction: column;
-    gap: $gapBig;
     padding: 5rem 0;
     border-style: solid;
     border-color: #d9d8d8;
     border-width: 0 0 0.1rem 0;
 
     @include mq(sm, max) {
-      gap: $gapSmall;
       padding: 2rem 0;
     }
   }
@@ -25,6 +23,7 @@
     column-gap: $gapBig;
     row-gap: $gapBig;
     width: 100%;
+    margin-bottom: 1.6rem;
 
     @include mq(lg, max) {
       grid-template-columns: repeat(3, 0.5fr);
@@ -45,9 +44,9 @@
 
     @include mq(sm, max) {
       grid-template-columns: 1fr;
-
       column-gap: $gapSmall;
       row-gap: $gapSmall;
+      margin-bottom: 1rem;
     }
 
     @include mq(xxs, max) {
@@ -106,8 +105,8 @@
       transition: background-color var(--transition);
     }
 
-    @include hover {
-      &::after {
+    @media (any-hover: hover) {
+      &:hover::after {
         background-color: rgba(10, 22, 49, 0.8);
       }
     }

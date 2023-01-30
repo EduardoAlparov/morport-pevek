@@ -218,7 +218,12 @@
     flex-direction: column;
     gap: 5rem;
     padding-left: 2.5rem;
-    transition: .3s ease-out;
+    transition: transform 1.2s ease;
+    transform: translate3d(0, 0, 0);
+
+    &.animate-history-down {
+      transform: translate3d(0, 100px, 0);
+    }
   }
 
   &__down-text {

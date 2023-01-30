@@ -177,8 +177,8 @@ img {
   }
 
   @include mq(sm, max) {
-    max-width: 90%;
-    padding: 0;
+    max-width: 100%;
+    padding: 1.6rem;
   }
 
   @include mq(custom, max, 359) {
