@@ -25,12 +25,14 @@
     }
 
     .history__down-text {
+      max-width: unset;
+
       @include mq(sm, max) {
         font-size: 1.6rem;
       }
 
       @include mq(xxs, max) {
-       max-width: 34rem;
+       max-width: 45rem;
       }
     }
   }

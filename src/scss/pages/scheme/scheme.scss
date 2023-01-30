@@ -1,6 +1,15 @@
 .scheme {
   $this: &;
 
+  &__container {
+    max-width: 100%;
+    padding: 0;
+
+    @include mq(md, max) {
+      padding: 0 1.6rem;
+    }
+  }
+
   &__main {
     padding: 5rem 0 0;
 
@@ -280,14 +289,14 @@
   }
 
   &__desc-wrapper {
-    width: 38rem;
-    padding: 3.2rem;
+    width: 48.2rem;
+    padding: 3.2rem 0 3.2rem 3.2rem; 
     overflow: hidden;
     background-color: var(--color-white);
 
     @include mq(xl, max) {
       width: 28rem;
-      padding: 1.6rem;
+      padding: 1.6rem 0 1.6rem 1.6rem;
     }
 
     @include mq(md, max) {
@@ -299,9 +308,12 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    margin-bottom: 2.4rem;
+    padding-right: 3.2rem;
 
     @include mq(xl, max) {
       gap: 1.2rem;
+      padding-right: 1.6rem;
     }
   }
 
@@ -449,6 +461,7 @@
 
   &__mobile-desc {
     display: none;
+    padding: 0 1.6rem;
 
     @include mq(md, max) {
       display: block;
@@ -462,6 +475,93 @@
     .scheme__desc-text {
       max-height: unset;
       overflow: auto;
+    }
+  }
+
+  &__slider-wrapper {
+    padding-right: 3.2rem;
+    margin-right: -3.2rem;
+
+    @include mq(md, max) {
+      padding-right: unset;
+      margin-right: unset;
+    }
+  }
+
+  &__slider {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    /* Fix of Webkit flickering */
+    z-index: 1;
+  }
+
+  &__slider-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+  }
+
+  &__slider-item {
+    width: 24.1rem;
+    max-width: 24.1rem;
+    height: 16rem;
+    max-height: 16rem;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  &__slider-button {
+    position: absolute;
+    z-index: 1;
+    width: 4.6rem;
+    height: 4.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--color-card);
+    cursor: pointer;
+    transition: var(--transition);
+
+    svg {
+      width: 1.3rem;
+      height: 1.3rem;
+      fill: var(--color-card);
+      stroke: var(--color-title);
+      transition: var(--transition);
+    }
+
+    &.swiper-button-prev {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.swiper-button-next {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+      
+      svg {
+        fill: var(--color-accent);
+        stroke: var(--color-white);
+      }
     }
   }
 }
