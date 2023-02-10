@@ -76,7 +76,7 @@
       stroke-width: 0.2rem;
 
       @include mq(sm, max) {
-        width: 1.5rem;
+        width: 2rem;
       }
     }
 
@@ -114,7 +114,6 @@
 
   &__input-wrapper {
     position: relative;
-
     width: 100%;
   }
 
