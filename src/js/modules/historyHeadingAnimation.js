@@ -24,7 +24,6 @@ export default () => {
         historyHeading.parentElement.classList.remove('animate-history-heading');
       }
 
-      console.log(ScrollTrigger.positionInViewport(historyDownContent, "center").toFixed(2));
       if (ScrollTrigger.positionInViewport(historyDownContent, "center").toFixed(2) < 1) {
         historyDownContent.classList.remove('animate-history-down');
       } else {

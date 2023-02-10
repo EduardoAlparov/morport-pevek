@@ -71,21 +71,22 @@ export default () => {
     historyNav.classList.toggle('story-nav--visible', (scrollbar.offset.y >= 1));
 
     titleriggers.forEach(tt => {
-      if(isElementInViewport(tt)) {
+      if(isElementInViewportFull(tt)) {
         historySlider.classList.remove('history-slider--white-background');
         historySlider.classList.remove('history-slider--accent-background');
       }
     });
 
     accentTriggers.forEach(at => {
-      if(isElementInViewport(at)) {
+      if(isElementInViewportFull(at)) {
         historySlider.classList.add('history-slider--accent-background');
         historySlider.classList.remove('history-slider--white-background');
       }
     });
 
     whiteTriggers.forEach(wt => {
-      if(isElementInViewport(wt)) {
+      if(isElementInViewportFull(wt)) {
+        console.log("white vis");
         historySlider.classList.add('history-slider--white-background');
       }
     });
@@ -197,4 +198,21 @@ export default () => {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
+
+  function isElementInViewportFull(el) {
+
+    // Special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+    );
+}
 }

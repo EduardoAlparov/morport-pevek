@@ -103,14 +103,6 @@
     @include mq(sm, max) {
       padding: 6.5rem 0 5.5rem;
     }
-
-    @include mq(custom, max, 360) {
-      padding: 2.5rem 0 2.5rem;
-    }
-  }
-
-  @include mq(sm, max) {
-    min-height: unset;
   }
 }
 

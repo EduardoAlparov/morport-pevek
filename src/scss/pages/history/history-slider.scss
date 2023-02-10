@@ -11,10 +11,6 @@
   background-color: var(--color-title);
   transition: background-color 1s ease;
 
-  @include mq(lg, max) {
-    transition: background-color 0.2s ease;
-  }
-
   &--accent-background {
     background-color: var(--color-accent);
   }
@@ -25,13 +21,22 @@
 
   .scroll-content {
     will-change: transform;
-    transition: transform 0.1s linear !important;
-    -moz-transition: transform 0.1s linear !important;
+    transition: transform 0.1s linear;
   }
   
   .scrollbar-track-y {
     @include mq(sm, max) {
       opacity: 0 !important;
+    }
+  }
+
+  @include mq(lg, max) {
+    transition: background-color 0.2s ease;
+
+    @-moz-document url-prefix() { 
+      .scroll-content {
+        -moz-transition: none;
+      }
     }
   }
 
