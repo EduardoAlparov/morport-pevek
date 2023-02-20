@@ -11,7 +11,7 @@
   }
 
   &__main {
-    padding: 5rem 0 0;
+    padding: 1.4rem 0 0;
 
     @include mq(xl, max) {
       padding: 3.6rem 0 0;
@@ -245,8 +245,8 @@
 
   &__tooltip-wrapper {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2rem;
+    left: 2.5rem;
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
@@ -263,8 +263,8 @@
 
   &__close-button {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 2rem;
+    left: -2.5rem;
     transform: translate(-50%,-50%);
     width: 4rem;
     height: 4rem;
@@ -290,7 +290,7 @@
 
   &__desc-wrapper {
     width: 48.2rem;
-    padding: 3.2rem 0 3.2rem 3.2rem; 
+    padding: 3.2rem 0 3.2rem 3.2rem;
     overflow: hidden;
     background-color: var(--color-white);
 
@@ -467,6 +467,10 @@
       display: block;
     }
 
+    .scheme__desc {
+      margin-bottom: 0;
+    }
+
     .scheme__desc-wrapper {
       width: 100%;
       padding: 2rem 0 0;
@@ -475,6 +479,10 @@
     .scheme__desc-text {
       max-height: unset;
       overflow: auto;
+    }
+
+    .scheme__slider-wrapper {
+      display: none;
     }
   }
 
@@ -557,7 +565,7 @@
 
     @include hover {
       background-color: var(--color-accent);
-      
+
       svg {
         fill: var(--color-accent);
         stroke: var(--color-white);

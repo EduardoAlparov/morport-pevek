@@ -37,16 +37,16 @@ export default () => {
   // -start- transform with transition and with custom scrolls instead of browser scrollbar
   class DisableScrollPlugin extends ScrollbarPlugin {
     static pluginName = 'disableScroll';
-  
+
     static defaultOptions = {
       direction: '',
     };
-  
+
     transformDelta(delta) {
       if (this.options.direction) {
         delta[this.options.direction] = 0;
       }
-  
+
       return { ...delta };
     }
   }
@@ -102,7 +102,7 @@ export default () => {
   });
   // -end- render mobile paginations items
 
-  // -start- swiper for horizontal direction images on mobile 
+  // -start- swiper for horizontal direction images on mobile
   if (window.matchMedia("(max-width: 575px)").matches) {
     const imgSwiper = new Swiper('.story-line__item--mobile-slider', {
       slidesPerView: 'auto',
@@ -120,14 +120,14 @@ export default () => {
       imgSize: '85% auto',
       imgPosition: 'top 200px left',
     });
-  
+
     jarallax(document.querySelectorAll('.jarallax-two'), {
       speed: 0.2,
       imgSize: 'cover',
       imgPosition: 'bottom center',
     });
   }
-  // -end- swiper for horizontal direction images on mobile 
+  // -end- swiper for horizontal direction images on mobile
 
   // -start- swiper for year mobile pagination
   const paginationSwiper =  new Swiper('.story-nav__body', {
@@ -148,7 +148,7 @@ export default () => {
   });
 
   paginationBehavior();
-  
+
   window.addEventListener('resize', function() {
     paginationBehavior()
   })
@@ -165,24 +165,24 @@ export default () => {
               let navItems = document.querySelectorAll('.story-nav__item');
               navItems.forEach( navItem => {
                 navItem.classList.remove('story-nav__item--active');
-  
+
                 if(navItem.textContent === item.querySelector('.article-story__year').firstElementChild.textContent) {
                   navItem.classList.add('story-nav__item--active');
                 }
               })
             }
-  
+
           currentItem = item;
-  
+
           paginationSwiper.slides.forEach(slide => {
             if(slide.classList.contains('story-nav__item--active')) {
               paginationSwiper.slideTo(paginationSwiper.slides.indexOf(slide), 200);
             }
           })
           }
-  
+
         })
-  
+
       });
     }
   }
@@ -214,5 +214,5 @@ export default () => {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
         rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
     );
-}
+  }
 }
