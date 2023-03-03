@@ -90,6 +90,7 @@
       fill: var(--color-card);
       stroke: var(--color-title);
       transition: var(--transition);
+      pointer-events: none;
     }
 
     &:disabled {
@@ -102,7 +103,7 @@
 
     @include hover {
       background-color: var(--color-accent);
-      
+
       svg {
         fill: var(--color-accent);
         stroke: var(--color-white);

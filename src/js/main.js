@@ -11,7 +11,8 @@ import mainLogoAnimation from './modules/mainLogoAnimation';
 
 import searchControlOpen from './modules/searchControlOpen';
 import burgerMenuContacts from './modules/burgerMenuContacts';
-import modalLinkHOver from './modules/modalLinkHOver';
+import modalLinkHover from './modules/modalLinkHover';
+import galleryPopupControl from './modules/galleryPopupControl';
 
 import technicSlidersControl from './modules/technicSlidersControl';
 import historyHeadingAnimation from './modules/historyHeadingAnimation';
@@ -37,7 +38,7 @@ documenReady(() => {
   // ===========================================================================
   //  burger menu open:
   burgerMenuContacts();
-  modalLinkHOver();
+  modalLinkHover();
   // ===========================================================================
   // carousel and sliders on page-technic by gsap and fancybox;
   technicSlidersControl();
@@ -73,5 +74,6 @@ documenReady(() => {
   // ===========================================================================
   //
   schemeTextControl();
+  galleryPopupControl();
   // ===========================================================================
 });

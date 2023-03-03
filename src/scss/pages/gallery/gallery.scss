@@ -19,7 +19,7 @@
     display: grid;
     grid-auto-flow: row dense;
     grid-template-columns: repeat(4, 0.25fr);
-    grid-template-rows: repeat(auto-fill, minmax(auto, 30.4rem));
+    grid-template-rows: repeat(3, minmax(auto, 30.4rem));
     column-gap: $gapBig;
     row-gap: $gapBig;
     width: 100%;
