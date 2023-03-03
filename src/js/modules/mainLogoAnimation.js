@@ -21,7 +21,7 @@ export default () => {
   document.body.onresize = () => {
     style = window.getComputedStyle(scaleTitle, null).getPropertyValue('font-size');
     fontSize = parseFloat(style);
-    
+
     if (window.matchMedia("(min-width: 1679px)").matches) {
       if(fontSize !== (316 * coefficient)) {
         scaleTitle.style.fontSize = "31.6rem";
@@ -73,7 +73,6 @@ export default () => {
     if (window.matchMedia("(min-width: 991px)").matches) {
       if(direction > 0) {
         let scaleValue = ((1 - progress).toFixed(1));
-
         scaleTitle.parentElement.style.gap = gap*scaleValue + "px";
         scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = top*scaleValue + "px";
 
@@ -87,10 +86,9 @@ export default () => {
 
       } else if (direction < 0) {
         let scaleValue = (1 - progress).toFixed(1);
-
         scaleTitle.parentElement.style.gap = gap*scaleValue + "px";
         scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = top*scaleValue + "px";
-        
+
         if (fontSize*scaleValue >= 111) {
           scaleTitle.style.fontSize = fontSize*scaleValue + "px";
         } else {
