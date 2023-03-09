@@ -395,6 +395,7 @@
       transform: translate(-40%, -30%);
       width: 13.5%;
       height: 8%;
+      clip-path: polygon(4% 0%, 100% 0, 43% 0, 126% 67%, 94% 118%, 0 43%, 0 100%, 0% 13%);
     }
 
     &--capitol {
@@ -427,6 +428,7 @@
       transform: translate(-35%, -39%);
       width: 22%;
       height: 19%;
+      clip-path: polygon(0% 0%, 100% 0, 16% 0, 117% 70%, 100% 114%, 0 50%, 0 100%, 0% 30%);
     }
 
     &--berth-two {
@@ -435,6 +437,7 @@
       transform: translate(-48%, -45%);
       width: 22%;
       height: 17%;
+      clip-path: polygon(0% 0%, 100% 0, 16% 0, 163% 70%, 100% 106%, 0 59%, 0 100%, 0% 30%);
     }
 
     &._visible {
@@ -461,7 +464,6 @@
 
   &__mobile-desc {
     display: none;
-    padding: 0 1.6rem;
 
     @include mq(md, max) {
       display: block;
@@ -754,6 +756,11 @@
       .scheme__tooltip-wrapper {
         opacity: 1;
         visibility: visible;
+        top: -4rem;
+      }
+
+      .scheme__close-button {
+        top: 4rem;
       }
 
       @include mq(md, max) {
@@ -853,6 +860,12 @@
       .scheme__tooltip-wrapper {
         opacity: 1;
         visibility: visible;
+        top: -11rem;
+        left: 6.5rem;
+      }
+
+      .scheme__close-button {
+        top: 12rem;
       }
 
       @include mq(md, max) {
