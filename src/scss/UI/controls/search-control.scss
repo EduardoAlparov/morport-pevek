@@ -283,6 +283,24 @@
   }
 }
 
+
+.page-scheme {
+  .search-control {
+    &__btn {
+      .icon-search {
+        stroke: var(--color-white);
+      }
+    }
+
+    @include mq(sm, max) {
+      .icon-search {
+        stroke: var(--color-accent);
+      }
+    }
+
+  }
+}
+
 .fixed-mobile-header {
   .search-control {
     &__btn {

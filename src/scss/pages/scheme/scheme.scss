@@ -1,29 +1,64 @@
 .scheme {
   $this: &;
 
+  &__body {
+    position: relative;
+    width: 100%;
+    padding-top: 80%;
+    height: 0;
+    background-image: url('/assets/images/scheme/scheme-empty.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(sm, max) {
+      padding-top: unset;
+      height: auto;
+      background-image: none;
+    }
+  }
+
   &__container {
-    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     padding: 0;
 
-    @include mq(md, max) {
+    @include mq(sm, max) {
+      position: static;
+      max-width: 100%;
       padding: 0 1.6rem;
     }
   }
 
-  &__main {
-    padding: 1.4rem 0 0;
+  &__heading {
+    position: absolute;
+    top: 21.3rem;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    transition: 0.3s ease;
 
     @include mq(xl, max) {
-      padding: 3.6rem 0 0;
+      top: 12rem;
     }
 
     @include mq(md, max) {
-      padding: 2rem 0 5.6rem;
-
-      border-style: solid;
-      border-color: #d9d8d8;
-      border-width: 0 0 0.1rem 0;
+      top: 8rem;
     }
+
+    @include mq(sm, max) {
+      position: static;
+    }
+  }
+
+  &__breadcrumbs {
+    @include mq(xl, max) {
+      margin-bottom: 2rem;
+    }
+
   }
 
   &__wrapper {
@@ -31,13 +66,17 @@
     width: 100%;
     min-width: 32rem;
     overflow: hidden;
-    padding-top: 56%;
+    padding-top: 80%;
 
     @include mq(sm, max) {
-      padding-top: 83%;
+      padding-top: 72%;
     }
 
     > picture {
+      opacity: 0;
+      visibility: hidden;
+
+
       img {
         position: absolute;
         top: 50%;
@@ -51,6 +90,11 @@
         @include mq(sm, max) {
           min-width: 140%;
         }
+      }
+
+      @include mq(sm, max) {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -80,18 +124,24 @@
     background-color: transparent;
 
     &--storages {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
+      top: 57%;
+      left: 68%;
+      transform: translate(-50%, -50%);
 
       .scheme__pseudo-button  {
         transform: translate(-41%, -68%);
       }
+
+      @include mq(sm) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
     }
 
     &--capitol {
-      top: 32%;
-      left: 21%;
+      top: 37%;
+      left: 20%;
       transform: translate(-50%, -50%);
 
       .scheme__pseudo-button  {
@@ -99,6 +149,10 @@
       }
 
       @include mq(sm, max) {
+        top: 32%;
+        left: 21%;
+        transform: translate(-50%, -50%);
+
         .scheme__button-wrapper {
           transform: translateX(-15%);
         }
@@ -112,39 +166,58 @@
     }
 
     &--hostel {
-      top: 43%;
-      left: 67%;
+      top: 48%;
+      left: 90%;
       transform: translate(-50%, -50%);
 
       .scheme__pseudo-button  {
         transform: translate(-50%, -70%);
       }
+
+      @include mq(sm) {
+        top: 43%;
+        left: 67%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     &--boxes {
-      top: 60%;
-      left: 68%;
+      top: 64%;
+      left: 87%;
       transform: translate(-50%, -50%);
 
       .scheme__pseudo-button  {
         transform: translate(-57%, -68%);
       }
+
+      @include mq(sm) {
+        top: 60%;
+        left: 68%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     &--berth-one {
-      top: 68%;
-      left: 49%;
-      transform: translate(-50%, -50%);
+      top: 73%;
+      left: 64%;
+      transform: translate(-54%, -50%);
+
 
       .scheme__pseudo-button  {
         transform: translate(-48%, -41%);
         width: 22.5rem;
         height: 9.5rem;
       }
+
+      @include mq(sm, max) {
+        top: 68%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     &--berth-two {
-      top: 56%;
+      top: 60%;
       left: 26%;
       transform: translate(-50%, -50%);
 
@@ -152,6 +225,12 @@
         width: 185px;
         height: 87px;
         transform: translate(-50%, -48%);
+      }
+
+      @include mq(sm, max) {
+        top: 56%;
+        left: 26%;
+        transform: translate(-50%, -50%);
       }
     }
   }
@@ -185,12 +264,16 @@
 
   &__button-wrapper {
     position: absolute;
-    top: -8rem;
+    top: -10rem;
     left: 50%;
     transform: translateX(-50%);
     transition: var(--transition);
 
     @include mq(md, max) {
+      top: -6rem;
+    }
+
+    @include mq(xs, max) {
       top: -4rem;
     }
   }
@@ -249,7 +332,7 @@
     left: 2.5rem;
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
+    transition: opacity var(--transition);
 
     @include mq(md, max) {
       opacity: 0 !important;
@@ -273,7 +356,7 @@
     justify-content: center;
     border-radius: 100%;
     background-color: var(--color-card);
-    transition: var(--transition);
+    transition: color var(--transition);
     cursor: pointer;
 
     .icon {
@@ -390,54 +473,102 @@
     cursor: pointer;
 
     &--storages {
-      top: 50%;
-      left: 50%;
-      transform: translate(-40%, -30%);
-      width: 13.5%;
+      top: 55%;
+      left: 65%;
+      transform: translate(-40%, -30%) rotate(1deg);
+      width: 21.5%;
       height: 8%;
-      clip-path: polygon(4% 0%, 100% 0, 43% 0, 126% 67%, 94% 118%, 0 43%, 0 100%, 0% 13%);
+
+      @include mq(sm, max) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -30%);
+        width: 13.5%;
+        height: 8%;
+        clip-path: polygon(4% 0%, 100% 0, 43% 0, 126% 67%, 94% 118%, 0 43%, 0 100%, 0% 13%);
+      }
     }
 
     &--capitol {
-      top: 32%;
-      left: 21%;
+      top: 35%;
+      left: 20%;
       transform: translate(-46%, -73%);
-      width: 5%;
+      width: 8%;
       height: 2%;
+
+      @include mq(sm, max) {
+        top: 30%;
+        left: 21%;
+        transform: translate(-46%, -60%);
+        width: 5%;
+        height: 2%;
+      }
     }
 
     &--hostel {
-      top: 43%;
-      left: 67%;
-      transform: translate(-64%, -73%);
-      width: 6.5%;
+      top: 47%;
+      left: 92%;
+      transform: translate(-66%, -80%);
+      width: 11%;
       height: 4%;
+
+      @include mq(sm, max) {
+        top: 42%;
+        left: 67%;
+        transform: translate(-64%, -73%);
+        width: 6.5%;
+        height: 4%;
+      }
     }
 
     &--boxes {
-      top: 60%;
-      left: 68%;
-      transform: translate(-79%, -72%);
-      width: 9.5%;
+      top: 65%;
+      left: 91%;
+      transform: translate(-63%, -66%);
+      width: 14.5%;
       height: 7%;
+
+      @include mq(sm, max) {
+        top: 60%;
+        left: 68%;
+        transform: translate(-79%, -72%);
+        width: 9.5%;
+        height: 7%;
+      }
     }
 
     &--berth-one {
-      top: 68%;
-      left: 49%;
-      transform: translate(-35%, -39%);
-      width: 22%;
+      top: 75%;
+      left: 63%;
+      transform: translate(-33%, -46%);
+      width: 35%;
       height: 19%;
-      clip-path: polygon(0% 0%, 100% 0, 16% 0, 117% 70%, 100% 114%, 0 50%, 0 100%, 0% 30%);
+
+      @include mq(sm, max) {
+        top: 68%;
+        left: 49%;
+        transform: translate(-35%, -39%);
+        width: 22%;
+        height: 19%;
+        clip-path: polygon(0% 0%, 100% 0, 16% 0, 117% 70%, 100% 114%, 0 50%, 0 100%, 0% 30%);
+      }
     }
 
     &--berth-two {
-      top: 56%;
-      left: 26%;
-      transform: translate(-48%, -45%);
-      width: 22%;
-      height: 17%;
-      clip-path: polygon(0% 0%, 100% 0, 16% 0, 163% 70%, 100% 106%, 0 59%, 0 100%, 0% 30%);
+      top: 61%;
+      left: 27%;
+      transform: translate(-46%, -48%);
+      width: 34%;
+      height: 16%;
+
+      @include mq(sm, max) {
+        top: 56%;
+        left: 26%;
+        transform: translate(-48%, -45%);
+        width: 22%;
+        height: 17%;
+        clip-path: polygon(0% 0%, 100% 0, 16% 0, 163% 70%, 100% 106%, 0 59%, 0 100%, 0% 30%);
+      }
     }
 
     &._visible {
@@ -607,8 +738,17 @@
       }
 
       .scheme__tooltip-wrapper {
+        right: 2.5rem;
+        left: unset;
         opacity: 1;
         visibility: visible;
+      }
+
+      .scheme__close-button {
+        top: 2rem;
+        right: -2.5rem;
+        left: unset;
+        transform: translate(50%, -50%);
       }
 
       @include mq(md, max) {
@@ -706,8 +846,16 @@
       }
 
       .scheme__tooltip-wrapper {
+        right: 2.5rem;
+        left: unset;
         opacity: 1;
         visibility: visible;
+      }
+
+      .scheme__close-button {
+        right: -2.5rem;
+        left: unset;
+        transform: translate(50%, -50%);
       }
 
       @include mq(md, max) {
@@ -754,13 +902,18 @@
       }
 
       .scheme__tooltip-wrapper {
+        top: -4rem;
+        right: 2.5rem;
+        left: unset;
         opacity: 1;
         visibility: visible;
-        top: -4rem;
       }
 
       .scheme__close-button {
-        top: 4rem;
+        top: 2rem;
+        right: -2.5rem;
+        left: unset;
+        transform: translate(50%, -50%);
       }
 
       @include mq(md, max) {
@@ -787,7 +940,6 @@
         }
       }
     }
-
 
     .scheme__mask--berth-two {
       opacity: 1;
@@ -858,14 +1010,14 @@
       }
 
       .scheme__tooltip-wrapper {
+        top: -4rem;
+        left: 2.5rem;
         opacity: 1;
         visibility: visible;
-        top: -11rem;
-        left: 6.5rem;
       }
 
       .scheme__close-button {
-        top: 12rem;
+        top: 6rem;
       }
 
       @include mq(md, max) {

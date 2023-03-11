@@ -1,22 +1,23 @@
 section.scheme.section
-  .section__body
-    .site-container
-      .section__breadcrumbs.breadcrumbs
-        ul.breadcrumbs__list
-          li.breadcrumbs__item
-            a( href="/" ).breadcrumbs__link
-              | Главная
-          li.breadcrumbs__item
-            a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
-              | Схема порта
+  .section__body.scheme__body
+    .scheme__heading
+      .site-container
+        .section__breadcrumbs.scheme__breadcrumbs.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a( href="/" ).breadcrumbs__link
+                | Главная
+            li.breadcrumbs__item
+              a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+                | Схема порта
 
-      h1.section__title.section__title--not-border
-        | Схема порта
+        h1.section__title.section__title--not-border
+          | Схема порта
 
     .scheme__container
       .scheme__main
         .scheme__wrapper
-          +pictureLazy('scheme/scheme-empty.png', 'схема порта Певек')
+          +pictureLazy('scheme/scheme-empty-mobile.jpg', 'схема порта Певек')
 
           .scheme__buttons-wrapper
             .scheme__inner-wrapper
@@ -29,7 +30,6 @@ section.scheme.section
               input(hidden type="radio" name="building" id="berth-two")
 
               .scheme__masks-wrapper
-
                 .scheme__masks
 
                   .scheme__mask-wrapper.scheme__mask-wrapper--storage
@@ -272,4 +272,5 @@ section.scheme.section
                                   .scheme__slider-button.scheme__slider-button--next.swiper-button-next
                                       +icon-multi('arrow-r')
                         .scheme__pseudo-button
-        .scheme__mobile-desc
+  .site-container.scheme__mobile-container
+    .scheme__mobile-desc

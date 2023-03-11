@@ -72,10 +72,25 @@
   }
 }
 
+
 ._set-dark-colors {
   .image-log {
     svg {
       fill: var(--color-accent)
+    }
+  }
+}
+
+.page-scheme {
+  .image-log {
+    svg {
+      fill: var(--color-white)
+    }
+
+    @include mq(sm, max) {
+      svg {
+        fill: var(--color-accent)
+      }
     }
   }
 }

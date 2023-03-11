@@ -105,3 +105,23 @@
     }
   }
 }
+
+.page-scheme {
+  .breadcrumbs__item {
+    &::after {
+      color: var(--color-white);
+
+      @include mq(sm, max) {
+        color: var(--color-title);
+      }
+    }
+  }
+
+  .breadcrumbs__link {
+    color: var(--color-white);
+
+    @include mq(sm, max) {
+      color: var(--color-title);
+    }
+  }
+}

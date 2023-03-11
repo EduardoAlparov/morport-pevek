@@ -4,7 +4,7 @@
   max-height: max-content;
   overflow: hidden;
   will-change: padding-top;
-  transition: padding-top 0.3s ease-out;
+  transition: padding-top 0.3s ease;
   z-index: 40;
 
   @include mq(lg, max) {
@@ -26,7 +26,7 @@
     will-change: gap;
     opacity: 0;
     overflow: hidden;
-    transition: gap 0.3s ease-out, width 3s, opacity 3s .3s;
+    transition: gap 0.3s ease, width 3s, opacity 3s .3s;
 
     @include mq(custom, max, 1500) {
       gap: 20rem;
@@ -52,7 +52,7 @@
     color: var(--color-white);
     will-change: font-size;
     backface-visibility: hidden;
-    transition: font-size 0.3s ease-out, width 3s, opacity 3s;
+    transition: font-size 0.35s ease-out, width 3s, opacity 3s;
 
     @include mq(custom, max, 1090) {
       font-size: 27rem;
