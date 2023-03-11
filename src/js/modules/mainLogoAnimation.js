@@ -1,5 +1,4 @@
 import { gsap } from "gsap";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -61,23 +60,26 @@ export default () => {
   }
 
   ScrollTrigger.create({
-    scrub: 1,
     trigger: '.intro',
     start: 0,
     endTrigger: '.intro',
-    fastScrollEnd: true,
-    onUpdate: (self) => introScrollListener(self.progress, self.direction, self.isActive)
+    scrub: 0.5,
+    invalidateOnRefresh: true,
+    onUpdate: (self) => introScrollListener(self.progress, self.direction, self.isActive, self.getVelocity())
   });
 
-  function introScrollListener(progress, direction, isActive) {
+  function introScrollListener(progress, direction, isActive, velocity) {
+    // console.log(velocity);
+
     if (window.matchMedia("(min-width: 991px)").matches) {
       if(direction > 0) {
-        let scaleValue = ((1 - progress).toFixed(1));
-        scaleTitle.parentElement.style.gap = gap*scaleValue + "px";
-        scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = top*scaleValue + "px";
+        let scaleValue = (1 - progress);
+
+        scaleTitle.parentElement.style.gap = (gap*scaleValue).toFixed(0) + "px";
+        scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = (top*scaleValue).toFixed(0) + "px";
 
         if (fontSize*scaleValue >= 111) {
-          scaleTitle.style.fontSize = fontSize*scaleValue + "px";
+          scaleTitle.style.fontSize = (fontSize*scaleValue).toFixed(0) + "px";
         } else {
           scaleTitle.parentElement.style.gap = "20px";
           scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "0px";
@@ -85,12 +87,13 @@ export default () => {
         }
 
       } else if (direction < 0) {
-        let scaleValue = (1 - progress).toFixed(1);
-        scaleTitle.parentElement.style.gap = gap*scaleValue + "px";
-        scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = top*scaleValue + "px";
+        let scaleValue = (1 - progress);
+
+        scaleTitle.parentElement.style.gap = (gap*scaleValue).toFixed(0) + "px";
+        scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = (top*scaleValue).toFixed(0) + "px";
 
         if (fontSize*scaleValue >= 111) {
-          scaleTitle.style.fontSize = fontSize*scaleValue + "px";
+          scaleTitle.style.fontSize = (fontSize*scaleValue).toFixed(0) + "px";
         } else {
           scaleTitle.parentElement.style.gap = "20px";
           scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "0px";

@@ -55,13 +55,13 @@
     .swiper-wrapper {
       width: max-content;
     }
-  }  
+  }
 
   &__list {
     position: relative;
     display: flex;
     will-change: transform;
-    transition: transform 1.6s ease !important;
+    transition: transform 1s linear !important;
   }
 
   &__item {

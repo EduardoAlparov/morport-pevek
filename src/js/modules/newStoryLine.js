@@ -158,7 +158,7 @@ export default () => {
       let currentItem;
       scrollbar.addListener((status) => {
         historyLineItems.forEach( item => {
-          if(isElementInViewport(item)) {
+          if(isElementInViewportFull(item)) {
             if(item === currentItem) {
               return;
             } else {
@@ -172,13 +172,13 @@ export default () => {
               })
             }
 
-          currentItem = item;
+            currentItem = item;
 
-          paginationSwiper.slides.forEach(slide => {
-            if(slide.classList.contains('story-nav__item--active')) {
-              paginationSwiper.slideTo(paginationSwiper.slides.indexOf(slide), 200);
-            }
-          })
+            paginationSwiper.slides.forEach(slide => {
+              if(slide.classList.contains('story-nav__item--active')) {
+                paginationSwiper.slideTo(paginationSwiper.slides.indexOf(slide), 500);
+              }
+            })
           }
 
         })
@@ -188,17 +188,7 @@ export default () => {
   }
   // -end- swiper for year mobile pagination
 
-  function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      (rect.bottom / 1.5) <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
+  // is dom element full-size in viewport:
   function isElementInViewportFull(el) {
 
     // Special bonus for those using jQuery

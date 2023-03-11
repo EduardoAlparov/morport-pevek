@@ -140,6 +140,26 @@
   }
 }
 
+.page-scheme {
+  .header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 59;
+    width: 100%;
+    transition: 0.3s ease;
+
+    &--hidden {
+      top: -11rem;
+    }
+
+    @include mq(sm, max) {
+      position: static;
+    }
+  }
+}
+
 .modal-menu-open {
   .header {
     z-index: 59;
