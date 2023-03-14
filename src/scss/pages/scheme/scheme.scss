@@ -1016,15 +1016,10 @@
         visibility: visible;
       }
 
-      .scheme__close-button {
-        top: 6rem;
-      }
-
       @include mq(md, max) {
         label {
           pointer-events: none;
         }
-
 
         .scheme__pseudo-button {
           display: block;
