@@ -670,7 +670,7 @@
     border-radius: 100%;
     background-color: var(--color-card);
     cursor: pointer;
-    transition: var(--transition);
+    transition: none;
 
     svg {
       width: 1.3rem;
@@ -710,7 +710,9 @@
 // checked control on css
 #storages:checked {
   & ~ .scheme__masks-wrapper {
+
     .scheme__mask-wrapper--storage {
+
       @include mq(md, max) {
         label {
           pointer-events: none;
@@ -876,6 +878,7 @@
   & ~ .scheme__masks-wrapper {
 
     .scheme__mask-wrapper--boxes {
+
       @include mq(md, max) {
         label {
           pointer-events: none;
@@ -888,6 +891,7 @@
     }
 
     .scheme__item--boxes {
+      z-index: 100;
       opacity: 1;
       visibility: visible;
 
@@ -946,7 +950,6 @@
     }
 
     .scheme__item--berth-two {
-      z-index: 100;
       opacity: 1;
       visibility: visible;
 
@@ -995,7 +998,6 @@
     }
 
     .scheme__item--berth-one {
-      z-index: 100;
       opacity: 1;
       visibility: visible;
 

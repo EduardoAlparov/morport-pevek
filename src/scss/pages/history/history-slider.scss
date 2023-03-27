@@ -9,7 +9,7 @@
   overflow: hidden;
   overflow-y: auto;
   background-color: var(--color-title);
-  transition: background-color 1s ease;
+  transition: background-color 0.5s ease-out;
 
   &--accent-background {
     background-color: var(--color-accent);
@@ -23,7 +23,7 @@
     will-change: transform;
     transition: transform 0.1s linear;
   }
-  
+
   .scrollbar-track-y {
     @include mq(sm, max) {
       opacity: 0 !important;
@@ -33,7 +33,7 @@
   @include mq(lg, max) {
     transition: background-color 0.2s ease;
 
-    @-moz-document url-prefix() { 
+    @-moz-document url-prefix() {
       .scroll-content {
         -moz-transition: none;
       }
@@ -62,10 +62,10 @@
     transform-box: border-box;
     transition: transform 1s ease !important;
   }
-  
+
   &__heading {
     margin-bottom: 7.5rem;
-    
+
     @include mq(xl, max) {
       margin-bottom: 5rem;
     }

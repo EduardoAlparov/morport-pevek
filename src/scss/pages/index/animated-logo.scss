@@ -9,16 +9,16 @@
 
   @include mq(lg, max) {
     height: max-content;
-    padding-top: 3rem;
     left: 0;
   }
 
   @include mq(sm, max) {
-    padding-top: 7.2rem;
+    padding-top: 5.2rem;
     position: static;
   }
 
   &__link {
+    position: relative;
     width: 0;
     display: flex;
     align-items: baseline;
@@ -44,10 +44,11 @@
   }
 
   &__title {
+    display: block;
     padding-right: 1.5rem;
     font-weight: 700;
     font-size: 31.6rem;
-    line-height: 111%;
+    line-height: 90%;
     letter-spacing: -0.03em;
     color: var(--color-white);
     will-change: font-size;
@@ -119,6 +120,17 @@
       line-height: 120%;
     }
   }
+
+  .site-container {
+    padding-top: 8rem;
+
+    @include mq(lg, max) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 4rem;
+    }
+  }
 }
 
 .animation-on {
@@ -127,6 +139,10 @@
   }
   .animated-logo__link {
     opacity: 1;
-    width: 100%;
+    width: max-content;
+
+    @include mq(lg, max) {
+
+    }
   }
 }

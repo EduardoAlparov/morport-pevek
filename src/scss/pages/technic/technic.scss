@@ -4,10 +4,6 @@
   &__body {
     width: 100%;
 
-    border-style: solid;
-    border-color: #d9d8d8;
-    border-width: 1px 0 1px 0;
-
     @include mq(sm, max) {
       width: 100%;
     }
@@ -15,8 +11,12 @@
 
   &__slider-wrapper {
     display: flex;
+    width: max-content;
     padding: 3rem 0;
     overflow: visible;
+    border-style: solid;
+    border-color: #d9d8d8;
+    border-width: 1px 0 1px 0;
 
 
     @include mq(sm, max) {
@@ -30,14 +30,6 @@
     }
   }
 
-  &__slider {
-    margin-left: -3rem;
-
-    @include mq(md, max) {
-      margin-left: 0;
-    }
-  }
-
   &__slide {
     border-style: solid;
     border-color: #d9d8d8;
@@ -46,7 +38,6 @@
     &:last-child {
       border-width: 0 0 0 0;
     }
-
 
     @include mq(sm, max) {
       border-width: 0 0 1px 0;

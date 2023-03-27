@@ -48,7 +48,7 @@ export default () => {
     }
 
     if (window.matchMedia("(max-width: 1199px)").matches) {
-      scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "3rem";
+      scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "5.2rem";
     } else {
       scaleTitle.parentElement.closest('.animated-logo').style.paddingTop = "8.8rem";
     }

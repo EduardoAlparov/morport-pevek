@@ -86,7 +86,6 @@ export default () => {
 
     whiteTriggers.forEach(wt => {
       if(isElementInViewportFull(wt)) {
-        console.log("white vis");
         historySlider.classList.add('history-slider--white-background');
       }
     });

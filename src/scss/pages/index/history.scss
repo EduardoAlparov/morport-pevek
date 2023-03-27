@@ -62,6 +62,10 @@
     @include mq(md, max) {
       top: 95%;
     }
+
+    @include mq(sm, max) {
+      top: 80%;
+    }
   }
 
   &__title {
