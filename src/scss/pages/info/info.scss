@@ -107,8 +107,13 @@
       @include mq(xl, max) {
         &--active {
           .nav__link {
+            padding-left: 3.5rem;
             background-color: var(--color-accent);
             color: var(--color-white);
+
+            &::after {
+              content: "";
+            }
           }
         }
       }
@@ -158,6 +163,8 @@
   }
 
   &__main {
+    display: flex;
+    flex-direction: column;
     padding-left: 5rem;
 
     @include mq(xxl, max) {
@@ -174,6 +181,22 @@
 
     @include mq(md, max) {
       margin-bottom: 1.6rem;
+    }
+  }
+
+  &__add-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0 3rem;
+
+    @include mq(xl, max) {
+      padding: 2rem 0;
+    }
+
+    @include mq(sm, max) {
+      display: flex;
+      padding: 2rem 0;
     }
   }
 }
