@@ -233,6 +233,19 @@
         transform: translate(-50%, -50%);
       }
     }
+
+    &--berth-three {
+      top: 78%;
+      left: 82%;
+      transform: translate(-50%, -50%);
+
+
+      @include mq(sm, max) {
+        top: 77%;
+        left: 62%;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 
   &__inner-wrapper {
@@ -538,19 +551,18 @@
     }
 
     &--berth-one {
-      top: 75%;
-      left: 63%;
-      transform: translate(-33%, -46%);
-      width: 35%;
-      height: 19%;
+      top: 70%;
+      left: 59%;
+      transform: translate(-52%, -48%);
+      width: 14.5%;
+      height: 7%;
 
       @include mq(sm, max) {
-        top: 68%;
-        left: 49%;
-        transform: translate(-35%, -39%);
-        width: 22%;
-        height: 19%;
-        clip-path: polygon(0% 0%, 100% 0, 16% 0, 117% 70%, 100% 114%, 0 50%, 0 100%, 0% 30%);
+        top: 64%;
+        left: 46%;
+        transform: translate(-52%, -48%);
+        width: 9.5%;
+        height: 6%;
       }
     }
 
@@ -561,6 +573,7 @@
       width: 34%;
       height: 16%;
 
+
       @include mq(sm, max) {
         top: 56%;
         left: 26%;
@@ -569,6 +582,26 @@
         height: 17%;
         clip-path: polygon(0% 0%, 100% 0, 16% 0, 163% 70%, 100% 106%, 0 59%, 0 100%, 0% 30%);
       }
+    }
+
+    &--berth-three {
+      top: 81%;
+      left: 81%;
+      transform: translate(-53%, -37%);
+      width: 11.5%;
+      height: 6%;
+
+      @include mq(sm, max) {
+        top: 75%;
+        left: 60%;
+        transform: translate(-51%, -35%);
+        width: 7.5%;
+        height: 6%;
+      }
+    }
+
+    & > img {
+      pointer-events: none;
     }
 
     &._visible {
@@ -1013,9 +1046,79 @@
 
       .scheme__tooltip-wrapper {
         top: -4rem;
-        left: 2.5rem;
+        right: 2.5rem;
+        left: unset;
         opacity: 1;
         visibility: visible;
+      }
+
+      .scheme__close-button {
+        top: 2rem;
+        right: -2.5rem;
+        left: unset;
+        transform: translate(50%, -50%);
+      }
+
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+
+        .scheme__pseudo-button {
+          display: block;
+        }
+
+      }
+    }
+  }
+}
+
+#berth-three:checked {
+  & ~ .scheme__masks-wrapper {
+
+    .scheme__mask-wrapper--berth-three {
+      @include mq(md, max) {
+        label {
+          pointer-events: none;
+        }
+      }
+    }
+
+    .scheme__mask--berth-three {
+      opacity: 1;
+    }
+
+    .scheme__item--berth-three {
+      opacity: 1;
+      visibility: visible;
+
+      .scheme__button {
+        color: var(--color-white);
+        background-color: var(--color-accent);
+        pointer-events: none;
+
+        &::before {
+          border-color: var(--color-accent) transparent transparent transparent;
+        }
+      }
+
+      .scheme__tooltip-wrapper {
+        top: -5.5rem;
+        right: 2.5rem;
+        left: unset;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .scheme__close-button {
+        top: 4rem;
+        right: -2.5rem;
+        left: unset;
+        transform: translate(50%, -50%);
+      }
+
+      .scheme__desc-text {
+        max-height: 7.2rem;
       }
 
       @include mq(md, max) {
