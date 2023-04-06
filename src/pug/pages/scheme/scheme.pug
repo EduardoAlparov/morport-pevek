@@ -28,6 +28,7 @@ section.scheme.section
               input(hidden type="radio" name="building" id="boxes")
               input(hidden type="radio" name="building" id="berth-one")
               input(hidden type="radio" name="building" id="berth-two")
+              input(hidden type="radio" name="building" id="berth-three")
 
               .scheme__masks-wrapper
                 .scheme__masks
@@ -200,7 +201,7 @@ section.scheme.section
                       .scheme__inner-wrapper
                         .scheme__button-wrapper
                           label.scheme__button(for="berth-two")
-                            | Причал №2
+                            | Причал №3
 
                         .scheme__tooltip-wrapper
                           .scheme__tooltip
@@ -240,6 +241,46 @@ section.scheme.section
                       .scheme__inner-wrapper
                         .scheme__button-wrapper
                           label.scheme__button(for="berth-one")
+                            | Причал №2
+
+                        .scheme__tooltip-wrapper
+                          .scheme__tooltip
+                            label.scheme__close-button(for="empty")
+                              +icon-mono('tooltip-close')
+                            .scheme__desc-wrapper
+                              .scheme__desc
+                                .scheme__desc-title
+                                  | Причал №1
+                                .scheme__desc-text
+                                  | Текст (от лат. textus — ткань; сплетение,
+                                  | сочетание) — зафиксированная на каком-либо
+                                  | материальном носителе человеческая мысль; в
+                                  | общем плане связная и полная последовательность
+                                  | символов. В лингвистике термин «текст»
+                                  | используется в более широком значении, включая
+                                  | также образцы устной речи.
+                              .scheme__slider-wrapper
+                                .scheme__slider.swiper.js-swiper-slider
+                                  .scheme__slider-list.swiper-wrapper
+                                    .scheme__slider-item.swiper-slide
+                                      +picture("technics/image-1.jpg", 'фотографии схемы порта Певек')
+                                    .scheme__slider-item.swiper-slide
+                                      +picture("technics/image-2.jpg", 'фотографии схемы порта Певек')
+                                    .scheme__slider-item.swiper-slide
+                                      +picture("technics/image-3.jpg", 'фотографии схемы порта Певек')
+                                  .scheme__slider-button.scheme__slider-button--next.swiper-button-prev
+                                      +icon-multi('arrow-l')
+                                  .scheme__slider-button.scheme__slider-button--next.swiper-button-next
+                                      +icon-multi('arrow-r')
+                        .scheme__pseudo-button
+                  .scheme__mask-wrapper.scheme__mask-wrapper--berth-three
+                    label.scheme__mask.scheme__mask--berth-three(for="berth-three")
+                      img(src="./assets/images/scheme/berth-three-mask.svg", alt="")
+
+                    .scheme__item.scheme__item--berth-three
+                      .scheme__inner-wrapper
+                        .scheme__button-wrapper
+                          label.scheme__button(for="berth-three")
                             | Причал №1
 
                         .scheme__tooltip-wrapper
@@ -272,5 +313,6 @@ section.scheme.section
                                   .scheme__slider-button.scheme__slider-button--next.swiper-button-next
                                       +icon-multi('arrow-r')
                         .scheme__pseudo-button
+
   .site-container.scheme__mobile-container
     .scheme__mobile-desc
