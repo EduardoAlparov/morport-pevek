@@ -18,10 +18,10 @@
     border-color: #d9d8d8;
     border-width: 1px 0 1px 0;
 
-
     @include mq(sm, max) {
       flex-direction: column;
       gap: 2rem;
+      width: 100%;
     }
 
     @include mq(sm, max) {

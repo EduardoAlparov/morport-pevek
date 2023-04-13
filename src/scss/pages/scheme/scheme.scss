@@ -239,6 +239,9 @@
       left: 82%;
       transform: translate(-50%, -50%);
 
+      @include mq(xxl, max) {
+        top: 76%;
+      }
 
       @include mq(sm, max) {
         top: 77%;
@@ -347,6 +350,9 @@
     visibility: hidden;
     transition: opacity var(--transition);
 
+    top: calc(50% - 2rem) !important;
+    transform: translateY(0%);
+
     @include mq(md, max) {
       opacity: 0 !important;
       visibility: hidden !important;
@@ -425,8 +431,6 @@
   }
 
   &__desc-text {
-    max-height: 14rem;
-    overflow: auto;
     font-size: 1.4rem;
     line-height: 140%;
     scrollbar-color: var(--color-other) transparent !important;
@@ -684,6 +688,7 @@
   }
 
   &__slider-item {
+    display: block;
     width: 24.1rem;
     max-width: 24.1rem;
     height: 16rem;
@@ -1110,15 +1115,15 @@
         visibility: visible;
       }
 
+      .scheme__tooltip {
+        transform: translateY(-9%);
+      }
+
       .scheme__close-button {
         top: 4rem;
         right: -2.5rem;
         left: unset;
         transform: translate(50%, -50%);
-      }
-
-      .scheme__desc-text {
-        max-height: 7.2rem;
       }
 
       @include mq(md, max) {

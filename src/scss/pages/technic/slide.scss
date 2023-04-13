@@ -1,6 +1,5 @@
 .slide {
   position: relative;
-
   padding: 0 2.5rem;
 
   &:first-child {
@@ -136,6 +135,7 @@
 
   &__title {
     grid-area: slide__title;
+    padding-bottom: 2rem;
     font-size: 3.8rem;
 
     @include mq(xxl, max) {
@@ -144,6 +144,10 @@
 
     @include mq(md, max) {
       font-size: 2.4rem;
+    }
+
+    @include mq(sm, max) {
+      padding-bottom: 0;
     }
   }
 
