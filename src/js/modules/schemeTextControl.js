@@ -1,3 +1,5 @@
+import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm";
+
 import Swiper, {
   Navigation,
   Pagination,
@@ -18,7 +20,7 @@ export default () => {
   const schemeItemsSliders = document.querySelectorAll('.js-swiper-slider');
 
   if(!schemeItemsSliders.length) return;
-  
+
   schemeItemsSliders.forEach(item => {
     const schemeItemsSwiper = new Swiper(item, {
       spaceBetween: 4,
@@ -44,7 +46,7 @@ export default () => {
             const schemeItemsSwiper = new Swiper(item, {
               spaceBetween: 4,
               slidesPerView: 'auto',
-        
+
               navigation: {
                 hideOnClick: true,
                 nextEl: '.swiper-button-next',
@@ -52,7 +54,7 @@ export default () => {
               },
             })
           })
-        
+
         }
       })
     })
@@ -79,4 +81,8 @@ export default () => {
 
   const getLabel = (labelFor, rootElement = document) =>
   rootElement.querySelector(`label[for="${labelFor}"]`);
+
+  Fancybox.bind('[data-fancybox="tech-gallery"]', {
+    groupAll: false
+  });
 }
