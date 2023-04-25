@@ -32,13 +32,15 @@
 
 
   &__body {
+    position: relative;
     width: 75.5rem;
+    height: 100%;
     min-height: 65.4rem;
     display: grid;
     grid-auto-flow: column dense;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 27.4rem;
-    grid-template-rows: 50.3rem min-content;
+    grid-template-rows: minmax(50.3rem, 1fr) min-content;
     gap: 2.7rem 3rem;
     grid-template-areas:
       "slide__image slide__image"
@@ -48,12 +50,12 @@
       width: 62.9rem;
       min-height: 54.5rem;
       grid-template-columns: 1fr 23rem;
-      grid-template-rows: 41.5rem min-content;
+      grid-template-rows: minmax(41.5rem, 1fr) min-content;
     }
 
     @include mq(xl, max) {
-      grid-template-rows: 1.7fr 0.3fr;
       grid-template-columns: 1fr max-content;
+      grid-template-rows: 1.7fr 0.3fr;
     }
 
     @include mq(md, max) {

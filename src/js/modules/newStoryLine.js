@@ -66,29 +66,58 @@ export default () => {
   // -end- transform with transition and with custom scrolls instead of browser scrollbar
 
   // -start- hide header then scroll up and changing background color
-  scrollbar.addListener((status) => {
+  let lastOffset = null;
+
+  scrollbar.addListener(({ offset }) => {
     header.classList.toggle('header--hidden', (scrollbar.offset.y >= 1));
     historyNav.classList.toggle('story-nav--visible', (scrollbar.offset.y >= 1));
 
-    titleriggers.forEach(tt => {
-      if(isElementInViewportFull(tt)) {
-        historySlider.classList.remove('history-slider--white-background');
-        historySlider.classList.remove('history-slider--accent-background');
-      }
-    });
+    if (!lastOffset) {
+      lastOffset = offset;
+      return;
+    }
 
-    accentTriggers.forEach(at => {
-      if(isElementInViewportFull(at)) {
-        historySlider.classList.add('history-slider--accent-background');
-        historySlider.classList.remove('history-slider--white-background');
-      }
-    });
+    if (lastOffset.y > offset.y) {
+      // console.log('up');
+        titleriggers.forEach(tt => {
+          if(isElementInViewportFull(tt)) {
+            historySlider.classList.remove('history-slider--white-background');
+            historySlider.classList.remove('history-slider--accent-background');
+          }
+        });
 
-    whiteTriggers.forEach(wt => {
-      if(isElementInViewportFull(wt)) {
-        historySlider.classList.add('history-slider--white-background');
-      }
-    });
+        accentTriggers.forEach(at => {
+          if(isElementInViewportFull(at)) {
+            historySlider.classList.add('history-slider--accent-background');
+            historySlider.classList.remove('history-slider--white-background');
+          }
+        });
+    } else if (lastOffset.y < offset.y) {
+      // console.log('down');
+        titleriggers.forEach(tt => {
+          if(isElementInViewportFull(tt)) {
+            historySlider.classList.remove('history-slider--white-background');
+            historySlider.classList.remove('history-slider--accent-background');
+          }
+        });
+
+        accentTriggers.forEach(at => {
+          if(isElementInViewportFull(at)) {
+            historySlider.classList.add('history-slider--accent-background');
+            historySlider.classList.remove('history-slider--white-background');
+          }
+        });
+
+        whiteTriggers.forEach(wt => {
+          if(isElementInViewportFull(wt)) {
+            historySlider.classList.add('history-slider--white-background');
+          }
+        });
+    } else {
+      return;
+    }
+
+    lastOffset = offset;
   });
   // -end- hide header then scroll up and changing background color
 
