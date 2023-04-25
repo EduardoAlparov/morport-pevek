@@ -555,11 +555,11 @@
     }
 
     &--berth-one {
-      top: 70%;
+      top: 73%;
       left: 59%;
-      transform: translate(-52%, -48%);
+      transform: translate(-53%, -46%);
       width: 14.5%;
-      height: 7%;
+      height: 14%;
 
       @include mq(sm, max) {
         top: 64%;
@@ -715,7 +715,6 @@
       height: 1.3rem;
       fill: var(--color-card);
       stroke: var(--color-title);
-      transition: var(--transition);
     }
 
     &.swiper-button-prev {

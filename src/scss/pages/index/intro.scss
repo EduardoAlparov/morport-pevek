@@ -100,6 +100,10 @@
     @include mq(xl, max) {
       padding: 10.5rem 0 5.5rem;
     }
+
+    @include mq(sm, max) {
+      padding: 15.5rem 0 5.5rem;
+    }
   }
 }
 

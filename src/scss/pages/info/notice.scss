@@ -1,6 +1,10 @@
 .notice {
   &__title {
     margin-bottom: 9.8rem;
+    color: var(--color-title);
+    font-weight: 550;
+    font-size: 2.4rem;
+    line-height: 110%;
 
     @include mq(xl, max) {
       margin-bottom: 5rem;
