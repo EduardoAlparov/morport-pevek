@@ -22,7 +22,7 @@ Build:
 Deploy:
     stage: deploy
     image: node:16.14.2
-    dependencies: 
+    dependencies:
         - Build
     tags:
         - stage
@@ -32,7 +32,6 @@ Deploy:
         - ssh-add <(echo "$SSH_PRIVATE_KEY")
         - mkdir -p ~/.ssh
         - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-    
-    script:
-        - scp -r ./build cp05609@87.249.43.162:/home/c/cp05609/morport/public_html/wp-content/themes/pevek/static
 
+    script:
+        - scp -r ./build cp05609@5.23.51.23:/home/c/cp05609/morport/public_html/wp-content/themes/pevek/static
