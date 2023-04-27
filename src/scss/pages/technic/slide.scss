@@ -136,6 +136,7 @@
 
   &__title {
     grid-area: slide__title;
+    margin-bottom: 2rem;
     padding-bottom: 2rem;
     font-size: 3.8rem;
 
@@ -155,7 +156,7 @@
   &__number {
     position: absolute;
     bottom: 0;
-    left: 3rem;
+    left: 0;
 
     @include mq(sm, max) {
       display: none;
