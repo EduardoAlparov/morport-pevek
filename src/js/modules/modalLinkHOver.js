@@ -1,11 +1,10 @@
 export default () => {
   const modalCont = document.querySelector('.modal__container');
   const modalTitle = document.querySelector('.modal__title');
-  const canHover = window.matchMedia('(hover: hover)').matches;
+  const canHover = window.matchMedia('(any-hover: none)').matches;
   const initialName = modalTitle.innerHTML;
 
-
-  if (canHover) {
+  if (!canHover) {
     modalCont.querySelectorAll('.nav__link').forEach(link => {
       link.addEventListener('mouseover', (e) => {
         modalTitle.innerHTML = '';
