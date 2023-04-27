@@ -107,7 +107,6 @@
     min-height: 13.8rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     @include mq(sm, max) {
       min-height: unset;
