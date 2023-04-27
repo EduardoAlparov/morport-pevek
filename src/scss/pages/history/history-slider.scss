@@ -13,10 +13,18 @@
 
   &--accent-background {
     background-color: var(--color-accent);
+
+    ._transite-colors {
+      color: var(--color-white);
+    }
   }
 
   &--white-background {
     background-color: var(--color-white);
+
+    ._transite-colors-accent {
+      color: var(--color-accent);
+    }
   }
 
   .scroll-content {
@@ -31,7 +39,7 @@
   }
 
   @include mq(lg, max) {
-    transition: background-color 0.2s ease;
+    transition: background-color 0.5s ease;
 
     @-moz-document url-prefix() {
       .scroll-content {
@@ -160,4 +168,9 @@
       display: none;
     }
   }
+}
+
+._transite-colors,
+._transite-colors-accent {
+  transition: color 0.5s ease;
 }

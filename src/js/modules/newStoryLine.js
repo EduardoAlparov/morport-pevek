@@ -78,7 +78,6 @@ export default () => {
     }
 
     if (lastOffset.y > offset.y) {
-      // console.log('up');
         titleriggers.forEach(tt => {
           if(isElementInViewportFull(tt)) {
             historySlider.classList.remove('history-slider--white-background');
@@ -93,7 +92,6 @@ export default () => {
           }
         });
     } else if (lastOffset.y < offset.y) {
-      // console.log('down');
         titleriggers.forEach(tt => {
           if(isElementInViewportFull(tt)) {
             historySlider.classList.remove('history-slider--white-background');
@@ -110,6 +108,7 @@ export default () => {
 
         whiteTriggers.forEach(wt => {
           if(isElementInViewportFull(wt)) {
+            historySlider.classList.remove('history-slider--accent-background');
             historySlider.classList.add('history-slider--white-background');
           }
         });
