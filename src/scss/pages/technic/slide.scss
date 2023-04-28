@@ -40,7 +40,7 @@
     grid-auto-flow: column dense;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 27.4rem;
-    grid-template-rows: minmax(50.3rem, 1fr) min-content;
+    grid-template-rows: 50.3rem min-content;
     gap: 2.7rem 3rem;
     grid-template-areas:
       "slide__image slide__image"
@@ -50,7 +50,7 @@
       width: 62.9rem;
       min-height: 54.5rem;
       grid-template-columns: 1fr 23rem;
-      grid-template-rows: minmax(41.5rem, 1fr) min-content;
+      grid-template-rows: 41.5rem min-content;
     }
 
     @include mq(xl, max) {
