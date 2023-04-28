@@ -7,9 +7,6 @@ export default () => {
     return;
   }
 
-  console.log('fancybox');
-
-
   Fancybox.bind('[data-fancybox="gallery"]', {
     compact: false,
     idle: false,
