@@ -118,3 +118,12 @@
     }
   }
 }
+.page-scheme {
+  .modal__title.section__title {
+    color: var(--color-white);
+
+    @include mq(sm, max) {
+      color: var(--color-white);
+    }
+  }
+}

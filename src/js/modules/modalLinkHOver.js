@@ -4,7 +4,18 @@ export default () => {
   const canHover = window.matchMedia('(any-hover: none)').matches;
   const initialName = modalTitle.innerHTML;
 
-  if (!canHover) {
+  if (canHover) {
+    modalCont.querySelectorAll('.nav__link').forEach(link => {
+      if( link.innerHTML === initialName ) {
+        let anchor = link.closest('.nav').querySelector('.nav__icon')
+
+        link.classList.add('nav__link--active');
+        link.parentElement.prepend(anchor.cloneNode(true));
+      }
+    })
+  }
+
+  if(window.matchMedia("(min-width: 1280px)").matches) {
     modalCont.querySelectorAll('.nav__link').forEach(link => {
       link.addEventListener('mouseover', (e) => {
         modalTitle.innerHTML = '';
@@ -26,14 +37,5 @@ export default () => {
         })
       })
     })
-  } else {
-    modalCont.querySelectorAll('.nav__link').forEach(link => {
-      if( link.innerHTML === initialName ) {
-        let anchor = link.closest('.nav').querySelector('.nav__icon')
-
-        link.classList.add('nav__link--active');
-        link.parentElement.prepend(anchor.cloneNode(true));
-      }
-    })
   }
-}
+ }
