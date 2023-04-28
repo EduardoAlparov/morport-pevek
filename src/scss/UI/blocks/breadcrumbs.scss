@@ -119,6 +119,10 @@
     &:last-child {
       .breadcrumbs__link {
         color: var(--color-card);
+
+        @include mq(sm, max) {
+          color: var(--color-other);
+        }
       }
     }
   }
