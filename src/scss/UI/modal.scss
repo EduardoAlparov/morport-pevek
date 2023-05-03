@@ -207,6 +207,17 @@
           border-width: 0;
         }
       }
+
+      @include mq(sm, max) {
+        & > .contacts__list {
+          flex-flow: row wrap;
+          gap: 40px 20px;
+        }
+
+        & .contacts__item {
+          width: calc(100% / 2 - 20px);
+        }
+      }
     }
 
     @include mq(xl, max) {

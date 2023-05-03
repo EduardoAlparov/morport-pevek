@@ -10,7 +10,6 @@ import yandexMap from './modules/yandexMap';
 import mainLogoAnimation from './modules/mainLogoAnimation';
 
 import searchControlOpen from './modules/searchControlOpen';
-import burgerMenuContacts from './modules/burgerMenuContacts';
 import modalLinkHover from './modules/modalLinkHover';
 import galleryPopupControl from './modules/galleryPopupControl';
 
@@ -36,8 +35,6 @@ documenReady(() => {
   //  search open:
   searchControlOpen();
   // ===========================================================================
-  //  burger menu open:
-  burgerMenuContacts();
   modalLinkHover();
   // ===========================================================================
   // carousel and sliders on page-technic by gsap and fancybox;

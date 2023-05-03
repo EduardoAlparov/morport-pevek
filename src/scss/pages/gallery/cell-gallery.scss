@@ -34,3 +34,26 @@
     }
   }
 }
+
+.carousel__slide {
+  &.has-video {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-white);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(../../../assets/images/icons/multi/play.svg);
+      background-size: 8px 8px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+}
