@@ -99,6 +99,9 @@
       align-items: center;
     }
 
+    &.swiper-slide {
+      width: max-content;
+    }
   }
 
   &__title {
