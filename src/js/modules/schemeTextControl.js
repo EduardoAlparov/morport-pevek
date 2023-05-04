@@ -85,4 +85,28 @@ export default () => {
   Fancybox.bind('[data-fancybox="tech-gallery"]', {
     groupAll: false
   });
+
+  Fancybox.bind('[data-fancybox="tech-gallery2"]', {
+    groupAll: false
+  });
+
+  Fancybox.bind('[data-fancybox="tech-gallery3"]', {
+    groupAll: false
+  });
+
+  Fancybox.bind('[data-fancybox="tech-gallery4"]', {
+    groupAll: false
+  });
+
+  Fancybox.bind('[data-fancybox="tech-gallery5"]', {
+    groupAll: false
+  });
+
+  Fancybox.bind('[data-fancybox="tech-gallery6"]', {
+    groupAll: false
+  });
+
+  Fancybox.bind('[data-fancybox="tech-gallery7"]', {
+    groupAll: false
+  });
 }
