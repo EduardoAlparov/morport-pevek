@@ -30,6 +30,10 @@
     line-clamp: 6;
     box-orient: vertical;
 
+    @include mq(xl, max) {
+      max-width: 100%;
+    }
+
     @include mq(md, max) {
       max-width: unset;
       font-size: 1.4rem;
