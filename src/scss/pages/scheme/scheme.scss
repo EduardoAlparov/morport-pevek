@@ -652,7 +652,7 @@
     }
 
     .scheme__slider-wrapper {
-      display: none;
+      padding: 2rem 0;
     }
   }
 
@@ -673,7 +673,6 @@
     overflow: hidden;
     list-style: none;
     padding: 0;
-    /* Fix of Webkit flickering */
     z-index: 1;
   }
 
@@ -721,12 +720,20 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+
+      @include mq(md, max) {
+        left: 1rem;
+      }
     }
 
     &.swiper-button-next {
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+
+      @include mq(md, max) {
+        right: 1rem;
+      }
     }
 
     &.swiper-button-disabled {
