@@ -36,10 +36,18 @@ export default () => {
 
   if(schemeWrapper && (window.matchMedia("(max-width: 991px)").matches)) {
     schemeWrapper.querySelectorAll('input[type="radio"]').forEach(input => {
-      input.addEventListener('change', () => {
+      input.addEventListener('change', (e) => {
         if(getLabel(input.id).classList.contains('scheme__mask')) {
           schemeMobileText.innerHTML = '';
           schemeMobileText.innerHTML = getLabel(input.id).parentElement.querySelector('.scheme__desc-wrapper').outerHTML;
+
+          let sliders = schemeMobileText.querySelectorAll('.scheme__slider-item');
+          Array.from(sliders).forEach( slide => {
+            slide.dataset.fancybox = slide.dataset.fancybox + 1;
+            Fancybox.bind(`[data-fancybox=${slide.dataset.fancybox}]`, {
+              groupAll: false
+            });
+          })
 
           let schemeItemsSliders = document.querySelectorAll('.js-swiper-slider');
           schemeItemsSliders.forEach(item => {
@@ -54,7 +62,6 @@ export default () => {
               },
             })
           })
-
         }
       })
     })
